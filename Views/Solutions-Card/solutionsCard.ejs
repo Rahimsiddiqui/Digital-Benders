@@ -1,0 +1,87 @@
+<div class="wrapper">
+  <div class="card-display-container">
+    <div class="card-display d-f">
+      <div class="grid-1">
+        <h6>DESIGN & BUILD</h6>
+        <a href="#">Custom Web Development</a><br />
+        <a href="#">CMS Development</a><br />
+        <a href="#">E-commerce Development</a><br />
+        <a href="#">Application Development</a><br />
+        <a href="#">Landing Page</a><br />
+        <a href="#">UI/UX Design</a><br />
+        <a href="#">Branding</a><br />
+      </div>
+      <div class="grid-2">
+        <h6>CREATE & MARKET</h6>
+        <a href="#">Marketing Strategy</a><br />
+        <a href="#">Google Ads</a><br />
+        <a href="#">Search Engine Optimization</a><br />
+        <a href="#">Social Media Marketing</a><br />
+        <a href="#">Content Marketing</a><br />
+        <a href="#">Reputation Managment</a><br />
+        <a href="#">Email Marketing</a><br />
+      </div>
+      <div class="grid-3">
+        <h6>AUTOMATE & SCALE</h6>
+        <a href="#">Call Action Tracking</a><br />
+        <a href="#">Data Analysis & Reporting</a><br />
+        <a href="#">API Integration</a><br />
+        <a href="#">Live Chat Solutions</a><br />
+        <a href="#">CRM Integration</a><br />
+      </div>
+    </div>
+  </div>
+
+  <div class="card-info d-f text-white">
+    <label class="bold-text"
+      ><img
+        src="https://www.creativesquad.ca/images/header_rocket.svg"
+        alt="..."
+      />WEBSITE ANALYSIS</label
+    >
+    <p>Looking to see how your Website stacks up?</p>
+    <p>Get you personalized Website Analysis one by one of our SEO Experts</p>
+    <a class="btn-analysis text-center bold-text" href="/seo-analysis"
+      >FREE ANALYSIS</a
+    >
+  </div>
+</div>
+
+<script>
+  const showCardBtn = document.querySelector("#show-card");
+  const wrapper = document.querySelector(".wrapper");
+  let hoverTimeout;
+
+  showCardBtn.addEventListener("mouseenter", () => {
+    clearTimeout(hoverTimeout);
+    hoverTimeout = setTimeout(() => {
+      wrapper.style.display = "flex";
+      // Force reflow before changing opacity
+      void wrapper.offsetWidth;
+      wrapper.style.opacity = "1";
+    }, 200);
+  });
+
+  showCardBtn.addEventListener("mouseleave", () => {
+    hoverTimeout = setTimeout(() => {
+      if (!wrapper.matches(":hover")) {
+        wrapper.style.opacity = "0";
+        // Wait for transition to complete before hiding
+        setTimeout(() => {
+          wrapper.style.display = "none";
+        }, 300);
+      }
+    }, 300);
+  });
+
+  wrapper.addEventListener("mouseleave", () => {
+    wrapper.style.opacity = "0";
+    setTimeout(() => {
+      wrapper.style.display = "none";
+    }, 300);
+  });
+
+  wrapper.addEventListener("mouseenter", () => {
+    clearTimeout(hoverTimeout);
+  });
+</script>

@@ -1,0 +1,64 @@
+<div class="contact-section d-g text-white">
+  <div class="idea-prompt d-f">
+    <p style="margin-left: 5px">Let's Talk</p>
+    <h6 class="text-title-size">
+      Got An Idea?<br />
+      <span class="bold-text">Let's get in touch!</span>
+    </h6>
+    <br />
+    <p>
+      Let's discuss your project and find out what we can do to provide value.
+    </p>
+  </div>
+  <div class="submit-form d-f">
+    <h6>Enter your details to get started.</h6>
+    <form class="form" action="/">
+      <input type="text" placeholder="Your Full Name" required />
+      <input
+        type="text"
+        pattern="[\d\s\(\)]*"
+        placeholder="Your Phone Number"
+        required
+      />
+      <input type="email" placeholder="Your Email Address" required />
+      <input type="text" placeholder="Enter Project Type" required />
+
+      <div id="spinner-overlay" style="z-index: 9999">
+        <div
+          class="spinner-border spinner spinner-border-sm"
+          role="status"
+          style="display: none; margin: 0 0 15px 47px"
+        ></div>
+      </div>
+
+      <span
+        style="display: none; margin-bottom: 15px"
+        id="msg-span"
+        class="text-white"
+        >Message Sent Successfully.</span
+      >
+
+      <button class="submit-btn bold-text">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const form = document.querySelector(`.form`);
+  const span = document.querySelector(`#msg-span`);
+  const spinner = document.querySelector(`.spinner`);
+
+  form.addEventListener(`submit`, (e) => {
+    e.preventDefault();
+    span.style.display = "none";
+
+    if (spinner) {
+      spinner.style.display = "inline-block";
+      setTimeout(() => {
+        spinner.style.display = "none";
+        span.style.display = "block";
+        form.reset();
+      }, 3000);
+    }
+  });
+</script>

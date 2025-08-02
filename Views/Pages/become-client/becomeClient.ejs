@@ -1,0 +1,166 @@
+<%- layout(`Boilerplate/boilerplate`) %>
+<link
+  rel="stylesheet"
+  href="/Stylesheets/BECOME CLIENT/become-client-styles.css"
+/>
+
+<%- include('../../Solutions-Card/solutionsCard.ejs') %>
+
+<div class="contact-us-container d-g">
+  <div class="contact-us-message">
+    <h3>DISCUSS YOUR PROJECT WITH <span>INDUSTRY EXPERTS</span></h3>
+    <p>
+      We deliver comprehensive and results-driven digital marketing solutions
+      tailored to your business. Reach new heights of online success with our
+      expertise and innovation.
+    </p>
+    <label
+      ><img
+        src="https://www.creativesquad.ca/images/icons/phone-contact.svg"
+        alt="..."
+      />
+      XXXX-XXXX-XXX</label
+    ><br />
+    <label
+      ><img
+        src="https://www.creativesquad.ca/images/icons/email-contact.svg"
+        alt="..."
+      />
+      info@digitalbenders.ca</label
+    ><br />
+    <label
+      ><img
+        src="https://www.creativesquad.ca/images/icons/loc-contact.svg"
+        alt="..."
+      />
+      Block-K, North Nazimabad, Karachi, Pakistan</label
+    >
+  </div>
+  <div class="contact-us-card d-f">
+    <p>Enter your details to get started right away!</p>
+
+    <form id="submit-form">
+      <input type="text" placeholder="Your Full Name" required />
+      <input type="email" placeholder="Your Email Address" required />
+      <input
+        type="number"
+        pattern="[\d\s\(\)]*"
+        placeholder="Your Phone Number"
+        required
+      />
+      <input type="text" placeholder="Your Message" required />
+
+      <div id="spinner-overlay" style="z-index: 9999">
+        <div
+          class="spinner-border spinner text-white spinner-border-sm"
+          role="status"
+          style="display: none; margin: 0 0 3vh 6.45vh"
+        ></div>
+      </div>
+
+      <span
+        style="display: none; margin-bottom: 15px"
+        id="msg-span"
+        class="text-white"
+        >Thank you for submitting your information, we'll get back to you in the
+        next 12 to 24hr.</span
+      >
+
+      <button>Submit</button>
+    </form>
+  </div>
+</div>
+<div class="FAQ-section">
+  <div class="FAQ-heading">
+    <h6 class="text-title-size bold-text">
+      FREQUENTLY ASKED
+      <span class="text-title-color">QUESTIONS</span>
+    </h6>
+  </div>
+  <div class="FAQs">
+    <div class="FAQ-item">
+      <button class="FAQ-question d-f">
+        Why should I hire a digital marketing company in Canada?
+        <span id="icon-1" class="FAQ-icon text-title-color">+</span>
+      </button>
+      <div class="FAQ-answer">
+        Hiring a digital marketing company in Canada provides access to
+        specialized expertise, local market knowledge, and a tailored approach
+        to your specific business needs.
+      </div>
+    </div>
+
+    <div class="FAQ-item">
+      <button class="FAQ-question d-f">
+        What services does your digital marketing company offer?
+        <span id="icon-2" class="FAQ-icon text-title-color">+</span>
+      </button>
+      <div class="FAQ-answer">
+        We offer a wide range of services including SEO, PPC, social media
+        marketing, content marketing, email marketing, and web design and
+        development.
+      </div>
+    </div>
+
+    <div class="FAQ-item">
+      <button class="FAQ-question d-f">
+        How can digital marketing help my business grow?
+        <span id="icon-3" class="FAQ-icon text-title-color">+</span>
+      </button>
+      <div class="FAQ-answer">
+        Digital marketing can help your business grow by increasing online
+        visibility, attracting targeted traffic, and generating leads through
+        various channels such as search engines, social media, and email
+        marketing.
+      </div>
+    </div>
+
+    <div class="FAQ-item">
+      <button class="FAQ-question d-f">
+        Do you work with businesses of all sizes?
+        <span id="icon-4" class="FAQ-icon text-title-color">+</span>
+      </button>
+      <div class="FAQ-answer">
+        Yes, we work with businesses of all sizes, from startups to large
+        enterprises. Our strategies are tailored to meet the unique needs and
+        goals of each client.
+      </div>
+    </div>
+  </div>
+  <div class="connect-prompt">
+    <img src="https://www.creativesquad.ca/images/faqs_people.png" alt="..." />
+    <p class="bold-text">Still have questions?</p>
+    <p>
+      Can't find the answer you're looking for?<br />
+      Let's Connect.
+    </p>
+  </div>
+</div>
+
+<script src="/Javascripts/BECOME CLIENT/become-client-js/FAQ.js"></script>
+
+<script>
+  const form = document.querySelector(`#submit-form`);
+  const span = document.querySelector(`#msg-span`);
+  const spinner = document.querySelector(`.spinner`);
+
+  form.addEventListener(`submit`, (e) => {
+    e.preventDefault();
+    span.style.display = "none";
+
+    if (spinner) {
+      spinner.style.display = "inline-block";
+      setTimeout(() => {
+        spinner.style.display = "none";
+        span.style.display = "block";
+        form.reset();
+
+        if (span.style.display === "block") {
+          setTimeout(() => {
+            span.style.display = "none";
+          }, 5000);
+        }
+      }, 3000);
+    }
+  });
+</script>

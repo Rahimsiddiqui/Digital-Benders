@@ -1,0 +1,150 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  .btn {
+    padding: 8px 10px;
+    color: white;
+    width: 15%;
+    transition: all 0.3s ease-in-out;
+  }
+  .navbar .nav-link,
+  .navbar-brand,
+  .navbar-brand:hover {
+    color: #fff;
+  }
+
+  .navbar .nav-link:hover {
+    color: rgb(203, 18, 18);
+  }
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  .btn:active {
+    transform: scale(0.95);
+  }
+  #getStartedBtn,
+  #testimonialsBtn {
+    letter-spacing: 1px;
+  }
+  #getStartedBtn {
+    background-color: rgb(203, 18, 18);
+    border-color: rgb(203, 18, 18);
+    margin-right: 100px;
+    margin-left: 15px;
+  }
+  #getStartedBtn:hover {
+    background-color: rgb(203, 25, 25);
+    color: rgb(240, 240, 240);
+  }
+  #getStartedBtn:active {
+    background-color: rgb(203, 30, 30);
+    color: rgb(230, 230, 230);
+  }
+  #testimonialsBtn {
+    border: 2px solid white;
+  }
+  #testimonialsBtn:hover {
+    color: rgb(255, 40, 40);
+    border-color: rgb(255, 40, 40);
+  }
+  #testimonialsBtn:active {
+    color: rgb(255, 30, 30);
+    border-color: rgb(255, 40, 40);
+  }
+  .container-fluid a,
+  .container-fluid button {
+    color: white;
+  }
+  .navbar-brand,
+  .navbar-brand:focus {
+    color: white;
+    font-size: 25px;
+    margin-left: 75px;
+  }
+  .navbar-brand img {
+    z-index: 2;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -1px;
+  }
+  .container-fluid a {
+    font-size: 20px;
+  }
+  .navbar {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+    padding-top: 20px;
+    z-index: 2;
+  }
+  .nav-link.active {
+    color: rgb(203, 18, 18) !important;
+  }
+  .nav-link.active:hover {
+    color: rgb(203, 15, 15);
+  }
+</style>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+  rel="stylesheet"
+/>
+
+<header>
+  <nav class="navbar navbar-expand-lg bg-transparent text-right">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/" style="font-size: 30px">
+        <img
+          src="https://sdmntprcentralus.oaiusercontent.com/files/00000000-c00c-61f5-9923-9c6a78328de3/raw?se=2025-07-22T16%3A02%3A37Z&sp=r&sv=2024-08-04&sr=b&scid=384b7f03-2c25-55fe-be0c-aa10839380d7&skoid=31bc9c1a-c7e0-460a-8671-bf4a3c419305&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-22T12%3A06%3A44Z&ske=2025-07-23T12%3A06%3A44Z&sks=b&skv=2024-08-04&sig=r1O0gxIkQ3EYk7hwp0gv2Y1k70kVPdWl8rt8EXp5IFk%3D"
+          alt="Logo"
+          width="30"
+          height="24"
+          class="d-inline-block align-text-top"
+        />
+        Digital Benders
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="show-card">SOLUTIONS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PRODUCTION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">COMPANY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">WORK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">LEARN</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link <%= currentRoute === '/become-client' ? 'active' : '' %>"
+              href="/become-client"
+              >BECOME A CLIENT</a
+            >
+          </li>
+        </ul>
+        <button class="btn" id="testimonialsBtn">TESTIMONIALS</button>
+        <button class="btn" id="getStartedBtn">GET STARTED</button>
+      </div>
+    </div>
+  </nav>
+</header>

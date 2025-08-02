@@ -1,0 +1,281 @@
+:root {
+  /* Typography */
+  --bold-font: bold;
+  --main-font-family: "Mulish", sans-serif;
+  --font-size-SM: 20px;
+  --font-size-MD: 40px;
+  --title-font-size: 45px;
+
+  /* Colors */
+  --title-color: rgb(244, 2, 2);
+  --text-color: rgb(33, 37, 41);
+  --muted-color: rgb(138, 137, 137);
+  --contact-section-BG: rgb(170, 6, 6);
+  --white-C-BG: white;
+  --section-BG: rgb(249, 249, 249);
+
+  /* Shadows */
+  --card-shadow-box: 0 4px 20px hsla(0, 0%, 52%, 0.25);
+
+  /* Layout */
+  --flex-display: flex;
+  --grid-display: grid;
+  --block-display: block;
+  --inline-block-display: inline-block;
+  --flex-column: column;
+  --flex-align-center: center;
+  --flex-justify-center: center;
+  --align-text-center: center;
+
+  /* Borders & Radius */
+  --border-radius-SM: 20px;
+  --border-radius-MD: 45px;
+  --border-radius-LG: 50%;
+
+  /* Misc */
+  --fit-object: cover;
+  --position-object: center;
+  --right-margin: 8px;
+  --gap-SM: 20px;
+  --full-width: 100%;
+  --full-height: 100%;
+  --case-study-img: 450px;
+  --full-transition: all 0.3s ease-in-out;
+}
+
+/* Utility Classes */
+
+.bold-text {
+  font-weight: var(--bold-font);
+}
+
+.text-title-size {
+  font-size: var(--title-font-size);
+}
+
+.text-title-color {
+  color: var(--title-color);
+}
+
+.text-white {
+  color: var(--white-C-BG);
+}
+
+.bg-white {
+  background-color: var(--white-C-BG);
+}
+
+.SM-font-size {
+  font-size: var(--font-size-SM);
+}
+
+.d-f {
+  display: var(--flex-display);
+}
+
+.d-g {
+  display: var(--grid-display);
+}
+
+.d-b {
+  display: var(--block-display);
+}
+
+.d-ib {
+  display: var(--inline-block-display);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.refund-policy-container {
+  font-family: montserrat, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+.main-heading {
+  font-family: Mulish, sans-serif;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+  z-index: -1;
+  background: linear-gradient(90deg, #1b1b1b, #454545);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -35vh;
+}
+
+.main-heading h1 {
+  font-size: 3rem;
+  letter-spacing: 2.5px;
+  font-weight: 800;
+  margin-top: 100px;
+  z-index: 1;
+  color: var(--title-color);
+}
+
+.secondary-heading {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 25px auto 13px auto;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--title-color);
+}
+
+.note span {
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+p {
+  color: var(--muted-color);
+}
+
+strong {
+  color: rgb(85, 85, 85);
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Adjusting Hover Card */
+
+.card-display-container {
+  border-top-left-radius: var(--border-radius-SM);
+  border-bottom-left-radius: var(--border-radius-SM);
+  padding: 45px;
+  border: none;
+  max-width: 70%;
+  margin: auto 0 auto auto;
+  background: linear-gradient(to right, rgb(35, 37, 37), rgb(50, 50, 50));
+  flex-wrap: wrap;
+}
+
+.card-display {
+  flex-wrap: nowrap;
+  gap: 25px;
+  margin: 0;
+}
+
+.wrapper {
+  display: none;
+  position: relative;
+  opacity: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin-top: -3vh;
+  margin-bottom: -57.3vh;
+  z-index: 1000;
+  transition: all 0.8s ease-in-out;
+}
+
+.wrapper.show {
+  opacity: 1;
+  display: var(--flex-display);
+}
+
+.card-info {
+  flex-direction: var(--flex-column);
+  background-color: var(--title-color);
+  padding: 47px 60px 56px 60px;
+  border-top-right-radius: var(--border-radius-SM);
+  border-bottom-right-radius: var(--border-radius-SM);
+  max-width: 30%;
+  margin-right: auto;
+  height: 50%;
+  flex-grow: 1;
+}
+
+.card-info p {
+  max-width: 90%;
+  color: var(--white-C-BG);
+}
+
+.card-info label img {
+  max-width: 30px;
+  max-height: 30px;
+  margin-right: 8.5px;
+}
+
+.card-info label {
+  font-size: 23px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 3px;
+  margin: 10px 0;
+}
+
+.card-info button {
+  max-width: var(--full-width);
+  border-radius: var(--border-radius-SM);
+  padding: 10px var(--font-size-SM);
+  border: 1px solid var(--white-C-BG);
+  transition: var(--full-transition);
+  margin-top: 15px;
+}
+
+.card-info button:hover {
+  background-color: var(--title-color);
+  transform: scale(1.05);
+  color: var(--white-C-BG);
+}
+
+.card-info button:active {
+  transform: scale(0.95) translateY(2px);
+}
+
+.grid-1 h6,
+.grid-2 h6,
+.grid-3 h6 {
+  color: var(--title-color);
+  font-weight: var(--bold-font);
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 3px;
+  font-size: 25px;
+  margin: 0 0 var(--font-size-SM) 0;
+}
+
+.grid-1 a,
+.grid-2 a,
+.grid-3 a {
+  display: var(--flex-display);
+  font-weight: var(--bold-font);
+  text-decoration: none;
+  color: var(--white-C-BG);
+  margin-bottom: -15px;
+}
+
+/* Adjusting Analysis Btn */
+
+.btn-analysis {
+  display: var(--inline-block-display);
+  text-decoration: none;
+  color: var(--title-color);
+  background-color: var(--white-C-BG);
+  padding: 10px 20px;
+  border-radius: var(--border-radius-SM);
+  transition: var(--full-transition);
+  border: 2px solid var(--white-C-BG);
+  cursor: pointer;
+  margin-top: 13px;
+}
+
+.btn-analysis:hover {
+  background-color: var(--title-color);
+  color: var(--white-C-BG);
+  transform: scale(1.03);
+}
+
+.btn-analysis:active {
+  transform: scale(0.95) translateY(2px);
+}

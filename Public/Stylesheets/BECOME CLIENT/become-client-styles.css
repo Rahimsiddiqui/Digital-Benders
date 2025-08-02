@@ -1,0 +1,403 @@
+:root {
+  /* Typography */
+  --bold-font: bold;
+  --main-font-family: "Mulish", sans-serif;
+  --font-size-SM: 20px;
+  --font-size-MD: 40px;
+  --title-font-size: 45px;
+
+  /* Colors */
+  --title-color: rgb(203, 18, 18);
+  --hover-color: rgb(244, 2, 2);
+  --text-color: rgb(33, 37, 41);
+  --contact-section-BG: rgb(170, 6, 6);
+  --muted-color: rgb(211, 211, 211);
+  --white-C-BG: white;
+  --section-BG: rgb(249, 249, 249);
+
+  /* Shadows */
+  --card-shadow-box: 0 4px 20px hsla(0, 0%, 52%, 0.25);
+
+  /* Layout */
+  --flex-display: flex;
+  --grid-display: grid;
+  --block-display: block;
+  --inline-block-display: inline-block;
+  --flex-column: column;
+  --flex-align-center: center;
+  --flex-justify-center: center;
+  --align-text-center: center;
+
+  /* Borders & Radius */
+  --border-radius-SM: 20px;
+  --border-radius-MD: 45px;
+  --border-radius-LG: 50%;
+
+  /* Misc */
+  --fit-object: cover;
+  --position-object: center;
+  --right-margin: 8px;
+  --gap-SM: 20px;
+  --full-width: 100%;
+  --full-height: 100%;
+  --case-study-img: 450px;
+  --full-transition: all 0.3s ease-in-out;
+}
+
+/* Utility Classes */
+
+.bold-text {
+  font-weight: var(--bold-font);
+}
+
+.text-title-size {
+  font-size: var(--title-font-size);
+}
+
+.text-title-color {
+  color: var(--title-color);
+}
+
+.text-white {
+  color: var(--white-C-BG);
+}
+
+.bg-white {
+  background-color: var(--white-C-BG);
+}
+
+.SM-font-size {
+  font-size: var(--font-size-SM);
+}
+
+.d-f {
+  display: var(--flex-display);
+}
+
+.d-g {
+  display: var(--grid-display);
+}
+
+.d-b {
+  display: var(--block-display);
+}
+
+.d-ib {
+  display: var(--inline-block-display);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.contact-us-container {
+  background: url(https://www.creativesquad.ca/images/creatives/contact-bg.png);
+  background-position: var(--align-text-center);
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-template-columns: repeat(2, 1fr);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100vh;
+  padding: var(--font-size-SM);
+  position: relative;
+  margin-top: -18vh;
+}
+
+.contact-us-message {
+  color: var(--white-C-BG);
+  margin-top: 21.5vh;
+  margin-left: 15vh;
+}
+
+.contact-us-message p,
+.contact-us-message label {
+  font-weight: 600;
+}
+
+.contact-us-message p {
+  margin: 5vh auto 4.5vh auto;
+}
+
+.contact-us-message label {
+  margin-bottom: 2vh;
+}
+
+.contact-us-message img {
+  margin-right: 1vh;
+}
+
+.contact-us-message span {
+  font-weight: 600;
+  color: var(--title-color);
+}
+
+.contact-us-card {
+  border: 3px solid rgb(112, 108, 108);
+  border-radius: 15px;
+  flex-direction: var(--flex-column);
+  justify-content: var(--flex-justify-center);
+  align-items: var(--align-text-center);
+  max-width: 70%;
+  max-height: 80%;
+  padding: 60px;
+  margin: 13.5vh auto auto auto;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.contact-us-card p {
+  color: var(--white-C-BG);
+  margin-bottom: var(--font-size-MD);
+  font-weight: 600;
+}
+
+.contact-us-card input {
+  width: var(--full-width);
+  border: none;
+  border-bottom: 1px solid var(--muted-color);
+  background-color: transparent;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  color: rgb(240, 240, 240);
+}
+
+.contact-us-card input::placeholder {
+  color: var(--muted-color);
+}
+
+.contact-us-card button {
+  border: none;
+  background-color: var(--title-color);
+  color: var(--white-C-BG);
+  padding: 10px var(--font-size-SM);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--full-transition);
+  margin-bottom: -4vh;
+}
+
+.contact-us-card button:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
+.contact-us-card button:active {
+  background-color: var(--hover-color);
+  transform: scale(0.95) translateY(2px);
+}
+
+/* Disabling Number Input Buttons */
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Disabling Browser Focus */
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.FAQ-section {
+  max-width: 800px;
+  margin: auto;
+  padding: 80px var(--font-size-SM);
+}
+
+.FAQ-heading {
+  margin-bottom: var(--font-size-SM);
+}
+
+.connect-prompt {
+  text-align: var(--align-text-center);
+}
+
+.connect-prompt img {
+  margin: var(--font-size-MD) 0 var(--font-size-SM) 0;
+}
+
+.FAQ-question {
+  width: var(--full-width);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: var(--font-size-SM) 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  justify-content: space-between;
+  letter-spacing: 0.5px;
+  align-items: var(--align-text-center);
+  border-bottom: 1px solid rgb(221, 221, 221);
+  transition: var(--full-transition);
+}
+
+.FAQ-question:hover {
+  border-radius: var(--border-radius-SM);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.FAQ-icon {
+  transition: all 0.3s ease-in-out;
+  padding: 1px 8px;
+  border: 2px solid var(--title-color);
+  border-radius: 50%;
+}
+
+.FAQ-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--full-transition);
+  padding: 0 15px;
+  background-color: var(--white-C-BG);
+}
+
+.FAQ-item.open .FAQ-answer {
+  padding: 15px;
+  max-height: 500px;
+}
+
+/* Adjusting Hover Card */
+
+.card-display-container {
+  border-top-left-radius: var(--border-radius-SM);
+  border-bottom-left-radius: var(--border-radius-SM);
+  padding: 45px;
+  border: none;
+  max-width: 70%;
+  margin: auto 0 auto auto;
+  background: linear-gradient(to right, rgb(35, 37, 37), rgb(50, 50, 50));
+  flex-wrap: wrap;
+}
+
+.card-display {
+  flex-wrap: nowrap;
+  gap: 25px;
+  margin: 0;
+}
+
+.wrapper {
+  display: none;
+  position: relative;
+  opacity: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin-top: -3vh;
+  margin-bottom: -75.33vh;
+  z-index: 1000;
+  transition: all 0.8s ease-in-out;
+}
+
+.wrapper.show {
+  opacity: 1;
+  display: var(--flex-display);
+}
+
+.card-info {
+  flex-direction: var(--flex-column);
+  background-color: var(--title-color);
+  padding: 47px 60px 56px 60px;
+  border-top-right-radius: var(--border-radius-SM);
+  border-bottom-right-radius: var(--border-radius-SM);
+  max-width: 30%;
+  margin-right: auto;
+  height: 50%;
+  flex-grow: 1;
+}
+
+.card-info p {
+  max-width: 90%;
+  color: var(--white-C-BG);
+}
+
+.card-info label img {
+  max-width: 30px;
+  max-height: 30px;
+  margin-right: 8.5px;
+}
+
+.card-info label {
+  font-size: 23px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 3px;
+  margin: 10px 0;
+}
+
+.card-info button {
+  max-width: var(--full-width);
+  border-radius: var(--border-radius-SM);
+  padding: 10px var(--font-size-SM);
+  border: 1px solid var(--white-C-BG);
+  transition: var(--full-transition);
+  margin-top: 15px;
+}
+
+.card-info button:hover {
+  background-color: var(--title-color);
+  transform: scale(1.05);
+  color: var(--white-C-BG);
+}
+
+.card-info button:active {
+  transform: scale(0.95) translateY(2px);
+}
+
+.grid-1 h6,
+.grid-2 h6,
+.grid-3 h6 {
+  color: var(--title-color);
+  font-weight: var(--bold-font);
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 3px;
+  font-size: 25px;
+  margin: 0 0 var(--font-size-SM) 0;
+}
+
+.grid-1 a,
+.grid-2 a,
+.grid-3 a {
+  display: var(--flex-display);
+  font-weight: var(--bold-font);
+  text-decoration: none;
+  color: var(--white-C-BG);
+  margin-bottom: -15px;
+}
+
+/* Adjusting Analysis Btn */
+
+.btn-analysis {
+  display: var(--inline-block-display);
+  text-decoration: none;
+  color: var(--title-color);
+  background-color: var(--white-C-BG);
+  padding: 10px 20px;
+  border-radius: var(--border-radius-SM);
+  transition: var(--full-transition);
+  border: 2px solid var(--white-C-BG);
+  cursor: pointer;
+  margin-top: 13px;
+}
+
+.btn-analysis:hover {
+  background-color: var(--title-color);
+  color: var(--white-C-BG);
+  transform: scale(1.03);
+}
+
+.btn-analysis:active {
+  transform: scale(0.95) translateY(2px);
+}

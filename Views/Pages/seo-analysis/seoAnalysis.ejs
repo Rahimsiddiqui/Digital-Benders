@@ -1,0 +1,347 @@
+<%- layout(`Boilerplate/boilerplate`) %>
+
+<link
+  rel="stylesheet"
+  href="/Stylesheets/SEO ANALYSIS/seo-analysis-styles.css"
+/>
+
+<%- include('../../Solutions-Card/solutionsCard.ejs') %>
+
+<div class="seo-analysis-container">
+  <div class="seo-analysis-form-container">
+    <div class="seo-analysis-prompt">
+      <h1 class="bold-text text-white">
+        COMPREHENSIVE SEO ANALYSIS FOR <br />
+        <span>STARTUPS, SMBS, AND ENTERPRISES</span>
+      </h1>
+      <h5 class="bold-text text-white">
+        WHAT'S YOUR WEBSITE'S OPTIMIZATION SCORE?
+      </h5>
+    </div>
+
+    <div class="feedback">
+      <div id="spinner-overlay" style="z-index: 9999">
+        <div
+          class="spinner-border spinner text-white spinner-border-sm"
+          role="status"
+          style="display: none"
+        ></div>
+      </div>
+
+      <span style="display: none" id="msg-span" class="text-white"
+        >Thank you for submitting your information, you'll receive your FREE SEO
+        ANALYSIS in the next 12 to 24hr.</span
+      >
+    </div>
+
+    <form class="seo-analysis-form d-g">
+      <input type="text" placeholder="Enter Your Full Name" required />
+      <input type="email" placeholder="Enter Your Email Address" required />
+      <input type="number" placeholder="Enter Phone Number" required />
+      <div class="url-input d-g">
+        <input type="url" placeholder="Enter Your Website URL" required />
+        <button class="text-white">ANALYZE</button>
+      </div>
+    </form>
+  </div>
+  <div class="more-about-company">
+    <h5 class="more-about-company-title bold-text text-title-size mb-5">
+      IN-DEPTH SEO <br />
+      <span class="more-about-company-title-span text-title-color"
+        >WEBSITE AUDIT</span
+      >
+    </h5>
+
+    <div class="more-about-business-btns bg-white d-f mb-5">
+      <button class="business-btn d-flex">WEBSITE CRAWLING</button>
+      <button class="business-btn d-flex">INDEXATION ISSUES</button>
+      <button class="business-btn d-flex">FULL SITE DIRECTORY</button>
+      <button class="business-btn d-flex">METADATA CHECK</button>
+      <button class="business-btn d-flex">ANALYSING PERFORMANCE</button>
+    </div>
+
+    <div class="info-holder mt-3">
+      <div class="container-of-info d-f" style="display: none" id="btn1">
+        <img
+          src="https://www.creativesquad.ca/images/website_crawling.jpg"
+          class="solutions-main-image"
+          alt="..."
+        />
+        <div class="info">
+          <div class="more-info mb-4">
+            <label class="info-holder-label text-title-color bold-text mb-3"
+              >WEBSITE CRAWLING</label
+            >
+            <p class="info-holder-text">
+              If certain pages on your website cannot be accessed by search
+              engines, there is a possibility that your site might not be
+              properly indexed or may not be indexed at all. When your website
+              doesn't appear in the index, it becomes inaccessible to users who
+              are trying to find it. We thoroughly examine your website to
+              identify any crawlability issues that hinder search engine bots
+              from properly indexing your content. We analyse robots.txt files,
+              XML sitemaps, and internal linking structures to ensure optimal
+              crawlability and discoverability of your web pages.
+            </p>
+            <a href="/become-client" class="connect-btn bold-text">
+              LETS CONNECT
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-of-info d-f" style="display: none" id="btn2">
+        <img
+          src="https://www.creativesquad.ca/images/indexation_issues.jpg"
+          class="solutions-main-image"
+          alt="..."
+        />
+        <div class="info">
+          <div class="more-info mb-4">
+            <label class="info-holder-label text-title-color bold-text mb-3"
+              >INDEXATION ISSUES</label
+            >
+            <p class="info-holder-text">
+              Achieving proper indexing of your pages is crucial for your
+              visibility on Google search results. Indexation issues arise when
+              search engines struggle to index and understand your website's
+              pages accurately. Our audit process includes a meticulous review
+              of your website's indexation status to identify potential issues.
+              We examine canonical tags, duplicate content, and URL parameters
+              to ensure that search engines can effectively index and display
+              your web pages in search results. By resolving indexation issues,
+              we help search engines better comprehend your content, leading to
+              improved rankings and increased organic traffic.
+            </p>
+            <a href="/become-client" class="connect-btn bold-text">
+              LETS CONNECT
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-of-info d-f" style="display: none" id="btn3">
+        <img
+          src="https://www.creativesquad.ca/images/sitemap.jpg"
+          class="solutions-main-image"
+          alt="..."
+        />
+        <div class="info">
+          <div class="more-info mb-4">
+            <label class="info-holder-label text-title-color bold-text mb-3"
+              >FULL SITE DIRECTORY</label
+            >
+            <p class="info-holder-text">
+              A Full Site Directory serves as a vital tool for search engines to
+              understand your website's structure and content. An XML-based Full
+              Site Directory facilitates Google in navigating through the
+              essential pages on your website. During this stage, we carefully
+              analyze your Full Site Directory to ensure it is properly
+              structured, up-to-date, and includes all relevant pages. We verify
+              that all URLs are correctly included and that the directory
+              adheres to search engine guidelines. By optimizing your Full Site
+              Directory, we enable search engines to crawl and index your
+              website more efficiently, enhancing its visibility and
+              discoverability
+            </p>
+            <a href="/become-client" class="connect-btn bold-text">
+              LETS CONNECT
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-of-info d-f" style="display: none" id="btn4">
+        <img
+          src="https://www.creativesquad.ca/images/metadata_check.jpg"
+          class="solutions-main-image"
+          alt="..."
+        />
+        <div class="info">
+          <div class="more-info mb-4">
+            <label class="info-holder-label text-title-color bold-text mb-3"
+              >METADATA CHECK</label
+            >
+            <p class="info-holder-text">
+              While Google may not always display meta descriptions
+              (approximately 37% of the time), it is still crucial to optimise
+              them for your most important pages.In this phase, we review your
+              website's metadata, such as title tags, meta descriptions, and
+              header tags. We ensure that they are unique, relevant, and
+              optimised with targeted keywords to improve search engine
+              visibility and encourage higher click-through rates from search
+              results. By optimising your metadata, we enhance your website's
+              appearance in search listings, increasing the likelihood of
+              attracting qualified traffic and improving your overall SEO
+              performance.
+            </p>
+            <a href="/become-client" class="connect-btn bold-text">
+              LETS CONNECT
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-of-info d-f" style="display: none" id="btn5">
+        <img
+          src="https://www.creativesquad.ca/images/analysing_performance.jpg"
+          class="solutions-main-image"
+          alt="..."
+        />
+        <div class="info">
+          <div class="more-info mb-4">
+            <label class="info-holder-label text-title-color bold-text mb-3"
+              >ANALYSING PERFORMANCE</label
+            >
+            <p class="info-holder-text">
+              Website performance impacts user experience and search engine
+              rankings. In order to enhance user experience, Google strives to
+              improve website speed, as slow-loading sites are generally
+              disliked by users. During this stage of our SEO audit process, we
+              assess your website's performance metrics, including page load
+              speed, mobile responsiveness, and overall user experience. We
+              identify any performance bottlenecks that may negatively impact
+              user engagement and search engine rankings. Our recommendations
+              aim to optimise your website's performance, ensuring faster
+              loading times, seamless user experiences, and ultimately, higher
+              search engine rankings and increased conversions.
+            </p>
+            <a href="/become-client" class="connect-btn bold-text">
+              LETS CONNECT
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="game-changing-analysis-container">
+    <div
+      class="game-changing-analysis-header bold-text"
+      data-aos="fade-up"
+      data-aos-delay="400"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
+      <h1 class="text-title-size mb-3">
+        EXPERIENCE A GAME-CHANGING <br />
+        <span class="text-title-color">SEO ANALYSIS</span>
+      </h1>
+      <p>
+        Digital Benders believes in delivering exceptional SEO analysis services
+        to help businesses thrive online.
+      </p>
+    </div>
+    <div class="game-changing-analysis-main">
+      <div
+        class="game-changing-analysis m-l"
+        data-aos="fade-right"
+        data-aos-delay="400"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <label class="text-title-color bold-text mt-1 mb-3">SEO RESULTS</label>
+        <p>
+          We delve into critical factors such as keyword optimization, on-page
+          elements, and technical SEO to assess your website's visibility and
+          effectiveness.
+        </p>
+      </div>
+
+      <div
+        class="game-changing-analysis m-r"
+        data-aos="fade-left"
+        data-aos-delay="400"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <label class="text-title-color bold-text mt-1 mb-3"
+          >TECHNICAL AUDIT</label
+        >
+        <p>
+          We examine the technical health of your website, identifying issues
+          like crawl errors, slow page speeds, broken links, and mobile
+          usability problems that could affect search engine performance.
+        </p>
+      </div>
+
+      <div
+        class="game-changing-analysis m-l"
+        data-aos="fade-right"
+        data-aos-delay="400"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <label class="text-title-color bold-text mt-1 mb-3"
+          >CONTENT QUALITY</label
+        >
+        <p>
+          We evaluate the depth, originality, and relevance of your website
+          content to ensure it aligns with user intent and supports strong
+          ranking signals across search engines.
+        </p>
+      </div>
+
+      <div
+        class="game-changing-analysis m-r"
+        data-aos="fade-left"
+        data-aos-delay="400"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <label class="text-title-color bold-text mt-1 mb-3"
+          >BACKLINK PROFILE</label
+        >
+        <p>
+          Our analysis reviews your backlink structure, identifying
+          opportunities for high-authority links and detecting toxic backlinks
+          that may harm your SEO credibility.
+        </p>
+      </div>
+
+      <div
+        class="game-changing-analysis m-l"
+        data-aos="fade-right"
+        data-aos-delay="400"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <label class="text-title-color bold-text mt-1 mb-3"
+          >USER EXPERIENCE</label
+        >
+        <p>
+          We assess navigation, layout, and accessibility to ensure your website
+          delivers an intuitive, engaging, and conversion-optimized experience
+          for all users.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/Javascripts/SEO ANALYSIS/seo-analysis-js/businessBtns.js"></script>
+
+<script>
+  const form = document.querySelector(`.seo-analysis-form`);
+  const span = document.querySelector(`#msg-span`);
+  const spinner = document.querySelector(`.spinner`);
+
+  form.addEventListener(`submit`, (e) => {
+    e.preventDefault();
+    span.style.display = "none";
+
+    if (spinner) {
+      spinner.style.display = "inline-block";
+      setTimeout(() => {
+        spinner.style.display = "none";
+        span.style.display = "block";
+        form.reset();
+
+        if (span.style.display === "block") {
+          setTimeout(() => {
+            span.style.display = "none";
+          }, 5000);
+        }
+      }, 3000);
+    }
+  });
+</script>
