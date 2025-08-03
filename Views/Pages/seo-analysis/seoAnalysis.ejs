@@ -27,11 +27,6 @@
           style="display: none"
         ></div>
       </div>
-
-      <span style="display: none" id="msg-span" class="text-white"
-        >Thank you for submitting your information, you'll receive your FREE SEO
-        ANALYSIS in the next 12 to 24hr.</span
-      >
     </div>
 
     <form class="seo-analysis-form d-g">
@@ -322,25 +317,23 @@
 
 <script>
   const form = document.querySelector(`.seo-analysis-form`);
-  const span = document.querySelector(`#msg-span`);
   const spinner = document.querySelector(`.spinner`);
 
   form.addEventListener(`submit`, (e) => {
     e.preventDefault();
-    span.style.display = "none";
 
     if (spinner) {
       spinner.style.display = "inline-block";
       setTimeout(() => {
         spinner.style.display = "none";
-        span.style.display = "block";
+        Swal.fire({
+          title: "Thank You!",
+          text: `Thank you for submitting your information, you'll receive your FREE SEO
+        ANALYSIS in the next 24-48hrs.`,
+          timer: 3000,
+          icon: "success",
+        });
         form.reset();
-
-        if (span.style.display === "block") {
-          setTimeout(() => {
-            span.style.display = "none";
-          }, 5000);
-        }
       }, 3000);
     }
   });

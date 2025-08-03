@@ -135,6 +135,29 @@
     align-items: center;
     margin-top: -17px;
     gap: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  @keyframes hovered {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-2px);
+    }
+  }
+  @keyframes active {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(1px);
+    }
+  }
+  .media-links a:hover {
+    animation: hovered 0.3s forwards;
+  }
+  .media-links a:active {
+    animation: active 0.3s forwards;
   }
 </style>
 
@@ -144,7 +167,7 @@
       <img src="https://www.creativesquad.ca/images/logo.svg" alt="..." />
     </div>
     <div class="news-subscription">
-      <h6>SIGN UP TO OUR <span>NEWSLETTER</span></h6>
+      <h6>SIGN UP TO OUR <span>NEWSLETTERS</span></h6>
 
       <div
         id="spinner-overlay"
@@ -157,19 +180,12 @@
         ></div>
       </div>
 
-      <span
-        style="display: none; margin: 20px 0 25px 0"
-        id="subscribe-msg-span"
-        class="text-white"
-        >Newsletter Subscribed Successfully</span
-      >
-
       <div class="input-group">
         <input
           type="text"
           name="subscribe"
           id="subscribe"
-          placeholder="Subscribe to our Newsletter"
+          placeholder="Subscribe to our Newsletters"
         />
 
         <span onclick="handleSubscribe()" class="input-group-text"
@@ -312,14 +328,18 @@
   const inputGroupText = document.querySelector(`.input-group-text`);
   const svg = inputGroupText.querySelector(`svg`);
 
-  svgs.forEach((svg, i) => {
-    svg.addEventListener(`mouseover`, () => {
-      svg.style.backgroundColor = "rgb(203, 18, 18)";
-      svg.style.fill = "white";
+  svgs.forEach((icon, i) => {
+    icon.addEventListener(`mouseover`, () => {
+      icon.style.backgroundColor = "rgb(203, 18, 18)";
+      icon.style.fill = "white";
+      icon.classList.remove(`active`);
+      icon.classList.add(`hovered`);
     });
-    svg.addEventListener(`mouseleave`, () => {
-      svg.style.backgroundColor = "white";
-      svg.style.fill = "black";
+    icon.addEventListener(`mouseleave`, () => {
+      icon.style.backgroundColor = "white";
+      icon.style.fill = "black";
+      icon.classList.remove(`hovered`);
+      icon.classList.add(`active`);
     });
   });
 
@@ -336,35 +356,33 @@
   svg.addEventListener(`mouseleave`, teleNormal);
 
   const handleSubscribe = () => {
-    const span = document.querySelector(`#subscribe-msg-span`);
     const spinner = document.querySelector(`.newsletter-spinner`);
     const subscribeInput = document.querySelector(`#subscribe`);
 
-    span.style.display = "none";
     spinner.style.display = "inline-block";
 
     setTimeout(() => {
       if (subscribeInput.value.trim() === "") {
-        span.textContent = "Please enter a valid email address.";
-        span.style.display = "block";
+        Swal.fire({
+          title: "Oops...",
+          text: "You didn't enter a valid email address.",
+          timer: 3000,
+          icon: "error",
+        });
         spinner.style.display = "none";
 
-        setTimeout(() => {
-          span.style.display = "none";
-        }, 5000);
-
         return;
+      } else {
+        Swal.fire({
+          title: "Thank You!",
+          text: `"${subscribeInput.value}" Newsletter subscribed successfully!`,
+          timer: 3000,
+          icon: "success",
+        });
       }
       spinner.style.display = "none";
-      span.style.display = "block";
       subscribeInput.value = "";
       form.reset();
-
-      if (span.style.display === "block") {
-        setTimeout(() => {
-          span.style.display = "none";
-        }, 5000);
-      }
     }, 3000);
   };
 </script>

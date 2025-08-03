@@ -58,14 +58,6 @@
         ></div>
       </div>
 
-      <span
-        style="display: none; margin-bottom: 15px"
-        id="msg-span"
-        class="text-white"
-        >Thank you for submitting your information, we'll get back to you in the
-        next 12 to 24hr.</span
-      >
-
       <button>Submit</button>
     </form>
   </div>
@@ -141,25 +133,23 @@
 
 <script>
   const form = document.querySelector(`#submit-form`);
-  const span = document.querySelector(`#msg-span`);
   const spinner = document.querySelector(`.spinner`);
 
   form.addEventListener(`submit`, (e) => {
     e.preventDefault();
-    span.style.display = "none";
 
     if (spinner) {
       spinner.style.display = "inline-block";
       setTimeout(() => {
         spinner.style.display = "none";
-        span.style.display = "block";
+        Swal.fire({
+          title: "Thank You!",
+          text: `Thank you for submitting your information, we'll get back to you in the
+        next 24-48hrs.`,
+          timer: 3000,
+          icon: "success",
+        });
         form.reset();
-
-        if (span.style.display === "block") {
-          setTimeout(() => {
-            span.style.display = "none";
-          }, 5000);
-        }
       }, 3000);
     }
   });

@@ -31,13 +31,6 @@
         ></div>
       </div>
 
-      <span
-        style="display: none; margin-bottom: 15px"
-        id="msg-span"
-        class="text-white"
-        >Message Sent Successfully.</span
-      >
-
       <button class="submit-btn bold-text">Submit</button>
     </form>
   </div>
@@ -45,18 +38,21 @@
 
 <script>
   const form = document.querySelector(`.form`);
-  const span = document.querySelector(`#msg-span`);
   const spinner = document.querySelector(`.spinner`);
 
   form.addEventListener(`submit`, (e) => {
     e.preventDefault();
-    span.style.display = "none";
 
     if (spinner) {
       spinner.style.display = "inline-block";
       setTimeout(() => {
         spinner.style.display = "none";
-        span.style.display = "block";
+        Swal.fire({
+          title: "Message Sent Successfully!",
+          text: "We will contact you within the next 24-48hrs.",
+          timer: 3000,
+          icon: "success",
+        });
         form.reset();
       }, 3000);
     }

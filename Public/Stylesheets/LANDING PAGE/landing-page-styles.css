@@ -180,7 +180,7 @@ img,
   left: 50%;
   transform: translateX(-50%);
   position: relative;
-  height: 101vh;
+  height: 103vh;
   z-index: -9998;
 }
 
@@ -1168,7 +1168,7 @@ img,
   align-items: flex-start;
   max-width: 1400px;
   margin-top: -3vh;
-  margin-bottom: -61.2vh;
+  margin-bottom: -62vh;
   z-index: 1000;
   transition: all 0.8s ease-in-out;
 }
