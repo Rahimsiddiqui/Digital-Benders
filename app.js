@@ -37,7 +37,7 @@ app.get(`/privacy-policy`, (req, res) => {
 });
 
 app.get(`/refund-policy`, (req, res) => {
-  res.render(`sPages/refund-policy/refundPolicy`);
+  res.render(`Pages/refund-policy/refundPolicy`);
 });
 
 app.get(`/become-client`, (req, res) => {
