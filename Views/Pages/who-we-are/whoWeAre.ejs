@@ -124,7 +124,7 @@
   </div>
   <div class="core-values-container">
     <div class="core-values-slider">
-      <div class="slider">
+      <div class="core-slider">
         <div class="slide">
           <div class="slide-image">
             <img
@@ -263,7 +263,7 @@
         <span class="text-title-color">THRIVING B2B & B2C BUSINESS</span>
       </h1>
       <p>
-        Over the years, Creative Squad has had the privilege of partnering with
+        Over the years, Digital Benders has had the privilege of partnering with
         diverse industries. We have left our mark on numerous sectors, from
         e-commerce giants to healthcare providers, hospitals to educational
         institutions.
@@ -369,16 +369,16 @@
 </div>
 
 <script>
-  const slider = document.querySelector(".slider");
+  const slider = document.querySelector(".core-slider");
   const slides = document.querySelectorAll(".slide");
   const prev = document.getElementById("prev");
   const next = document.getElementById("next");
 
   let index = 0;
   const slidesToShow = 2;
-  const gap = 20; // match CSS gap
+  const gap = 20;
   const slideWidth = slider.querySelector(".slide").offsetWidth;
-  const maxIndex = slides.length - slidesToShow; // 6 - 2 = 4
+  const maxIndex = slides.length - slidesToShow;
 
   next.addEventListener("click", () => {
     if (index < maxIndex) {

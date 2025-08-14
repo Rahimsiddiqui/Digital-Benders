@@ -279,7 +279,7 @@ body {
   margin: auto;
 }
 
-.slider {
+.core-slider {
   display: flex;
   gap: 20px;
   padding: 8px;
