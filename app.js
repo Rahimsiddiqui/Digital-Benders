@@ -48,6 +48,10 @@ app.get(`/seo-analysis`, (req, res) => {
   res.render(`Pages/seo-analysis/seoAnalysis`);
 });
 
+app.get(`/who-we-are`, (req, res) => {
+  res.render(`Pages/who-we-are/whoWeAre`);
+});
+
 app.listen(3000, (req, res) => {
   console.log(`Server Started... (Express)`);
 });
