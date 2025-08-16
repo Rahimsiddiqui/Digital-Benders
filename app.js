@@ -56,6 +56,10 @@ app.get(`/digital-media-services-in-canada`, (req, res) => {
   res.render(`Pages/digital-media-services/digitalMediaServices`);
 });
 
+app.get(`/production-services-in-canada`, (req, res) => {
+  res.render(`Pages/production-services/productionServices`);
+});
+
 app.listen(3000, (req, res) => {
   console.log(`Server Started... (Express)`);
 });
