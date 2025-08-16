@@ -265,6 +265,269 @@ body {
   max-height: 50px;
 }
 
+/* ADJUSTING THE FAQ SECTION */
+
+.FAQ-section {
+  margin: auto;
+  padding: 80px var(--font-size-SM);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--section-BG);
+}
+
+.FAQs,
+.FAQ-heading {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.FAQ-heading {
+  margin-bottom: var(--font-size-SM);
+}
+
+.connect-prompt {
+  text-align: var(--align-text-center);
+}
+
+.connect-prompt img {
+  margin: var(--font-size-MD) 0 var(--font-size-SM) 0;
+}
+
+.FAQ-question {
+  width: var(--full-width);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: var(--font-size-SM) 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  justify-content: space-between;
+  letter-spacing: 0.5px;
+  align-items: var(--align-text-center);
+  border-bottom: 1px solid rgb(221, 221, 221);
+  transition: var(--full-transition);
+}
+
+.FAQ-question:hover {
+  border-radius: var(--border-radius-SM);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.FAQ-icon {
+  transition: all 0.3s ease-in-out;
+  padding: 1px 8px;
+  border: 2px solid var(--title-color);
+  border-radius: 50%;
+}
+
+.FAQ-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--full-transition);
+  padding: 0 15px;
+  background-color: var(--section-BG);
+}
+
+.FAQ-item.open .FAQ-answer {
+  padding: 15px;
+  max-height: 500px;
+}
+
+/* Adjusting Contact Section */
+
+.contact-section {
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--contact-section-BG);
+  width: 100vw;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  padding: 70px 0;
+}
+
+.idea-prompt {
+  flex-direction: var(--flex-column);
+  margin: auto;
+  padding-bottom: 20px;
+  max-width: 450px;
+}
+
+.submit-form {
+  flex-direction: var(--flex-column);
+  margin: 45px auto auto auto;
+}
+
+.submit-form h6 {
+  margin: -30px 0 30px 0;
+}
+
+.submit-form input,
+.submit-form input:focus {
+  border: none;
+  border-bottom: 1px solid var(--white-C-BG);
+  background-color: var(--contact-section-BG);
+  color: var(--white-C-BG);
+  padding-bottom: 10px;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  outline: none;
+  width: 40%;
+  margin: auto var(--font-size-SM) var(--font-size-SM) auto;
+}
+
+.submit-form input::placeholder {
+  color: var(--white-C-BG);
+}
+
+.submit-btn {
+  border: 1px solid var(--white-C-BG);
+  border-radius: var(--font-size-SM);
+  color: var(--contact-section-BG);
+  background-color: var(--white-C-BG);
+  padding: 10px 28px;
+  transition: var(--full-transition);
+}
+
+.submit-btn:hover {
+  background-color: var(--contact-section-BG);
+  color: var(--white-C-BG);
+}
+
+/* Adjusting Hover Card */
+
+.card-display-container {
+  border-top-left-radius: var(--border-radius-SM);
+  border-bottom-left-radius: var(--border-radius-SM);
+  padding: 45px;
+  border: none;
+  max-width: 70%;
+  margin: auto 0 auto auto;
+  background: linear-gradient(to right, rgb(35, 37, 37), rgb(50, 50, 50));
+  flex-wrap: wrap;
+}
+
+.card-display {
+  flex-wrap: nowrap;
+  gap: 25px;
+  margin: 0;
+}
+
+.wrapper {
+  display: none;
+  position: relative;
+  opacity: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin-top: -3vh;
+  margin-bottom: -76vh;
+  z-index: 1000;
+  transition: all 0.8s ease-in-out;
+}
+
+.wrapper.show {
+  opacity: 1;
+  display: var(--flex-display);
+}
+
+.card-info {
+  flex-direction: var(--flex-column);
+  background-color: var(--title-color);
+  padding: 47px 60px 56px 60px;
+  border-top-right-radius: var(--border-radius-SM);
+  border-bottom-right-radius: var(--border-radius-SM);
+  max-width: 30%;
+  margin-right: auto;
+  height: 50%;
+  flex-grow: 1;
+}
+
+.card-info p {
+  max-width: 90%;
+  color: var(--white-C-BG);
+}
+
+.card-info label img {
+  max-width: 30px;
+  max-height: 30px;
+  margin-right: 8.5px;
+}
+
+.card-info label {
+  font-size: 23px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 3px;
+  margin: 10px 0;
+}
+
+.card-info button {
+  max-width: var(--full-width);
+  border-radius: var(--border-radius-SM);
+  padding: 10px var(--font-size-SM);
+  border: 1px solid var(--white-C-BG);
+  transition: var(--full-transition);
+  margin-top: 15px;
+}
+
+.card-info button:hover {
+  background-color: var(--title-color);
+  transform: scale(1.05);
+  color: var(--white-C-BG);
+}
+
+.card-info button:active {
+  transform: scale(0.95) translateY(2px);
+}
+
+.grid-1 h6,
+.grid-2 h6,
+.grid-3 h6 {
+  color: var(--title-color);
+  font-weight: var(--bold-font);
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 3px;
+  font-size: 25px;
+  margin: 0 0 var(--font-size-SM) 0;
+}
+
+.grid-1 a,
+.grid-2 a,
+.grid-3 a {
+  display: var(--flex-display);
+  font-weight: var(--bold-font);
+  text-decoration: none;
+  color: var(--white-C-BG);
+  margin-bottom: -15px;
+}
+
+/* Adjusting Analysis Btn */
+
+.btn-analysis {
+  display: var(--inline-block-display);
+  text-decoration: none;
+  color: var(--title-color);
+  background-color: var(--white-C-BG);
+  padding: 10px 20px;
+  border-radius: var(--border-radius-SM);
+  transition: var(--full-transition);
+  border: 2px solid var(--white-C-BG);
+  cursor: pointer;
+  margin-top: 13px;
+}
+
+.btn-analysis:hover {
+  background-color: var(--title-color);
+  color: var(--white-C-BG);
+  transform: scale(1.03);
+}
+
+.btn-analysis:active {
+  transform: scale(0.95) translateY(2px);
+}
+
 /* SWIPER */
 
 .swiper:not(.custom-swiper) {

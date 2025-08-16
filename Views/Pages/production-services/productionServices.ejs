@@ -5,6 +5,8 @@
   href="/Stylesheets/PRODUCTION SERVICES/production-services-styles.css"
 />
 
+<%- include('../../Solutions-Card/solutionsCard.ejs') %>
+
 <div class="production-service-container">
   <div class="hero d-g">
     <div class="hero-title">
@@ -331,6 +333,114 @@
       </div>
     </div>
   </div>
+  <div class="FAQ-section">
+    <div class="FAQ-heading">
+      <h6 class="text-title-size bold-text">
+        FREQUENTLY ASKED
+        <span class="text-title-color">QUESTIONS</span>
+      </h6>
+    </div>
+
+    <div class="FAQs">
+      <div class="FAQ-item">
+        <button class="FAQ-question d-f">
+          Why should I choose a Canadian digital media agency?
+          <span id="icon-5" class="FAQ-icon text-title-color">+</span>
+        </button>
+        <div class="FAQ-answer">
+          Canadian agencies have local market expertise, understand regional
+          consumer behavior, and comply with local regulations, ensuring
+          campaigns are effective and legally sound.
+        </div>
+      </div>
+
+      <div class="FAQ-item">
+        <button class="FAQ-question d-f">
+          How can digital media services boost my online presence?
+          <span id="icon-6" class="FAQ-icon text-title-color">+</span>
+        </button>
+        <div class="FAQ-answer">
+          Services like social media management, SEO, and content marketing
+          increase brand visibility, drive targeted traffic, and improve
+          engagement across digital platforms.
+        </div>
+      </div>
+
+      <div class="FAQ-item">
+        <button class="FAQ-question d-f">
+          Can I target audiences in specific Canadian provinces or cities?
+          <span id="icon-7" class="FAQ-icon text-title-color">+</span>
+        </button>
+        <div class="FAQ-answer">
+          Yes, we can create hyper-local campaigns targeting specific provinces,
+          cities, or even neighborhoods to reach the right audience effectively.
+        </div>
+      </div>
+
+      <div class="FAQ-item">
+        <button class="FAQ-question d-f">
+          What types of digital media campaigns do you offer?
+          <span id="icon-8" class="FAQ-icon text-title-color">+</span>
+        </button>
+        <div class="FAQ-answer">
+          We provide social media marketing, paid advertising, content
+          marketing, email campaigns, influencer collaborations, and full
+          digital branding services.
+        </div>
+      </div>
+    </div>
+
+    <div class="connect-prompt">
+      <img
+        src="https://www.creativesquad.ca/images/faqs_people.png"
+        alt="..."
+      />
+      <p class="bold-text">Still have questions?</p>
+      <p>
+        Can't find the answer you're looking for?<br />
+        Let's Connect.
+      </p>
+    </div>
+  </div>
+  <div class="contact-section d-g text-white">
+    <div class="idea-prompt d-f">
+      <p style="margin-left: 5px">Let's Talk</p>
+      <h6 class="text-title-size">
+        Got An Idea?<br />
+        <span class="bold-text">Let's get in touch!</span>
+      </h6>
+      <br />
+      <p>
+        Let's discuss your project and find out what we can do to provide value.
+      </p>
+    </div>
+    <div class="submit-form d-f">
+      <h6>Enter your details to get started.</h6>
+      <form class="form" action="/">
+        <input type="text" placeholder="Your Full Name" required />
+        <input
+          type="text"
+          pattern="[\d\s\(\)]*"
+          placeholder="Your Phone Number"
+          required
+        />
+        <input type="email" placeholder="Your Email Address" required />
+        <input type="text" placeholder="Enter Project Type" required />
+
+        <div id="spinner-overlay" style="z-index: 9999">
+          <div
+            class="spinner-border spinner spinner-border-sm"
+            role="status"
+            style="display: none; margin: 0 0 15px 47px"
+          ></div>
+        </div>
+
+        <button class="submit-btn bold-text">Submit</button>
+      </form>
+    </div>
+  </div>
 </div>
 
 <script src="/Javascripts/PRODUCTION SERVICES/production-services-js/services.js"></script>
+<script src="/Javascripts/PRODUCTION SERVICES/production-services-js/FAQ.js"></script>
+<script src="/Javascripts/PRODUCTION SERVICES/production-services-js/contact.js"></script>
