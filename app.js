@@ -40,6 +40,10 @@ app.get(`/refund-policy`, (req, res) => {
   res.render(`Pages/refund-policy/refundPolicy`);
 });
 
+app.get(`/testimonials`, (req, res) => {
+  res.render(`Pages/testimonials/testimonials`);
+});
+
 app.get(`/become-client`, (req, res) => {
   res.render(`Pages/become-client/becomeClient`);
 });

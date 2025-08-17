@@ -1140,9 +1140,14 @@ img,
   transition: var(--full-transition);
 }
 
-.submit-btn:hover {
+.submit-btn:hover:not(:disabled) {
   background-color: var(--contact-section-BG);
   color: var(--white-C-BG);
+}
+
+.disabled:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 /* Adjusting Hover Card */

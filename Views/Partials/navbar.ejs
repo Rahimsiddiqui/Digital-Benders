@@ -23,7 +23,7 @@
     transform: scale(1.05);
   }
   .btn:active {
-    transform: scale(0.95);
+    transform: scale(0.95) translateY(2px);
   }
   #getStartedBtn,
   #testimonialsBtn {
@@ -73,6 +73,9 @@
   }
   .container-fluid a {
     font-size: 20px;
+  }
+  .container-fluid .btn {
+    font-size: 17px;
   }
   .navbar {
     font-family: "Bebas Neue", sans-serif;
@@ -155,8 +158,10 @@
             >
           </li>
         </ul>
-        <button class="btn" id="testimonialsBtn">TESTIMONIALS</button>
-        <button class="btn" id="getStartedBtn">GET STARTED</button>
+        <a class="btn" id="testimonialsBtn" href="/testimonials"
+          >TESTIMONIALS</a
+        >
+        <a class="btn" id="getStartedBtn" href="/become-client">GET STARTED</a>
       </div>
     </div>
   </nav>
