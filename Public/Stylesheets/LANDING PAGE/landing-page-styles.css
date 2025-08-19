@@ -1257,6 +1257,10 @@ img,
   margin-bottom: -15px;
 }
 
+.wrapper .active {
+  color: var(--title-color);
+}
+
 /* Adjusting Analysis Btn */
 
 .btn-analysis {

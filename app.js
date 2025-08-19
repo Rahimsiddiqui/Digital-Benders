@@ -64,6 +64,16 @@ app.get(`/production-services-in-canada`, (req, res) => {
   res.render(`Pages/production-services/productionServices`);
 });
 
+app.get(`/landing-page-services-in-canada`, (req, res) => {
+  res.render(`Pages/landing-page-services/landingPageServices`);
+});
+
+app.get(`/ecommerce-development-services-in-canada`, (req, res) => {
+  res.render(
+    `Pages/ecommerce-development-services/ecommerceDevelopmentServices`
+  );
+});
+
 app.listen(3000, (req, res) => {
   console.log(`Server Started... (Express)`);
 });
