@@ -38,7 +38,7 @@
   --gap-SM: 20px;
   --full-width: 100%;
   --full-height: 100%;
-  --case-study-img: 450px;
+  --case-study-img: 400px;
   --full-transition: all 0.3s ease-in-out;
 }
 
@@ -227,7 +227,7 @@ img,
 
 .slide-track {
   padding-top: var(--font-size-SM);
-  animation: scroll 100s linear infinite;
+  animation: scroll 150s linear infinite;
 }
 
 .slide-track-articles {
@@ -640,8 +640,6 @@ img,
 .case-studies-container img {
   min-width: var(--case-study-img);
   min-height: var(--case-study-img);
-  max-width: var(--case-study-img);
-  max-height: var(--case-study-img);
   border-radius: var(--border-radius-SM);
   transition: var(--full-transition);
 }
