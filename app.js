@@ -74,6 +74,12 @@ app.get(`/ecommerce-development-services-in-canada`, (req, res) => {
   );
 });
 
+app.get(`/user-interface-experience-services-in-canada`, (req, res) => {
+  res.render(
+    `Pages/user-interface-experience-services/userInterfaceExperienceServices`
+  );
+});
+
 app.listen(3000, (req, res) => {
   console.log(`Server Started... (Express)`);
 });
