@@ -6,7 +6,7 @@ Thumbs.db
 *.log
 
 # Node.js (if using JS/React/Node)
-node_modules/
+node_modules
 npm-debug.log
 yarn-error.log
 .pnpm-debug.log
