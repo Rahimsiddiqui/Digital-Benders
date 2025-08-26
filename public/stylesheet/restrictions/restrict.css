@@ -1,0 +1,49 @@
+/* Restricting Margin & Padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Restricting Vertical Overflow */
+body {
+  overflow-x: hidden;
+}
+
+/* Restricting Bootstrap Focus Glow */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: inherit !important;
+}
+
+/* RESTRICTING NUMBER INPUT SPIN BUTTONS */
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* RESTRICTING AUTOCOMPLETE BACKGROUND HIGHLIGHT */
+
+/* Chrome, Safari */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+/* Firefox */
+input:autofill {
+  box-shadow: 0 0 0px 1000px white inset !important;
+}

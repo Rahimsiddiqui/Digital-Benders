@@ -1,0 +1,112 @@
+:root {
+  /* Colors */
+  --normal-clr-accent: #cb1212;
+  --hover-clr-accent: #bd0f0f;
+
+  /* Typography */
+
+  --bebas-neue-font: "Bebas Neue", sans-serif;
+  --mulish-font: "Mulish", sans-serif;
+  --poppins-font: "Poppins", sans-serif;
+  --montserrat-font: "Montserrat", sans-serif;
+
+  /* Sizes */
+  --size-4xs: 0.125rem;
+  --size-3xs: 0.25rem;
+  --size-2_5xs: 0.4rem;
+  --size-2xs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-4_5xl: 2.55rem;
+  --size-5xl: 3rem;
+  --size-5_6xl: 3.35rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-7_5xl: 5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+  --size-11xl: 12rem;
+  --size-12xl: 14rem;
+  --size-13xl: 16rem;
+  --size-14xl: 18rem;
+  --size-15xl: 20rem;
+  --size-16xl: 22rem;
+  --size-17xl: 24rem;
+  --size-18xl: 26rem;
+  --size-19xl: 28rem;
+  --size-20xl: 30rem;
+  --size-21xl: 32rem;
+  --size-22xl: 34rem;
+  --size-23xl: 36rem;
+  --size-24xl: 38rem;
+  --size-25xl: 40rem;
+}
+
+body {
+  font-family: var(--poppins-font);
+}
+
+img,
+svg,
+picture,
+video {
+  object-fit: cover;
+  object-position: center;
+  background-size: cover;
+  background-position: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.seo-only,
+.spinner {
+  display: none;
+}
+
+.full-width {
+  width: 100vw;
+  transform: translateX(-50%);
+  left: 50%;
+  position: relative;
+  background-color: white;
+}
+
+.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* xxs */
+@media (max-width: 319px) {
+  body {
+    transform: scale(0.9);
+  }
+}
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+/* @media (min-width: 1024px) {} */
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */

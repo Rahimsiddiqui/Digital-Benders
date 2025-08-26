@@ -1,0 +1,239 @@
+footer {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("https://www.creativesquad.ca/images/footer_background_mob.png");
+  padding-top: var(--size-4xl);
+  padding-bottom: var(--size-2xl);
+  font-family: var(--mulish-font);
+}
+
+.footer__brand-image img {
+  max-width: var(--size-12xl);
+  max-height: var(--size-12xl);
+  margin-bottom: var(--size-4xl);
+}
+
+.footer__links-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-xs);
+
+  & .footer__link {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: var(--size-sm);
+  }
+}
+
+.footer__info-container {
+  margin-top: var(--size-5xl);
+  font-size: var(--size-sm);
+
+  & .footer__info {
+    & p {
+      color: white;
+
+      & img {
+        display: none;
+      }
+    }
+
+    & p:not(:last-child) {
+      padding-bottom: var(--size-3xs);
+    }
+  }
+}
+
+.footer__media-links {
+  margin-top: var(--size-lg);
+  margin-bottom: var(--size-4xl);
+  padding: var(--size-sm);
+
+  & a:not(:last-child) {
+    margin-right: var(--size-2xs);
+  }
+
+  & a {
+    padding: var(--size-2xs);
+    border-radius: 50%;
+    background: white;
+    display: inline-flex;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: relative;
+
+    &:hover {
+      background: var(--normal-clr-accent);
+      transform: translateY(-2px);
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      & svg {
+        fill: white;
+      }
+    }
+
+    & svg {
+      fill: black;
+      width: var(--size-lg);
+      height: var(--size-lg);
+    }
+  }
+}
+
+.newsletter-container {
+  text-transform: uppercase;
+  padding-bottom: var(--size-xs);
+
+  & .newsletter__title {
+    font-weight: 600;
+    margin-bottom: var(--size-xs);
+    color: var(--normal-clr-accent);
+    font-size: var(--size-base);
+
+    & span {
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  & .form__input {
+    padding: var(--size-xs);
+    font-size: var(--size-sm);
+    border: none;
+    margin: 0 auto;
+
+    &::placeholder {
+      font-size: var(--size-xs);
+    }
+  }
+
+  & .newsletter__form {
+    width: 90vw;
+  }
+
+  & .input-group-text,
+  .form__tele-icon {
+    border: none;
+    border-radius: 0;
+    background: white;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  & .form__tele-icon:hover {
+    fill: var(--normal-clr-accent);
+  }
+}
+
+.footer__payment-methods {
+  border-top: 1px solid rgba(98, 98, 98, 0.61);
+  display: flex;
+  justify-content: center;
+  gap: var(--size-base);
+  align-items: center;
+  padding-top: var(--size-2xl);
+  width: 90vw;
+
+  & img {
+    max-width: var(--size-4xl);
+    max-height: var(--size-4xl);
+  }
+}
+
+.watermark {
+  color: white;
+  padding-top: var(--size-2xl);
+  font-size: var(--size-sm);
+}
+
+.spinner {
+  margin-bottom: var(--size-xs);
+}
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+@media (min-width: 768px) {
+  .newsletter__form,
+  .footer__payment-methods {
+    max-width: 768px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .footer__info,
+  .footer__links-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer__info-container {
+    & .footer__info {
+      gap: var(--size-2xl);
+      & p {
+        & img {
+          display: inline-block;
+          margin-right: var(--size-3xs);
+          max-width: var(--size-4xl);
+          max-height: var(--size-4xl);
+        }
+      }
+    }
+  }
+
+  .footer__brand-image {
+    & img {
+      max-width: var(--size-13xl);
+      max-height: var(--size-13xl);
+      margin-bottom: var(--size-5xl);
+    }
+  }
+
+  .footer__links-container {
+    gap: var(--size-base);
+  }
+
+  .footer__media-links {
+    & a:not(:last-child) {
+      margin-right: var(--size-xs);
+    }
+
+    & a {
+      padding: var(--size-xs);
+    }
+  }
+
+  .newsletter-container {
+    padding-bottom: var(--size-lg);
+    & .newsletter__title {
+      margin-bottom: var(--size-sm);
+      font-size: var(--size-lg);
+    }
+  }
+
+  .footer__payment-methods {
+    gap: var(--size-2xl);
+  }
+
+  .watermark {
+    padding-top: var(--size-2xl);
+    font-size: var(--size-base);
+  }
+}
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
