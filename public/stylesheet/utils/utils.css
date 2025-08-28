@@ -3,6 +3,7 @@
   --normal-clr-accent: #cb1212;
   --hover-clr-accent: #bd0f0f;
   --muted-clr-accent: #3d3d3d;
+  --section-bg: #f9f9f9;
 
   /* Shadows */
   --card-shadow: 0 4px 20px hsla(0, 0%, 52%, 0.3);
@@ -25,7 +26,9 @@
   --size-lg: 1.125rem;
   --size-xl: 1.25rem;
   --size-2xl: 1.5rem;
+  --size-2_5xl: 1.65rem;
   --size-3xl: 1.875rem;
+  --size-3_5xl: 2rem;
   --size-4xl: 2.25rem;
   --size-4_5xl: 2.55rem;
   --size-5xl: 3rem;
@@ -72,6 +75,22 @@ a {
   text-decoration: none;
 }
 
+img[alt] {
+  font-weight: 400;
+  text-transform: capitalize;
+  font-family: var(--montserrat-font);
+}
+
+[class*="section-"] {
+  padding-top: var(--size-5xl);
+  padding-bottom: var(--size-5xl);
+
+  &:first-child {
+    padding-top: 0;
+    padding-bottom: var(--size-2xl);
+  }
+}
+
 .seo-only,
 .spinner {
   display: none;
@@ -88,6 +107,67 @@ a {
 .disabled {
   opacity: 0.7;
   cursor: not-allowed;
+}
+
+.btn-sm,
+.btn-md,
+.btn-invert {
+  border: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-sm,
+.btn-md {
+  background-color: var(--normal-clr-accent);
+  border: 2px solid var(--normal-clr-accent);
+  color: white;
+
+  &:hover {
+    background-color: var(--hover-clr-accent);
+    border-color: var(--hover-clr-accent);
+  }
+}
+
+.btn-sm,
+.btn-invert {
+  padding: 6px 20px;
+}
+.btn-md {
+  padding: 8px 25px;
+}
+.btn-invert {
+  color: var(--normal-clr-accent);
+  border: 2px solid var(--normal-clr-accent);
+
+  &:hover {
+    background-color: var(--normal-clr-accent);
+    color: white;
+  }
+}
+
+/* Disable Selection Globally */
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* CUSTOMIZING SCROLLBAR */
+
+/* Chrome, Safari, Edge, Opera */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #bebdbd;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: #000;
 }
 
 /* xxs */
