@@ -1,3 +1,62 @@
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<!-- Barba -->
+<script src="https://unpkg.com/@barba/core"></script>
+
+<!-- Barba GSAP Setup -->
+<script>
+  // Initialize Barba
+  barba.init({
+    transitions: [
+      {
+        name: "fade",
+        leave(data) {
+          return gsap.to(data.current.container, {
+            opacity: 0,
+            duration: 0.5,
+            backgroundColor: "#f2f2f2",
+          });
+        },
+        enter(data) {
+          return gsap.from(data.next.container, {
+            opacity: 0,
+            duration: 0.5,
+            backgroundColor: "#f2f2f2",
+          });
+        },
+      },
+    ],
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const overlay = document.getElementById("flash");
+
+    // Fade-in overlay when leaving
+    document.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const url = link.getAttribute("href");
+        if (!url || url.startsWith("#") || link.target === "_blank") return;
+
+        e.preventDefault();
+
+        gsap.to(overlay, {
+          opacity: 1,
+          duration: 0.4,
+          onComplete: () => {
+            window.location.href = url;
+          },
+        });
+      });
+    });
+
+    // Fade-out overlay when arriving
+    gsap.fromTo(overlay, { opacity: 1 }, { opacity: 0, duration: 0.4 });
+  });
+</script>
+
 <!-- Bootstrap -->
 
 <script
@@ -29,6 +88,23 @@
     s0.parentNode.insertBefore(s1, s0);
   })();
 </script>
+
+<!-- Restricting Pace.js -->
+
+<script>
+  window.paceOptions = {
+    ajax: false,
+    document: true,
+    eventLag: false,
+    elements: {
+      selectors: [],
+    },
+  };
+</script>
+
+<!-- Pace.js Script -->
+
+<script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
 
 <!-- Restriciting Functions -->
 

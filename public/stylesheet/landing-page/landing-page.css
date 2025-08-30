@@ -254,7 +254,8 @@
 }
 
 /* BRAND GROWING */
-.brand-growing-container {
+.brand-growing-container,
+.services-container {
   max-width: 90%;
   margin: auto;
 }
@@ -311,34 +312,139 @@
 }
 
 /* Card internals (flattened) */
-.card__content {
+.brand-growing__card .card__content {
   margin-bottom: var(--size-3xl);
 }
 
-.card__content h4 {
+.brand-growing__card .card__content h4 {
   font-size: var(--size-sm);
   text-transform: uppercase;
 }
 
-.card__content h4 img {
+.brand-growing__card .card__content h4 img {
   margin-right: var(--size-2xs);
   vertical-align: middle;
 }
 
-.card__content p {
+.brand-growing__card .card__content p {
   font-size: var(--size-sm);
   color: var(--muted-clr-accent);
 }
 
-.card__main-image {
+.brand-growing__card .card__main-image {
   text-align: center;
   margin-bottom: var(--size-3xl);
 }
 
-.card__main-image img {
+.brand-growing__card .card__main-image img {
   border-radius: 8px;
   width: 100%;
   height: auto;
+}
+
+.section-5 {
+  background: var(--section-bg);
+}
+
+.services-container .services__header {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  font-size: var(--size-2xl);
+}
+
+.services-container .services__header span {
+  color: var(--normal-clr-accent);
+}
+
+.services-cards-container {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.services-cards-container .services__card {
+  padding-bottom: var(--size-3_5xl);
+  box-shadow: var(--card-shadow);
+  margin-top: var(--size-2xl);
+  border-radius: 13px;
+}
+
+.services-cards-container .services__card:first-child {
+  margin-top: var(--size-5xl);
+}
+
+.services__card.active .shown__card {
+  display: none;
+}
+
+.services__card .card__header {
+  padding: var(--size-2xl) var(--size-2xl) var(--size-10xl) var(--size-2xl);
+  border-top-right-radius: 13px;
+  border-top-left-radius: 13px;
+  position: relative;
+}
+
+.services__card .card__header-inner,
+.services__card .card__content-inner {
+  max-width: 78%;
+  margin: 0 auto;
+}
+
+.services__card .card__main-image {
+  position: relative;
+}
+
+.services__card .card__main-image img {
+  position: absolute;
+  top: var(--size-xl);
+  left: var(--size-2xs);
+  max-width: var(--size-5_5xl);
+  height: auto;
+}
+
+.services__card .card__title {
+  position: absolute;
+  bottom: 0;
+  left: var(--size-3xl);
+  color: var(--normal-clr-accent);
+  font-size: var(--size-xl);
+  letter-spacing: -0.1px;
+}
+
+.services__card .card__description {
+  font-size: var(--size-base);
+  color: black;
+  padding-bottom: var(--size-6xl);
+}
+
+.services__card .card__changer {
+  font-size: var(--size-base);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.services__card .card__changer img {
+  padding-left: var(--size-3xs);
+  max-width: var(--size-3xl);
+  height: auto;
+}
+
+.services__card .hidden__card {
+  display: none;
+}
+
+.services__card.active .hidden__card {
+  display: block;
+}
+
+.hidden__card .card__header {
+  background-color: var(--card-red-bg);
+}
+
+.hidden__card .card__title {
+  color: white;
+  bottom: var(--size-xl);
 }
 
 /* SWIPER */
@@ -415,7 +521,7 @@
   }
 
   .hero__title {
-    font-size: var(--size-5_6xl);
+    font-size: var(--size-5_5xl);
     padding: var(--size-7xl) 0 var(--size-2xl) 0;
   }
 
@@ -430,7 +536,8 @@
   }
 
   .providing-results-container header,
-  .results-cards .card {
+  .results-cards .card,
+  .testimonials-cards-container .card {
     max-width: 700px;
   }
 
@@ -440,10 +547,6 @@
 
   .results-cards .card .card__content h3 {
     font-size: var(--size-2xl);
-  }
-
-  .testimonials-cards-container .card {
-    max-width: 700px;
   }
 
   .about-company-container {
@@ -507,8 +610,18 @@
   }
 
   .section-2,
-  .section-3 {
+  .section-3,
+  .section-5 {
     padding: 0 var(--size-6xl);
+  }
+
+  .section-3,
+  .section-5 {
+    padding-top: var(--size-5xl);
+  }
+
+  .section-5 {
+    padding-bottom: var(--size-5xl);
   }
 
   .about-company-container {
@@ -536,7 +649,7 @@
     flex-wrap: nowrap;
     justify-content: space-evenly;
     box-shadow: var(--card-shadow);
-    gap: var(--size-4xs);
+    gap: 0;
   }
 
   /* Show only active card as grid on large screens */
@@ -556,7 +669,7 @@
   }
 
   .brand-growing__card.active .card__main-image img {
-    max-width: 500px;
+    max-width: 550px;
   }
 }
 
@@ -618,5 +731,9 @@
 
   .brand-growing__card .card__content:not(:last-child) {
     margin-bottom: var(--size-2xl);
+  }
+
+  .brand-growing__card.active {
+    max-width: 82%;
   }
 }

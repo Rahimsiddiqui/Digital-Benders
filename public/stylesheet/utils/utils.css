@@ -3,6 +3,7 @@
   --normal-clr-accent: #cb1212;
   --hover-clr-accent: #bd0f0f;
   --muted-clr-accent: #3d3d3d;
+  --card-red-bg: #d11413;
   --section-bg: #f9f9f9;
 
   /* Shadows */
@@ -16,6 +17,7 @@
   --montserrat-font: "Montserrat", sans-serif;
 
   /* Sizes */
+  --size-5xs: 0.075rem;
   --size-4xs: 0.125rem;
   --size-3xs: 0.25rem;
   --size-2_5xs: 0.4rem;
@@ -32,13 +34,15 @@
   --size-4xl: 2.25rem;
   --size-4_5xl: 2.55rem;
   --size-5xl: 3rem;
-  --size-5_6xl: 3.35rem;
+  --size-5_5xl: 3.35rem;
   --size-6xl: 3.75rem;
   --size-7xl: 4.5rem;
   --size-7_5xl: 5rem;
   --size-8xl: 6rem;
   --size-9xl: 8rem;
+  --size-9_5xl: 9rem;
   --size-10xl: 10rem;
+  --size-10_5xl: 11rem;
   --size-11xl: 12rem;
   --size-12xl: 14rem;
   --size-13xl: 16rem;

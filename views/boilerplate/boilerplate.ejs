@@ -12,10 +12,15 @@
     <!-- Restrictions CSS -->
     <link rel="stylesheet" href="/stylesheet/restrictions/restrict.css" />
 
+    <!-- Overlay (full-screen) -->
+    <div id="flash"></div>
+
     <!-- Navbar -->
     <%- include(`../partials/navbar`) %>
     <!-- Main Content -->
-    <main><%- body %></main>
+    <div id="barba-wrapper" data-barba="wrapper">
+      <main data-barba="container"><%- body %></main>
+    </div>
     <!-- Footer -->
     <%- include(`../partials/footer`) %>
 
