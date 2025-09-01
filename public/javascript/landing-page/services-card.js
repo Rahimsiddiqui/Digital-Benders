@@ -6,16 +6,18 @@ cards.forEach((card) => {
   if (!cardChanger) return;
 
   // MOBILE / CLICK
-  cardChanger.addEventListener("click", () => {
+  cardChanger.addEventListener("click", (e) => {
+    e.preventDefault();
     card.classList.toggle("active");
-    console.log(mainImage);
   });
 
   // DESKTOP / HOVER
-  cardChanger.addEventListener("mouseenter", () => {
+  cardChanger.addEventListener("mouseenter", (e) => {
+    e.preventDefault();
     card.classList.add("active");
   });
-  card.addEventListener("mouseleave", () => {
+  card.addEventListener("mouseleave", (e) => {
+    e.preventDefault();
     card.classList.remove("active");
   });
 });
