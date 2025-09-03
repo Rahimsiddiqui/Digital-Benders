@@ -38,6 +38,10 @@ footer {
     & p {
       color: white;
 
+      & a {
+        color: white;
+      }
+
       & img {
         display: none;
       }

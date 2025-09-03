@@ -66,6 +66,10 @@
       border-color: var(--hover-clr-accent);
       background-color: var(--hover-clr-accent);
     }
+
+    &:active {
+      color: white;
+    }
   }
 }
 

@@ -489,8 +489,89 @@
   right: 0;
 }
 
+.case-studies-container {
+  max-width: 100%;
+}
+
+.case-studies-container header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+header .case-studies__title,
+header .case-studies__subtitle {
+  font-weight: 600;
+}
+
+header .case-studies__title span,
+header .case-studies__subtitle {
+  color: var(--normal-clr-accent);
+}
+
+header .case-studies__title {
+  font-size: var(--size-2xl);
+  margin-top: var(--size-xs);
+  letter-spacing: 0.5px;
+}
+
+header .case-studies__subtitle {
+  letter-spacing: 10px;
+  font-size: var(--size-base);
+}
+
+.case-studies__swiper .swiper-slide {
+  max-width: 90%;
+  margin: 0 auto !important;
+}
+
+.case-studies__swiper .swiper-slide img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  margin: var(--size-3xl) 0;
+}
+
+.case-studies__swiper .swiper__content,
+.swiper__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.case-studies__swiper .swiper__content {
+  width: 92.5%;
+  margin: 0 auto;
+  gap: var(--size-xs);
+}
+
+.case-studies__swiper .swiper__heading,
+.case-studies__swiper .swiper__button {
+  font-weight: 600;
+}
+
+.case-studies__swiper .swiper__heading {
+  color: var(--normal-clr-accent);
+  font-size: var(--size-lg);
+}
+
+.case-studies__swiper .swiper__button {
+  font-size: var(--size-xs);
+  gap: var(--size-2xs);
+}
+
+.case-studies__swiper .swiper__button a {
+  border: 3px solid var(--normal-clr-accent);
+  border-radius: 50%;
+}
+
+.case-studies__swiper .swiper__button svg {
+  padding: 1px 4px;
+  fill: var(--normal-clr-accent);
+  transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
 /* SWIPER */
-.swiper {
+/*  .swiper {
   width: 100vw;
   height: var(--size-10xl);
 }
@@ -505,7 +586,7 @@
 .swiper__image {
   max-width: var(--size-9xl);
   max-height: var(--size-9xl);
-}
+} */
 
 /* ========= Responsive / Breakpoints ========= */
 
@@ -530,6 +611,10 @@
 
   .services-container .services__header {
     font-size: var(--size-2_5xl);
+  }
+
+  .case-studies__swiper .swiper__heading {
+    font-size: var(--size-base);
   }
 }
 
@@ -734,7 +819,7 @@
   }
 
   .services__card {
-    min-width: 335px;
+    min-width: 300px;
   }
 
   .services__card .card__header-inner {
