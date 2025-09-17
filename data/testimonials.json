@@ -1,0 +1,20 @@
+[
+  {
+    "id": "testimonial-1",
+    "video": "https://www.youtube.com/embed/U1USZs8AoQ0",
+    "title": "Tru Off Grid",
+    "description": "Their satisfaction motivates us."
+  },
+  {
+    "id": "testimonial-2",
+    "video": "https://www.youtube.com/embed/L_thYvisr8s",
+    "title": "Empowerment Project",
+    "description": "Proud to highlight our client's journey."
+  },
+  {
+    "id": "testimonial-3",
+    "video": "https://www.youtube.com/embed/emRxmtX9FNE",
+    "title": "Meadows Equine",
+    "description": "Proud to highlight our client's journey."
+  }
+]

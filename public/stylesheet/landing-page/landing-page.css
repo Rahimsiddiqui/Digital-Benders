@@ -104,8 +104,8 @@
   border-radius: 50%;
   border: 2px solid var(--normal-clr-accent);
   margin-left: var(--size-2_5xs);
-  padding: 1px;
-  padding-bottom: 0.18em;
+  padding: 1px 1.5px;
+  padding-bottom: 0.2em;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -499,6 +499,9 @@
 
 .case-studies-container {
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .case-studies-container .swiper {
@@ -534,6 +537,41 @@ header .case-studies__subtitle {
   font-size: var(--size-base);
 }
 
+.case-studies-container .case-studies__link {
+  max-width: 130px;
+  margin: var(--size-2xl) auto;
+  border: 2px solid var(--normal-clr-accent);
+  box-shadow: var(--card-shadow);
+  color: var(--normal-clr-accent);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: var(--size-sm);
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+
+  &:hover {
+    background-color: var(--normal-clr-accent);
+    color: white;
+
+    & svg {
+      fill: white;
+    }
+  }
+}
+
+.case-studies-container .case-studies__link svg {
+  fill: var(--normal-clr-accent);
+  margin-left: var(--size-4xs);
+  padding-bottom: 0.1em;
+  width: 15px;
+  height: auto;
+  transition: fill 0.3s ease-in-out;
+
+  &:hover {
+    fill: white;
+  }
+}
+
 .case-studies__swiper {
   max-width: 90%;
   margin: 0 auto;
@@ -544,6 +582,11 @@ header .case-studies__subtitle {
   width: 100%;
   height: auto;
   margin: var(--size-3xl) 0;
+  transition: transform 0.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
 }
 
 .case-studies__swiper .swiper__content,
@@ -577,15 +620,22 @@ header .case-studies__subtitle {
 .case-studies__swiper .swiper__button a {
   border: 3px solid var(--normal-clr-accent);
   border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--normal-clr-accent);
+  }
 }
 
 .case-studies__swiper .swiper__button svg {
   padding: 1px 4px;
   fill: var(--normal-clr-accent);
-  transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
+  transition: fill 0.3s ease-in-out;
 
-/* SWIPER */
+  &:hover {
+    fill: white;
+  }
+}
 
 /* Hero Swiper */
 .hero__swiper {
@@ -910,6 +960,16 @@ header .case-studies__subtitle {
 
   .services__card .card__title {
     font-size: var(--size-2xl);
+  }
+
+  .case-studies-container .case-studies__link {
+    margin: var(--size-3_5xl) auto;
+    font-size: var(--size-base);
+  }
+
+  .case-studies-container .case-studies__link svg {
+    padding-bottom: 0.2em;
+    width: 18px;
   }
 }
 
