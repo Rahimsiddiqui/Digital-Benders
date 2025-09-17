@@ -93,6 +93,10 @@ img[alt] {
   padding-top: var(--size-5xl);
   padding-bottom: var(--size-5xl);
 
+  &:nth-child(2) {
+    padding-top: 0;
+  }
+
   &:first-child {
     padding-top: 0;
     padding-bottom: var(--size-2xl);
