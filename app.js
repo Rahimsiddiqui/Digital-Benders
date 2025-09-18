@@ -24,6 +24,7 @@ app.get("/", (req, res) => {
   const caseStudies = loadJSON("caseStudies.json");
   const results = loadJSON("results.json");
   const testimonials = loadJSON("testimonials.json");
+  const developmentProcess = loadJSON("developmentProcess.json");
 
   res.render("pages/landing-page", {
     caseStudies,
@@ -31,6 +32,7 @@ app.get("/", (req, res) => {
     results,
     testimonials,
     brandGrowing,
+    developmentProcess,
   });
 });
 

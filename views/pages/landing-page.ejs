@@ -515,9 +515,50 @@
       ></a>
     </div>
   </section>
-
-  <!-- <section class="full-width section-7"></section>
-  <section class="full-width section-8"></section>
+  <section class="full-width section-7">
+    <div class="development-process-container">
+      <header>
+        <h3>
+          Full Cycle Development Process <br />
+          <span>For Inspiring Online Experiences</span>
+        </h3>
+        <div class="process__btns-container">
+          <% developmentProcess.forEach(card => { %>
+          <button class="process__btn" data-card="<%= card.id + 1 %>">
+            <%- card.button %>
+          </button>
+          <img
+            src="https://www.creativesquad.ca/images/dev_process_chevronleft.svg"
+            alt="Left Chevorn Image"
+            loading="lazy"
+          />
+          <% }) %>
+        </div>
+      </header>
+      <div class="process__cards-container">
+        <% developmentProcess.forEach(card => { %>
+        <div class="process__card" id="<%= card.id + 1 %>">
+          <div class="card__main-image">
+            <img src="<%- card.image %>" alt="<%- card.title %>" />
+          </div>
+          <div class="card__content">
+            <h4 class="card__header"><%= card.title %></h4>
+            <p class="card__paragraph"><%= card.description %></p>
+          </div>
+          <a href="<%- card.link %>" class="card__link">Read More</a>
+        </div>
+        <% }) %>
+        <div class="card__note">
+          <p class="note__paragraph">
+            We put transparency and honesty first. Strong communication and a
+            result-driven approach have always made it possible.
+          </p>
+          <a href="/who-we-are" class="note__btn">Who We Are</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="full-width section-8"></section>
   <section class="full-width section-9"></section>
   <section class="full-width section-10"></section> -->
 </div>
@@ -528,4 +569,5 @@
 <!-- JS -->
 <script src="/javascript/landing-page/swiper.js"></script>
 <script src="/javascript/landing-page/growing-business.js"></script>
+<script src="/javascript/landing-page/development-process.js"></script>
 <script src="/javascript/landing-page/services-card.js"></script>
