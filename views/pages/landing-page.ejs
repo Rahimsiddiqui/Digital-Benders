@@ -524,7 +524,7 @@
         </h3>
         <div class="process__btns-container">
           <% developmentProcess.forEach(card => { %>
-          <button class="process__btn" data-card="<%= card.id + 1 %>">
+          <button class="process__btn" data-card="<%= card.id %>">
             <%- card.button %>
           </button>
           <img
@@ -537,15 +537,15 @@
       </header>
       <div class="process__cards-container">
         <% developmentProcess.forEach(card => { %>
-        <div class="process__card" id="<%= card.id + 1 %>">
+        <div class="process__card" id="<%= card.id %>">
           <div class="card__main-image">
             <img src="<%- card.image %>" alt="<%- card.title %>" />
           </div>
           <div class="card__content">
             <h4 class="card__header"><%= card.title %></h4>
             <p class="card__paragraph"><%= card.description %></p>
+            <a href="<%- card.link %>" class="card__link">Read More</a>
           </div>
-          <a href="<%- card.link %>" class="card__link">Read More</a>
         </div>
         <% }) %>
         <div class="card__note">
@@ -553,7 +553,7 @@
             We put transparency and honesty first. Strong communication and a
             result-driven approach have always made it possible.
           </p>
-          <a href="/who-we-are" class="note__btn">Who We Are</a>
+          <a href="/who-we-are" class="note__btn">About Us</a>
         </div>
       </div>
     </div>
