@@ -469,7 +469,7 @@
       <div class="case-studies__swiper swiper">
         <div class="swiper-wrapper">
           <% caseStudies.forEach(study => { %>
-          <div class="swiper-slide" id="case-<%= study.id %>">
+          <div class="swiper-slide" id="<%= study.id %>">
             <div class="swiper__image">
               <img
                 src="<%= study.image %>"
@@ -558,8 +558,40 @@
       </div>
     </div>
   </section>
-  <!-- <section class="full-width section-8"></section>
-  <section class="full-width section-9"></section>
+  <section class="full-width section-8">
+    <div class="recent-articles-container">
+      <header>
+        <h5 class="recent-articles__subtitle">Recent Articles</h5>
+        <h3 class="recent-articles__title">
+          Every single update and <span>story from our journal</span>
+        </h3>
+      </header>
+      <div class="recent-articles__swiper">
+        <div class="swiper-wrapper">
+          <% recentArticles.forEach(article => { %>
+          <div class="swiper-slide" id="<%- article.id %>">
+            <div class="swiper__main-image">
+              <img
+                src="<%- article.image %>"
+                alt="<%- article.alt %>"
+                loading="lazy"
+              />
+            </div>
+            <div class="swiper__content">
+              <span class="swiper__date"><%= article.date %></span>
+              <h4 class="swiper__heading"><%= article.heading %></h4>
+              <p class="swiper__description"><%= article.description %></p>
+              <a href="/blogs/<%- article.link %>" class="swiper__link"
+                >Read More</a
+              >
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="full-width section-9"></section>
   <section class="full-width section-10"></section> -->
 </div>
 

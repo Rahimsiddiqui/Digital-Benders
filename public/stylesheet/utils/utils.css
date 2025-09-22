@@ -182,13 +182,6 @@ img[alt] {
   background: #000;
 }
 
-/* xxs */
-@media (max-width: 319px) {
-  body {
-    transform: scale(0.9);
-  }
-}
-
 /* xs */
 /* @media (min-width: 475px) {} */
 

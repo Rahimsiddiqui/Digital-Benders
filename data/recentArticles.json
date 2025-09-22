@@ -1,0 +1,38 @@
+[
+  {
+    "id": "article-1",
+    "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1733517641561-Web%20Development%20and%20Design%20Services%20in%20Toronto.jpg",
+    "alt": "Professional Web Development and Design Services Image",
+    "date": "6/12/2024",
+    "heading": "Building a Strong Digital Presence: The Importance of Professional Web Development and Design Services",
+    "description": "A business’s website is often the first point of contact between the company and potential customers. This makes web development and web design services not just important but absolutely essential for creating a strong online presence. A professio...",
+    "link": "building-a-strong-digital-presence-the-importance-of-professional-web-development-and-design-services"
+  },
+  {
+    "id": "article-2",
+    "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1736255854403-Search%20Engine%20Optimization.jpg",
+    "alt": "Comprehensive Optimization Services Image",
+    "date": "7/1/2024",
+    "heading": "Optimize Your Website for Success with Comprehensive Optimization Services",
+    "description": "Your website is often the first impression customers have of your business. A well-designed website is crucial, but without optimization, even the most stunning site may fall short in driving traffic and achieving conversions. This is where websit...",
+    "link": "optimize-your-website-for-success-with-comprehensive-optimization-services"
+  },
+  {
+    "id": "article-3",
+    "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1736257265315-Google+Advertising.jpg",
+    "alt": "Guide to Local Success Image",
+    "date": "7/1/2024",
+    "heading": "Harness the Power of Google Advertising: Your Guide to Local Success",
+    "description": "Advertising on Google is more than just a marketing strategy—it's a necessity for businesses aiming to stay competitive. Whether you’re targeting a global audience or focusing on local customers, Google advertising offers tools and features to mat...",
+    "link": "harness-the-power-of-google-advertising-your-guide-to-local-success"
+  },
+  {
+    "id": "article-4",
+    "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1739220540870-SEO%20Services%20in%20Canada.png",
+    "alt": "Expert Website Optimization Services Image",
+    "date": "10/2/2024",
+    "heading": "Transform Your Online Presence with Expert Website Optimization Services",
+    "description": "Your website is the face of your business. If it’s slow, outdated, or difficult to navigate, potential customers may leave before they even get to know your brand. That’s where website optimization services come into play. By improving the structu...",
+    "link": "transform-your-online-presence-with-expert-website-optimization-services"
+  }
+]
