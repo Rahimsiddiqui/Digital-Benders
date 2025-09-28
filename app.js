@@ -19,13 +19,13 @@ app.use(express.static(path.join(__dirname, `public`)));
 app.engine(`ejs`, ejsMate);
 
 app.get("/", (req, res) => {
-  const brandGrowing = loadJSON("brandGrowing.json");
-  const services = loadJSON("services.json");
-  const caseStudies = loadJSON("caseStudies.json");
-  const results = loadJSON("results.json");
-  const testimonials = loadJSON("testimonials.json");
-  const developmentProcess = loadJSON("developmentProcess.json");
-  const recentArticles = loadJSON("recentArticles.json");
+  const brandGrowing = loadJSON("landing-page/brandGrowing.json");
+  const services = loadJSON("landing-page/services.json");
+  const caseStudies = loadJSON("landing-page/caseStudies.json");
+  const results = loadJSON("landing-page/results.json");
+  const testimonials = loadJSON("landing-page/testimonials.json");
+  const developmentProcess = loadJSON("landing-page/developmentProcess.json");
+  const recentArticles = loadJSON("landing-page/recentArticles.json");
 
   res.render("pages/landing-page", {
     caseStudies,

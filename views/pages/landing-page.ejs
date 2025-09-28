@@ -539,7 +539,11 @@
         <% developmentProcess.forEach(card => { %>
         <div class="process__card" id="<%= card.id %>">
           <div class="card__main-image">
-            <img src="<%- card.image %>" alt="<%- card.title %>" />
+            <img
+              src="<%- card.image %>"
+              alt="<%- card.title %>"
+              loading="lazy"
+            />
           </div>
           <div class="card__content">
             <h4 class="card__header"><%= card.title %></h4>
@@ -565,11 +569,12 @@
         <h3 class="recent-articles__title">
           Every single update and <span>story from our journal</span>
         </h3>
+        <div class="text-horizontal-line"></div>
       </header>
-      <div class="recent-articles__swiper">
+      <div class="recent-articles__swiper swiper">
         <div class="swiper-wrapper">
           <% recentArticles.forEach(article => { %>
-          <div class="swiper-slide" id="<%- article.id %>">
+          <div class="swiper-slide">
             <div class="swiper__main-image">
               <img
                 src="<%- article.image %>"
@@ -581,12 +586,28 @@
               <span class="swiper__date"><%= article.date %></span>
               <h4 class="swiper__heading"><%= article.heading %></h4>
               <p class="swiper__description"><%= article.description %></p>
-              <a href="/blogs/<%- article.link %>" class="swiper__link"
+              <a
+                href="/blogs/<%- article.link %>"
+                class="swiper__link btn-invert"
                 >Read More</a
               >
             </div>
           </div>
           <% }) %>
+        </div>
+        <div class="swiper-next">
+          <img
+            src="https://www.creativesquad.ca/images/icons/next.svg"
+            alt="Navigation 'Next' Control"
+            loading="lazy"
+          />
+        </div>
+        <div class="swiper-prev">
+          <img
+            src="https://www.creativesquad.ca/images/icons/next.svg"
+            alt="Navigation 'Previous' Control"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>

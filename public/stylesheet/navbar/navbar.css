@@ -133,7 +133,7 @@
 
   & .sidebar__mobile-btns {
     & .btn {
-      font-size: var(--size-base);
+      font-size: var(--size-md);
       font-weight: bold;
       border-color: var(--normal-clr-accent);
       background-color: var(--normal-clr-accent);

@@ -99,7 +99,7 @@ footer {
     font-weight: 600;
     margin-bottom: var(--size-xs);
     color: var(--normal-clr-accent);
-    font-size: var(--size-base);
+    font-size: var(--size-md);
 
     & span {
       font-weight: bold;
@@ -139,7 +139,7 @@ footer {
   border-top: 1px solid rgba(98, 98, 98, 0.61);
   display: flex;
   justify-content: center;
-  gap: var(--size-base);
+  gap: var(--size-md);
   align-items: center;
   padding-top: var(--size-2xl);
   width: 90vw;
@@ -205,7 +205,7 @@ footer {
   }
 
   .footer__links-container {
-    gap: var(--size-base);
+    gap: var(--size-md);
   }
 
   .footer__media-links {
@@ -232,7 +232,7 @@ footer {
 
   .watermark {
     padding-top: var(--size-2xl);
-    font-size: var(--size-base);
+    font-size: var(--size-md);
   }
 }
 
