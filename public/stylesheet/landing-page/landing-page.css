@@ -667,6 +667,11 @@ header .case-studies__subtitle {
 .case-studies__swiper {
   max-width: 90%;
   margin: 0 auto;
+  cursor: pointer;
+}
+
+.case-studies__swiper .swiper-slide {
+  cursor: pointer;
 }
 
 .case-studies__swiper .swiper-slide img {
@@ -1144,6 +1149,16 @@ header .reassuring-text {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 90%;
+  }
+
+  .faq__question,
+  .faq__answer {
+    align-self: normal;
+    text-align: left;
+  }
+
+  .faq__answer {
+    margin-top: var(--size-md);
   }
 
   .faq__question {

@@ -21,7 +21,7 @@ faqs.forEach((faq) => {
       answer.style.maxHeight = "0";
       setTimeout(() => {
         answer.style.marginTop = "0";
-      }, 300); // match CSS transition time
+      }, 400); // match CSS transition time
       icon.src = "https://www.creativesquad.ca/images/faqs_plus.svg";
     }
   };
