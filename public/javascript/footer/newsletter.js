@@ -2,7 +2,7 @@
 const form = document.querySelector(".newsletter__form");
 const subscribeInput = document.querySelector(".form__input");
 const telegramIcon = document.querySelector(".form__tele-icon");
-const spinner = document.querySelector(".spinner");
+const spinner = document.querySelector(".newsletter-spinner");
 
 // Function To Check If Form Is Filled
 const isFormFilled = (form) => {
@@ -12,7 +12,7 @@ const isFormFilled = (form) => {
 };
 
 // Function To Handle Form Submit
-function handleSubmit(e) {
+function handleSubmitNewsletter(e) {
   e.preventDefault();
 
   // Storing Input Value So It Is Safe
@@ -50,3 +50,5 @@ function handleSubmit(e) {
     form.reset();
   }, 3000);
 }
+
+form.addEventListener("submit", handleSubmitNewsletter);

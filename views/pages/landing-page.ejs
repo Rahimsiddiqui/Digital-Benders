@@ -656,7 +656,62 @@
       </div>
     </div>
   </section>
-  <!-- <section class="full-width section-10"></section> -->
+  <section class="full-width section-10">
+    <div class="contact-section-container">
+      <header>
+        <h6 class="contact-section__subtitle">Let's Talk</h6>
+        <h3 class="contact-section__title">
+          Got an Idea? <br />
+          <span>Let's get in touch</span>
+        </h3>
+        <p class="contact-section__description">
+          Let’s discuss your project and find out what we can do to provide
+          value.
+        </p>
+      </header>
+      <form class="contact-section__form">
+        <p class="inputs__detail-paragraph">
+          Enter your details below to get started.
+        </p>
+        <div class="contact-section__inputs">
+          <input
+            type="text"
+            class="contact-section__input"
+            placeholder="Your Full Name"
+            required
+          />
+          <input
+            type="text"
+            class="contact-section__input"
+            placeholder="Your Phone Number"
+            id="customNumberInput"
+            required
+          />
+          <input
+            type="email"
+            class="contact-section__input"
+            placeholder="Your Email Address"
+            required
+          />
+          <input
+            type="text"
+            class="contact-section__input"
+            placeholder="Enter Project Type"
+            required
+          />
+        </div>
+
+        <div id="spinner-overlay" style="z-index: 9999">
+          <div
+            class="spinner-border spinner contact-spinner text-white spinner-border-md"
+            role="status"
+          ></div>
+        </div>
+
+        <button class="submit__form" type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
 </div>
 
 <!-- Swiper -->
@@ -668,3 +723,4 @@
 <script src="/javascript/landing-page/development-process.js"></script>
 <script src="/javascript/landing-page/services-card.js"></script>
 <script src="/javascript/landing-page/faqs.js"></script>
+<script src="/javascript/landing-page/contact-section.js"></script>
