@@ -42,25 +42,4 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-
-  new Swiper(".recent-articles__swiper", {
-    slidesPerView: 1,
-    centeredSlides: true,
-    spaceBetween: 17,
-    grabCursor: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    speed: 500,
-    loop: true,
-    breakpoints: {
-      1024: {
-        navigation: {
-          nextEl: ".swiper-next",
-          prevEl: ".swiper-prev",
-        },
-      },
-    },
-  });
 });

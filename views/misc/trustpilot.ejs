@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/stylesheet/misc/trustpilot.css" />
+
+<div class="trustpilot-container">
+  <header>
+    <h3 class="trustpilot__title">Trust We've <span>Earned</span></h3>
+    <h5 class="trustpilot__subtitle">What are clients say about us</h5>
+    <div class="trustpilot__row">
+      <img
+        src="https://www.creativesquad.ca/images/web_creatives/google_reviews2.png"
+        alt="Google Rating (5 Stars)"
+        class="google__rating"
+      />
+      <a href="#" target="_blank" class="location__teller btn-invert"
+        >See More</a
+      >
+    </div>
+  </header>
+  <div class="trustpilot__swiper swiper">
+    <div class="swiper-wrapper">
+      <% trustpilot.forEach(review => { %>
+      <div class="swiper-slide">
+        <div class="swiper__header">
+          <div class="swiper__main-image">
+            <img
+              src="<%- review.authorImage %>"
+              alt="<%- review.author %> Image"
+            />
+          </div>
+          <div class="swiper__author-info">
+            <p>
+              <b><%= review.author %></b>
+              <br />
+              <img
+                src="https://www.creativesquad.ca/images/icons/customerstars.svg"
+                alt="5 Star Rating"
+              />
+            </p>
+          </div>
+        </div>
+        <p class="swiper__comment"><%= review.comment %></p>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</div>
+
+<script src="/javascript/misc/trustpilot.js"></script>

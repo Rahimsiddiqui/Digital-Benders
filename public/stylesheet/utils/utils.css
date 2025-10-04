@@ -116,6 +116,10 @@ img[alt] {
   background-color: white;
 }
 
+.trustpilot-section {
+  padding-top: 200px;
+}
+
 .disabled {
   opacity: 0.7;
   cursor: not-allowed;
@@ -182,20 +186,20 @@ img[alt] {
   background: #000;
 }
 
-/* xs */
+/* >= 475px */
 /* @media (min-width: 475px) {} */
 
-/* sm */
-/* @media (min-width: 640px) {} */
+/* >= 576px */
+/* @media (min-width: 576px) {} */
 
-/* md */
+/* >= 768px */
 /* @media (min-width: 768px) {} */
 
-/* lg */
+/* >= 1024px */
 /* @media (min-width: 1024px) {} */
 
-/* xl */
-/* @media (min-width: 1280px) {} */
+/* >= 1260px */
+/* @media (min-width: 1260px) {} */
 
-/* 2xl */
-/* @media (min-width: 1536px) {} */
+/* >= 1400px */
+/* @media (min-width: 1400px) {} */

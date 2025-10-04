@@ -27,6 +27,7 @@ app.get("/", (req, res) => {
   const developmentProcess = loadJSON("landing-page/developmentProcess.json");
   const recentArticles = loadJSON("landing-page/recentArticles.json");
   const faqs = loadJSON("landing-page/faqs.json");
+  const trustpilot = loadJSON("misc/trustpilot.json");
 
   res.render("pages/landing-page", {
     caseStudies,
@@ -37,6 +38,7 @@ app.get("/", (req, res) => {
     developmentProcess,
     recentArticles,
     faqs,
+    trustpilot,
   });
 });
 
