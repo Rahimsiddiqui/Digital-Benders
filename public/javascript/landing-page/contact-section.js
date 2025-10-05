@@ -23,7 +23,7 @@ function handleSubmitContact(e) {
 
     Swal.fire({
       title: "Thank You!",
-      text: "We Will Contact in 5-7 Business Days!",
+      text: "We Will Contact in 3-4 Business Days!",
       timer: 3000,
       icon: "success",
     });

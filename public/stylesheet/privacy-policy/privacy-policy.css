@@ -1,0 +1,100 @@
+@import url("/stylesheet/utils/utils.css");
+
+.privacy-policy-container {
+  font-family: montserrat, sans-serif;
+}
+
+.privacy-policy-container header {
+  padding: var(--size-10xl) 0;
+  margin-top: -3.37rem;
+  background: linear-gradient(90deg, #1b1b1b, #454545);
+}
+
+header .privacy-policies__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--normal-clr-accent);
+}
+
+.privacy-policy-container .privacy-policies {
+  margin: var(--size-4xl) auto 0 auto;
+  padding: 0 var(--size-lg);
+}
+
+.privacy-policy-container .privacy-policies:last-child {
+  margin-bottom: var(--size-4xl);
+}
+
+.privacy-policies .privacy-policy__title {
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: var(--size-xl);
+  color: var(--normal-clr-accent);
+  text-transform: uppercase;
+  margin-bottom: var(--size-xs);
+  margin-top: var(--size-2xl);
+}
+
+.privacy-policies .privacy-policy__description {
+  color: var(--muted-clr-accent);
+}
+
+/* >= 576px */
+@media (min-width: 576px) {
+  header .privacy-policies__title {
+    font-size: var(--size-4xl);
+  }
+
+  .privacy-policy-container .privacy-policies {
+    max-width: 540px;
+  }
+}
+
+/* >= 640px */
+@media (min-width: 640px) {
+  .privacy-policy-container header {
+    margin-top: -3.799rem;
+  }
+}
+
+/* >= 768px */
+@media (min-width: 768px) {
+  header .privacy-policies__title {
+    font-size: var(--size-4_5xl);
+  }
+
+  .privacy-policy-container .privacy-policies {
+    max-width: 720px;
+  }
+
+  .privacy-policy-container .privacy-policies {
+    margin-top: var(--size-5xl);
+  }
+}
+
+/* >= 1024px */
+@media (min-width: 1024px) {
+  header .privacy-policies__title {
+    font-size: var(--size-5xl);
+  }
+
+  .privacy-policy-container .privacy-policies {
+    max-width: 990px;
+  }
+
+  .privacy-policy-container .privacy-policies:last-child {
+    margin-bottom: var(--size-5xl);
+  }
+}
+
+/* >= 1260px */
+@media (min-width: 1260px) {
+  .privacy-policy-container header {
+    margin: -4.533rem auto 0 0 !important;
+  }
+}
+
+/* >= 1400px */
+/* @media (min-width: 1400px) {} */

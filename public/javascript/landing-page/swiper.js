@@ -42,4 +42,22 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+  // Style For Recent Articles Swiper
+  new Swiper(".recent-articles__swiper", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 17,
+    grabCursor: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-next",
+      prevEl: ".swiper-prev",
+    },
+    speed: 1000,
+    loop: true,
+  });
 });

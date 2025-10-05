@@ -1,0 +1,18 @@
+<%- layout(`boilerplate/boilerplate`) %>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/stylesheet/refund-policy/refund-policy.css" />
+
+<div class="refund-policy-container">
+  <header class="full-width">
+    <h1 class="refund-policies__title">Refund Policy</h1>
+  </header>
+  <div class="refund-policies">
+    <% refundPolicy.forEach(policy => { %>
+    <div class="refund-policy">
+      <h2 class="refund-policy__title"><%= policy.title %></h2>
+      <p class="refund-policy__description"><%= policy.description %></p>
+    </div>
+    <% }); %>
+  </div>
+</div>

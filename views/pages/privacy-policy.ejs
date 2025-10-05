@@ -1,0 +1,18 @@
+<%- layout(`boilerplate/boilerplate`) %>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/stylesheet/privacy-policy/privacy-policy.css" />
+
+<div class="privacy-policy-container">
+  <header class="full-width">
+    <h1 class="privacy-policies__title">Privacy Policy</h1>
+  </header>
+  <div class="privacy-policies">
+    <% privacyPolicy.forEach(policy => { %>
+    <div class="privacy-policy">
+      <h2 class="privacy-policy__title"><%= policy.title %></h2>
+      <p class="privacy-policy__description"><%= policy.description %></p>
+    </div>
+    <% }); %>
+  </div>
+</div>

@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, `public`)));
 
 app.engine(`ejs`, ejsMate);
 
-app.get("/", (req, res) => {
+app.get("/", (_, res) => {
   const brandGrowing = loadJSON("landing-page/brandGrowing.json");
   const services = loadJSON("landing-page/services.json");
   const caseStudies = loadJSON("landing-page/caseStudies.json");
@@ -42,6 +42,24 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(3000, (req, res) => {
+app.get("/privacy-policy", (_, res) => {
+  const privacyPolicy = loadJSON("privacy-policy/privacyPolicy.json");
+
+  res.render("pages/privacy-policy", { privacyPolicy });
+});
+
+app.get("/privacy-policy", (_, res) => {
+  const privacyPolicy = loadJSON("privacy-policy/privacyPolicy.json");
+
+  res.render("pages/privacy-policy", { privacyPolicy });
+});
+
+app.get("/refund-policy", (_, res) => {
+  const refundPolicy = loadJSON("refund-policy/refundPolicy.json");
+
+  res.render("pages/refund-policy", { refundPolicy });
+});
+
+app.listen(3000, () => {
   console.log(`Server Started... (Express)`);
 });
