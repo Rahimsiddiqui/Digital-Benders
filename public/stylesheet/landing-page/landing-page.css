@@ -835,86 +835,6 @@ header .text-horizontal-line {
   background-color: var(--section-bg);
 }
 
-.faqs-container {
-  margin: 0 auto;
-}
-
-.faqs-container header {
-  text-align: center;
-}
-
-header .faqs__title {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: var(--size-2xl);
-
-  & span {
-    color: var(--normal-clr-accent);
-  }
-}
-
-header .image-with-paragraph {
-  & p {
-    font-size: var(--size-sm);
-    font-weight: 500;
-  }
-
-  & .faqs__image img {
-    max-width: var(--size-9xl);
-    height: auto;
-    margin: var(--size-2xl) 0 var(--size-xs) 0;
-  }
-}
-
-header .reassuring-text {
-  font-size: var(--size-sm);
-  color: var(--muted-clr-accent);
-  margin-bottom: var(--size-4xl);
-}
-
-.faq {
-  border-bottom: 1px solid #d4d4d4;
-  padding-bottom: 0;
-  max-width: 92%;
-  margin: 0 auto var(--size-lg) auto;
-}
-
-.faq__question {
-  font-size: var(--size-xs);
-  font-weight: bold;
-  cursor: pointer;
-  font-family: var(--mulish-font);
-  display: flex;
-  align-self: center;
-  text-align: center;
-
-  & .faq__toggle {
-    margin-left: auto;
-    border: none;
-    background: none;
-  }
-
-  img {
-    max-width: 20px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-  }
-}
-
-.faq__answer {
-  font-size: var(--size-sm);
-  color: #949494;
-  align-self: center;
-  text-align: center;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-}
-
-.faq__toggle img {
-  transition: transform 0.3s ease-in-out;
-}
-
 .section-10 {
   background: url(https://www.creativesquad.ca/images/contactformbackground.jpg);
   width: 100%;
@@ -1086,7 +1006,6 @@ header .contact-section__subtitle {
   .development-process-container,
   .recent-articles-container,
   .case-studies__swiper .swiper-slide,
-  .faqs-container,
   .contact-section-container {
     max-width: 520px;
   }
@@ -1223,15 +1142,6 @@ header .contact-section__subtitle {
     font-size: var(--size-3xl);
   }
 
-  .faqs-container {
-    max-width: 740px;
-    margin: 0 auto;
-  }
-
-  .faq__question {
-    font-size: var(--size-lg);
-  }
-
   .contact-section__form .contact-section__inputs {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1265,36 +1175,6 @@ header .contact-section__subtitle {
   .contact-section-container .inputs__detail-paragraph,
   .contact-section-container header {
     text-align: left;
-  }
-
-  .faqs-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 90%;
-  }
-
-  .faq__question,
-  .faq__answer {
-    align-self: normal;
-    text-align: left;
-  }
-
-  .faq__answer {
-    margin-top: var(--size-md);
-  }
-
-  .faq__question {
-    & img {
-      max-width: 25px;
-    }
-  }
-
-  .faqs-container header {
-    text-align: left;
-  }
-
-  .faq {
-    max-width: 100%;
   }
 
   .recent-articles__swiper .swiper-slide {
@@ -1619,10 +1499,6 @@ header .contact-section__subtitle {
 
   .recent-articles__swiper {
     max-width: 1100px;
-  }
-
-  .faqs-container {
-    max-width: 1300px;
   }
 
   .contact-section-container {

@@ -25,8 +25,8 @@ app.get("/", (_, res) => {
   const results = loadJSON("landing-page/results.json");
   const testimonials = loadJSON("landing-page/testimonials.json");
   const developmentProcess = loadJSON("landing-page/developmentProcess.json");
+  const faqs = loadJSON("misc/faqs.json");
   const recentArticles = loadJSON("landing-page/recentArticles.json");
-  const faqs = loadJSON("landing-page/faqs.json");
   const trustpilot = loadJSON("misc/trustpilot.json");
 
   res.render("pages/landing-page", {
@@ -58,6 +58,12 @@ app.get("/refund-policy", (_, res) => {
   const refundPolicy = loadJSON("refund-policy/refundPolicy.json");
 
   res.render("pages/refund-policy", { refundPolicy });
+});
+
+app.get("/contact", (_, res) => {
+  const faqs = loadJSON("misc/faqs.json");
+
+  res.render("pages/contact", { faqs });
 });
 
 app.listen(3000, () => {

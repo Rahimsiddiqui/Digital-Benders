@@ -613,48 +613,7 @@
     </div>
   </section>
   <section class="full-width section-9">
-    <div class="faqs-container">
-      <header>
-        <h3 class="faqs__title">
-          Frequently Asked <br />
-          <span>Questions</span>
-        </h3>
-        <div class="image-with-paragraph">
-          <div class="faqs__image">
-            <img
-              src="https://www.creativesquad.ca/images/faqs_people.png"
-              alt="Image Of 3 People"
-            />
-          </div>
-          <p>Still Have Questions?</p>
-        </div>
-        <p class="reassuring-text">
-          Can't find the answer you're looking for? <br />
-          Let's Connect.
-        </p>
-      </header>
-
-      <div class="faqs">
-        <% faqs.forEach(faq => { %>
-        <div class="faq">
-          <h4 class="faq__question">
-            <%= faq.question %>
-            <button
-              class="faq__toggle"
-              aria-expanded="false"
-              aria-controls="faq-<%- faq.id %>"
-            >
-              <img
-                src="https://www.creativesquad.ca/images/faqs_plus.svg"
-                alt=""
-              />
-            </button>
-          </h4>
-          <p id="faq-<%- faq.id %>" class="faq__answer"><%= faq.answer %></p>
-        </div>
-        <% }) %>
-      </div>
-    </div>
+    <%- include('../misc/faqs.ejs') %>
   </section>
   <%- include('../misc/trustpilot.ejs') %>
   <section class="section-10 trustpilot-section">
@@ -723,5 +682,4 @@
 <script src="/javascript/landing-page/growing-business.js"></script>
 <script src="/javascript/landing-page/development-process.js"></script>
 <script src="/javascript/landing-page/services-card.js"></script>
-<script src="/javascript/landing-page/faqs.js"></script>
 <script src="/javascript/landing-page/contact-section.js"></script>
