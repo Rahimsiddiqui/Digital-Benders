@@ -1,0 +1,192 @@
+@import url("/stylesheet/utils/utils.css");
+
+.seo-analysis-container header {
+  background: url(https://www.creativesquad.ca/images/creatives/seo-analysis-hero.png)
+    no-repeat center center/cover;
+  text-align: center;
+  margin-top: -3.37rem;
+  padding: var(--size-7_5xl) 0;
+}
+
+#spinner-overlay {
+  margin-bottom: var(--size-1_5xl);
+}
+
+header .column {
+  max-width: 93.5%;
+  margin: 0 auto;
+}
+
+header .seo-analysis__title,
+header h4 {
+  color: white;
+  text-transform: uppercase;
+}
+
+header .seo-analysis__title {
+  font-size: var(--size-2xl);
+
+  & span {
+    color: var(--normal-clr-accent);
+  }
+}
+
+header h4 {
+  font-size: var(--size-xs);
+  margin: var(--size-xs) 0 var(--size-1_5xl) 0;
+}
+
+.seo-analysis__form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--size-xs);
+}
+
+.seo-analysis__form .seo-analysis__input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  padding: 25px 12.5px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #ededed18;
+  color: #a1a0a0;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &::placeholder {
+    color: #a1a0a0;
+  }
+}
+
+#url-input {
+  margin-bottom: var(--size-xl);
+}
+
+#url-btn {
+  background-color: var(--card-red-bg);
+  border: 1px solid var(--card-red-bg);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  padding: 0.5rem 2.2rem;
+  border-radius: 4px;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+
+  &:hover {
+    background-color: var(--hover-clr-accent);
+    border-color: var(--hover-clr-accent);
+  }
+}
+
+/* >= 376px */
+@media (min-width: 376px) {
+  header .seo-analysis__title {
+    font-size: var(--size-2_5xl);
+  }
+}
+
+/* >= 476px */
+@media (min-width: 476px) {
+  header .seo-analysis__title {
+    font-size: var(--size-3xl);
+  }
+}
+
+/* >= 576px */
+@media (min-width: 576px) {
+  header .seo-analysis__title {
+    font-size: var(--size-3xl);
+  }
+
+  .seo-analysis-container header {
+    padding: var(--size-8xl) 0;
+  }
+
+  header .column {
+    max-width: 520px;
+  }
+}
+
+/* >= 640px */
+@media (min-width: 640px) {
+  .seo-analysis-container {
+    margin-top: -3.799rem;
+  }
+}
+
+/* >= 768px */
+@media (min-width: 768px) {
+  header .column {
+    max-width: 720px;
+  }
+
+  header .seo-analysis__title {
+    font-size: var(--size-4xl);
+  }
+}
+
+/* >= 1024px */
+@media (min-width: 1024px) {
+  .seo-analysis-container header {
+    padding-top: var(--size-8_5xl);
+  }
+
+  header .column {
+    max-width: 960px;
+  }
+
+  .seo-analysis__form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .url__checking-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    & input,
+    & button {
+      width: 100%;
+    }
+  }
+
+  #url-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-color: transparent;
+  }
+
+  #url-btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-color: rgba(255, 255, 255, 0.3);
+    border-left-color: transparent;
+  }
+}
+
+/* >= 1260px */
+@media (min-width: 1260px) {
+  .seo-analysis-container {
+    margin-top: -4.533rem;
+    margin-left: -2.97rem;
+  }
+
+  header .seo-analysis__title {
+    font-size: var(--size-5xl);
+  }
+
+  header h4 {
+    font-size: var(--size-md);
+  }
+
+  header .column {
+    max-width: 1180px;
+  }
+}
+
+/* >= 1400px */
+@media (min-width: 1400px) {
+  header .column {
+    max-width: 1330px;
+  }
+}

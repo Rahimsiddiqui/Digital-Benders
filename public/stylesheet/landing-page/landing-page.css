@@ -912,13 +912,13 @@ header .contact-section__subtitle {
   border: 1px solid white;
   text-transform: uppercase;
   font-weight: 600;
-  color: rgb(171, 9, 9);
+  color: var(--card-red-bg);
   padding: 0.5rem 2.2rem;
   border-radius: 4px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
   &:hover {
-    background-color: rgb(171, 9, 9);
+    background-color: var(--card-red-bg);
     color: white;
   }
 }

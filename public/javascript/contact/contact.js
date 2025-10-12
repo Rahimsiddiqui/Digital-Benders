@@ -1,8 +1,8 @@
 const numberInput = document.getElementById("customNumberInput");
-const inputs = document.querySelectorAll(".contact-section__input");
-const contactSpinner = document.querySelector(".contact-spinner");
+const inputs = document.querySelectorAll(".form__input");
+const contactSpinner = document.querySelector(".company-contact-spinner");
 const submitButton = document.querySelector(".submit__form");
-const contactForm = document.querySelector(".contact-section__form");
+const contactForm = document.querySelector(".contact__form");
 
 numberInput.addEventListener("input", function () {
   this.value = this.value.replace(/[^0-9()+\- ]/g, "");

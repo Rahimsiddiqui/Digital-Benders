@@ -1,70 +1,27 @@
-const { express, app, path, ejsMate, fs } = require(`./dependecies`);
+const { express, app, path, ejsMate } = require(`./dependencies`);
 
-app.set(`views`, path.join(__dirname, `views`));
-app.set(`view engine`, `ejs`);
+// setup
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+app.engine("ejs", ejsMate);
+app.use(express.static(path.join(__dirname, "public")));
 
-function loadJSON(file) {
-  return JSON.parse(
-    fs.readFileSync(path.join(__dirname, "data", file), "utf-8")
-  );
-}
-
+// middleware
 app.use((req, res, next) => {
   res.locals.currentRoute = req.path;
   next();
 });
 
-app.use(express.static(path.join(__dirname, `public`)));
+// routers
+const landingPageRoute = require("./routes/landing-page");
+const policiesRoutes = require("./routes/policies");
+const contactRoute = require("./routes/contact");
+const seoAnalysisRoute = require("./routes/seo-analysis");
 
-app.engine(`ejs`, ejsMate);
-
-app.get("/", (_, res) => {
-  const brandGrowing = loadJSON("landing-page/brandGrowing.json");
-  const services = loadJSON("landing-page/services.json");
-  const caseStudies = loadJSON("landing-page/caseStudies.json");
-  const results = loadJSON("landing-page/results.json");
-  const testimonials = loadJSON("landing-page/testimonials.json");
-  const developmentProcess = loadJSON("landing-page/developmentProcess.json");
-  const faqs = loadJSON("misc/faqs.json");
-  const recentArticles = loadJSON("landing-page/recentArticles.json");
-  const trustpilot = loadJSON("misc/trustpilot.json");
-
-  res.render("pages/landing-page", {
-    caseStudies,
-    services,
-    results,
-    testimonials,
-    brandGrowing,
-    developmentProcess,
-    recentArticles,
-    faqs,
-    trustpilot,
-  });
-});
-
-app.get("/privacy-policy", (_, res) => {
-  const privacyPolicy = loadJSON("privacy-policy/privacyPolicy.json");
-
-  res.render("pages/privacy-policy", { privacyPolicy });
-});
-
-app.get("/privacy-policy", (_, res) => {
-  const privacyPolicy = loadJSON("privacy-policy/privacyPolicy.json");
-
-  res.render("pages/privacy-policy", { privacyPolicy });
-});
-
-app.get("/refund-policy", (_, res) => {
-  const refundPolicy = loadJSON("refund-policy/refundPolicy.json");
-
-  res.render("pages/refund-policy", { refundPolicy });
-});
-
-app.get("/contact", (_, res) => {
-  const faqs = loadJSON("misc/faqs.json");
-
-  res.render("pages/contact", { faqs });
-});
+app.use("/", landingPageRoute);
+app.use("/", policiesRoutes);
+app.use("/", contactRoute);
+app.use("/", seoAnalysisRoute);
 
 app.listen(3000, () => {
   console.log(`Server Started... (Express)`);

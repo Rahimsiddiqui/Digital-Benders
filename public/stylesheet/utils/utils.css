@@ -3,6 +3,7 @@
   --normal-clr-accent: #cb1212;
   --hover-clr-accent: #bd0f0f;
   --muted-clr-accent: #3d3d3d;
+  --form-btn-accent: #ab0909;
   --card-red-bg: #d11413;
   --section-bg: #f9f9f9;
 
@@ -10,7 +11,6 @@
   --card-shadow: 0 4px 20px hsla(0, 0%, 52%, 0.3);
 
   /* Typography */
-
   --bebas-neue-font: "Bebas Neue", sans-serif;
   --mulish-font: "Mulish", sans-serif;
   --poppins-font: "Poppins", sans-serif;
@@ -18,7 +18,7 @@
 
   /* Sizes */
   --size-5xs: 0.075rem;
-  :0.125rem ;
+  --size-4xs: 0.125rem;
   --size-3xs: 0.25rem;
   --size-2_5xs: 0.4rem;
   --size-2xs: 0.5rem;
@@ -27,6 +27,7 @@
   --size-md: 1rem;
   --size-lg: 1.125rem;
   --size-xl: 1.25rem;
+  --size-1_5xl: 1.34rem;
   --size-2xl: 1.5rem;
   --size-2_5xl: 1.65rem;
   --size-3xl: 1.875rem;
@@ -39,6 +40,7 @@
   --size-7xl: 4.5rem;
   --size-7_5xl: 5rem;
   --size-8xl: 6rem;
+  --size-8_5xl: 7rem;
   --size-9xl: 8rem;
   --size-9_5xl: 9rem;
   --size-10xl: 10rem;
