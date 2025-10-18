@@ -55,6 +55,38 @@
       </form>
     </div>
   </header>
+
+  <div class="brand-growing-container">
+    <div class="brand-growing__header">
+      <h3 class="brand-growing__title">
+        In-depth SEO <br />
+        <span>Website Audit</span>
+      </h3>
+      <div class="brand-growing__btns">
+        <% brandGrowing.forEach(card => { %>
+        <button class="brand-growing__btn" data-card="<%= card.id %>">
+          <%- card.button %>
+        </button>
+        <% }) %>
+      </div>
+    </div>
+
+    <div class="brand-growing__cards">
+      <% brandGrowing.forEach(card => { %>
+      <div class="brand-growing__card" id="<%= card.id %>">
+        <div class="card__main-image">
+          <img src="<%= card.image %>" alt="<%= card.alt %>" loading="lazy" />
+        </div>
+        <div class="card__content">
+          <h3 class="brand-growing__title"><%- card.title %></h3>
+          <p class="card__description"><%- card.description %></p>
+          <a class="card__button btn-invert" href="/contact">Let's Connect</a>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
 </div>
 
 <script src="/javascript/seo-analysis/contact.js"></script>
+<script src="/javascript/landing-page/growing-business.js"></script>

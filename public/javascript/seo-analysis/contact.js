@@ -4,8 +4,6 @@ const analysisSpinner = document.querySelector(".analysis-spinner");
 const submitButton = document.querySelector(".submit__form");
 const analysisForm = document.querySelector(".seo-analysis__form");
 
-this.value = this.value.replace(/[^0-9()+\- ]/g, "");
-
 numberInput.addEventListener("input", function () {
   this.value = this.value.replace(/[^0-9()+\- ]/g, "");
 });

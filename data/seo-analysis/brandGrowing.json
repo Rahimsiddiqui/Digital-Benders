@@ -1,0 +1,42 @@
+[
+  {
+    "id": "card-1",
+    "button": "Website <br /> Crawling",
+    "title": "Website Crawling",
+    "description": "If certain pages on your website cannot be accessed by search engines, there is a possibility that your site might not be properly indexed or may not be indexed at all. When your website doesn't appear in the index, it becomes inaccessible to users who are trying to find it. We thoroughly examine your website to identify any crawlability issues that hinder search engine bots from properly indexing your content. We analyse robots.txt files, XML sitemaps, and internal linking structures to ensure optimal crawlability and discoverability of your web pages.",
+    "image": "https://www.creativesquad.ca/images/website_crawling.jpg",
+    "alt": "Website Crawling Image"
+  },
+  {
+    "id": "card-2",
+    "button": "Indexation <br /> Issues",
+    "title": "Indexation Issues",
+    "description": "Achieving proper indexing of your pages is crucial for your visibility on Google search results. Indexation issues arise when search engines struggle to index and understand your website's pages accurately. Our audit process includes a meticulous review of your website's indexation status to identify potential issues. We examine canonical tags, duplicate content, and URL parameters to ensure that search engines can effectively index and display your web pages in search results. By resolving indexation issues, we help search engines better comprehend your content, leading to improved rankings and increased organic traffic.",
+    "image": "https://www.creativesquad.ca/images/indexation_issues.jpg",
+    "alt": "Indexation Issues Image"
+  },
+  {
+    "id": "card-3",
+    "button": "Sitemap",
+    "title": "Sitemap",
+    "description": "A sitemap serves as a vital tool for search engines to understand your website's structure and content. An XML sitemap facilitates Google in navigating through the essential pages on your website. During this stage, we carefully analyze your website's sitemap to ensure it is properly structured, up-to-date, and includes all relevant pages. We verify that all URLs are correctly included and that the sitemap adheres to search engine guidelines. By optimizing your sitemap, we facilitate search engines in crawling and indexing your website more efficiently, enhancing your website's visibility and discoverability.",
+    "image": "https://www.creativesquad.ca/images/sitemap.jpg",
+    "alt": "Sitemap Image"
+  },
+  {
+    "id": "card-4",
+    "button": "Metadata <br /> Check",
+    "title": "Metadata Check",
+    "description": "While Google may not always display meta descriptions (approximately 37% of the time), it is still crucial to optimise them for your most important pages. In this phase, we review your website's metadata, such as title tags, meta descriptions, and header tags. We ensure that they are unique, relevant, and optimised with targeted keywords to improve search engine visibility and encourage higher click-through rates from search results. By optimising your metadata, we enhance your website's appearance in search listings, increasing the likelihood of attracting qualified traffic and improving your overall SEO performance.",
+    "image": "https://www.creativesquad.ca/images/metadata_check.jpg",
+    "alt": "Metadata Check Image"
+  },
+  {
+    "id": "card-5",
+    "button": "Analysing <br /> Performance",
+    "title": "Analysing Performance",
+    "description": "Website performance impacts user experience and search engine rankings. In order to enhance user experience, Google strives to improve website speed, as slow-loading sites are generally disliked by users. During this stage of our SEO audit process, we assess your website's performance metrics, including page load speed, mobile responsiveness, and overall user experience. We identify any performance bottlenecks that may negatively impact user engagement and search engine rankings. Our recommendations aim to optimise your website's performance, ensuring faster loading times, seamless user experiences, and ultimately, higher search engine rankings and increased conversions.",
+    "image": "https://www.creativesquad.ca/images/creatives/BG_marketing.webp",
+    "alt": "Analysing Performance Image"
+  }
+]

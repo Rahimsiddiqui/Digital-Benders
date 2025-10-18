@@ -266,14 +266,14 @@
   margin: auto;
 }
 
-.brand-growing__header {
+.brand-growing__title {
   text-align: center;
   font-size: var(--size-2xl);
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.brand-growing__header span {
+.brand-growing__title span {
   color: var(--normal-clr-accent);
 }
 
@@ -958,7 +958,7 @@ header .contact-section__subtitle {
     height: auto;
   }
 
-  .brand-growing__header {
+  .brand-growing__title {
     font-size: var(--size-2_5xl);
   }
 
@@ -1083,7 +1083,7 @@ header .contact-section__subtitle {
     font-size: var(--size-sm);
   }
 
-  .brand-growing__header {
+  .brand-growing__title {
     font-size: var(--size-4_5xl);
   }
 
