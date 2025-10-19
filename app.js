@@ -1,4 +1,18 @@
+require("dotenv").config();
 const { express, app, path, ejsMate } = require(`./dependencies`);
+
+// ENV
+const PORT = process.env.PORT || 3000;
+const MONGO_URI = process.env.MONGO_URI;
+
+// Mongoose
+const mongoose = require(`mongoose`);
+
+// Connecting to Mongoose
+mongoose
+  .connect(MONGO_URI)
+  .then(() => console.log("MongoDB Successfully Connected."))
+  .catch((err) => console.error(err));
 
 // setup
 app.set("views", path.join(__dirname, "views"));
@@ -23,6 +37,6 @@ app.use("/", policiesRoutes);
 app.use("/", contactRoute);
 app.use("/", seoAnalysisRoute);
 
-app.listen(3000, () => {
-  console.log(`Server Started... (Express)`);
+app.listen(PORT, () => {
+  console.log(`Server Started On Port: ${PORT}!`);
 });
