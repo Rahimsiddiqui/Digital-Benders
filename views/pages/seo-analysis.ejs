@@ -4,89 +4,182 @@
 <link rel="stylesheet" href="/stylesheet/seo-analysis/seo-analysis.css" />
 
 <div class="seo-analysis-container">
-  <header>
-    <div class="column">
-      <h1 class="seo-analysis__title">
-        Comprehensive SEO Analysis for <br />
-        <span>startups, SMBs, and enterprises</span>
-      </h1>
-      <h4>What's Your Website's Optimization Score?</h4>
+  <section>
+    <header id="main-header">
+      <div class="column">
+        <h1 class="seo-analysis__title">
+          Comprehensive SEO Analysis for <br />
+          <span>startups, SMBs, and enterprises</span>
+        </h1>
+        <h4>What's Your Website's Optimization Score?</h4>
 
-      <div id="spinner-overlay" class="overlay" style="z-index: 9999">
-        <div
-          class="spinner-border spinner analysis-spinner text-white spinner-border-md"
-          role="status"
-        ></div>
-      </div>
+        <div id="spinner-overlay" class="overlay" style="z-index: 9999">
+          <div
+            class="spinner-border spinner analysis-spinner text-white spinner-border-md"
+            role="status"
+          ></div>
+        </div>
 
-      <form class="seo-analysis__form">
-        <input
-          type="text"
-          class="seo-analysis__input"
-          required
-          placeholder="Enter Name"
-        />
-        <input
-          type="email"
-          class="seo-analysis__input"
-          required
-          placeholder="Enter Email Address"
-        />
-        <input
-          type="text"
-          id="customNumberInput"
-          class="seo-analysis__input"
-          placeholder="Enter Phone Number"
-          required
-        />
-        <div class="url__checking-row">
+        <form class="seo-analysis__form">
           <input
-            type="url"
+            type="text"
             class="seo-analysis__input"
-            placeholder="Enter Website URL"
-            id="url-input"
+            required
+            placeholder="Enter Name"
+          />
+          <input
+            type="email"
+            class="seo-analysis__input"
+            required
+            placeholder="Enter Email Address"
+          />
+          <input
+            type="text"
+            id="customNumberInput"
+            class="seo-analysis__input"
+            placeholder="Enter Phone Number"
             required
           />
+          <div class="url__checking-row">
+            <input
+              type="url"
+              class="seo-analysis__input"
+              placeholder="Enter Website URL"
+              id="url-input"
+              required
+            />
 
-          <button class="submit__form" id="url-btn" type="submit">
-            Analyze
+            <button class="submit__form" id="url-btn" type="submit">
+              Analyze
+            </button>
+          </div>
+        </form>
+      </div>
+    </header>
+  </section>
+
+  <section>
+    <div class="brand-growing-container">
+      <div class="brand-growing__header">
+        <h3 class="brand-growing__title">
+          In-depth SEO <br />
+          <span>Website Audit</span>
+        </h3>
+        <div class="brand-growing__btns">
+          <% brandGrowing.forEach(card => { %>
+          <button class="brand-growing__btn" data-card="<%= card.id %>">
+            <%- card.button %>
           </button>
+          <% }) %>
         </div>
-      </form>
-    </div>
-  </header>
+      </div>
 
-  <div class="brand-growing-container">
-    <div class="brand-growing__header">
-      <h3 class="brand-growing__title">
-        In-depth SEO <br />
-        <span>Website Audit</span>
-      </h3>
-      <div class="brand-growing__btns">
+      <div class="brand-growing__cards">
         <% brandGrowing.forEach(card => { %>
-        <button class="brand-growing__btn" data-card="<%= card.id %>">
-          <%- card.button %>
-        </button>
+        <div class="brand-growing__card" id="<%= card.id %>">
+          <div class="card__main-image">
+            <img src="<%= card.image %>" alt="<%= card.alt %>" loading="lazy" />
+          </div>
+          <div class="card__content">
+            <h3 class="brand-growing__title"><%- card.title %></h3>
+            <p class="card__description"><%- card.description %></p>
+            <a class="card__button btn-invert" href="/contact">Let's Connect</a>
+          </div>
+        </div>
         <% }) %>
       </div>
     </div>
+  </section>
 
-    <div class="brand-growing__cards">
-      <% brandGrowing.forEach(card => { %>
-      <div class="brand-growing__card" id="<%= card.id %>">
-        <div class="card__main-image">
-          <img src="<%= card.image %>" alt="<%= card.alt %>" loading="lazy" />
-        </div>
-        <div class="card__content">
-          <h3 class="brand-growing__title"><%- card.title %></h3>
-          <p class="card__description"><%- card.description %></p>
-          <a class="card__button btn-invert" href="/contact">Let's Connect</a>
+  <section>
+    <div class="website-scrolling-analysis-container">
+      <div class="column">
+        <h3 class="scrolling-analysis__title">
+          Experience A Game-Changing
+          <br />
+          <span>SEO Analysis</span>
+        </h3>
+        <p class="scrolling-analysis__description">
+          Digital Benders believes that a strong SEO foundation is the key to
+          achieving exceptional online success
+        </p>
+      </div>
+
+      <div class="column">
+        <div class="scoring-cards-container">
+          <% scoringCards.forEach(card => { %>
+          <div class="scoring-card <%= card.id %>">
+            <h6 class="scoring-card__title"><%- card.title %></h6>
+            <p class="scoring-card__description"><%- card.description %></p>
+          </div>
+          <% }) %>
         </div>
       </div>
-      <% }) %>
     </div>
-  </div>
+  </section>
+
+  <section class="section-4">
+    <div class="contact-section-container">
+      <header>
+        <h6 class="contact-section__subtitle">Let's Talk</h6>
+        <h3 class="contact-section__title">
+          Got a Website? <br />
+          <span>Let's Optimize Your Prescence!</span>
+        </h3>
+        <p class="contact-section__description">
+          Take the first step towards digital dominance by <br />
+          requesting your personalised SEO analysis now!
+        </p>
+      </header>
+
+      <form id="contact__form">
+        <p class="inputs__detail-paragraph">
+          Enter your details to get started.
+        </p>
+        <div class="contact-section__inputs">
+          <input
+            type="text"
+            class="contact-section__input"
+            placeholder="Your Full Name"
+            required
+          />
+          <input
+            type="text"
+            class="contact-section__input customNumberInput"
+            placeholder="Your Phone Number"
+            required
+          />
+          <input
+            type="email"
+            class="contact-section__input"
+            placeholder="Your Email Address"
+            required
+          />
+          <input
+            type="text"
+            class="contact-section__input"
+            placeholder="Enter Project Type"
+            required
+          />
+        </div>
+
+        <div
+          id="spinner-overlay"
+          class="seo-analysis__spinner"
+          style="z-index: 9999"
+        >
+          <div
+            class="spinner-border spinner seo-analysis-spinner text-white spinner-border-md"
+            role="status"
+          ></div>
+        </div>
+
+        <button class="submit__form" type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
 </div>
 
 <script src="/javascript/seo-analysis/contact.js"></script>
-<script src="/javascript/landing-page/growing-business.js"></script>
+<script src="/javascript/seo-analysis/growing-business.js"></script>
+<script src="/javascript/seo-analysis/contact-section.js"></script>
