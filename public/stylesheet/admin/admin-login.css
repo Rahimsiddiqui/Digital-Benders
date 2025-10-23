@@ -1,0 +1,157 @@
+@import url("/stylesheet/utils/utils.css");
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow-y: hidden !important;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+#loginForm {
+  background: white;
+  padding: 70px 15px 33px 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+  font-family: "Poppins";
+  color: #333;
+  font-weight: 800;
+  line-height: 1.2;
+  padding-bottom: 30px;
+}
+
+input {
+  font-family: "Poppins";
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666;
+  display: block;
+  width: 76%;
+  background: #e6e6e6;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  padding: 0 30px;
+  outline: none;
+  border: none;
+  position: relative;
+
+  &:first-of-type {
+    margin-bottom: 10px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 30px;
+  }
+}
+
+button {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  width: 90%;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background: #57b846;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+#col-1 img {
+  display: none;
+}
+
+#col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+@media (min-width: 576px) {
+  input {
+    max-width: 70%;
+  }
+
+  button {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  #loginForm {
+    padding: 63px 35px 63px 45px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    vertical-align: middle;
+  }
+
+  #col-1 img {
+    display: block;
+    width: 282.72px;
+    height: auto;
+  }
+
+  input {
+    max-width: 70%;
+  }
+
+  button {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 900px) {
+  #col-1 {
+    margin-left: 35px;
+  }
+
+  input {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #loginForm {
+    padding: 83px 55px 83px 65px;
+  }
+
+  #col-1 {
+    margin-left: 45px;
+
+    & img {
+      width: 75%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #loginForm {
+    width: 1000px;
+  }
+
+  #col-1 img {
+    width: 337.31px;
+  }
+}

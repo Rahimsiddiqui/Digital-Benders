@@ -72,7 +72,7 @@ function verifyToken(req, res, next) {
 
   if (!token) {
     console.log("No token found in cookies.");
-    return res.status(403).json({ message: "No token provided" });
+    return res.status(403).send("No token provided");
   }
 
   try {
@@ -114,7 +114,7 @@ app.get("/admin", verifyToken, (req, res) => {
 });
 
 // ===== ADMIN LOGOUT =====
-app.get("/admin/logout", (req, res) => {
+app.post("/admin/logout", (_, res) => {
   res.clearCookie("token", { path: "/" });
   res.redirect("/");
 });
