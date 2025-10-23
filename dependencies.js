@@ -1,6 +1,9 @@
 const express = require(`express`);
 const app = express();
 const path = require(`path`);
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
+const User = require("./models/User");
 const ejsMate = require(`ejs-mate`);
 const fs = require(`fs`);
 
@@ -17,4 +20,7 @@ module.exports = {
   ejsMate,
   fs,
   loadJSON,
+  jwt,
+  bcrypt,
+  User,
 };

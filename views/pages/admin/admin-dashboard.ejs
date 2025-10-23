@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <style>
+      body {
+        background: #0f0f0f;
+        color: white;
+        font-family: Arial;
+        text-align: center;
+        padding-top: 100px;
+      }
+      h1 {
+        color: #00ff90;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome, <%= username %> 👑</h1>
+    <p>You have full admin access.</p>
+
+    <script>
+      const token = localStorage.getItem("token");
+      if (!token) {
+        window.location.href = "/admin/login";
+      }
+    </script>
+  </body>
+</html>
