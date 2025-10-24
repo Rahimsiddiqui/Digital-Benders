@@ -1,5 +1,12 @@
 const { express, jwt, bcrypt, User } = require(`../../dependencies`);
 const router = express.Router();
+const rateLimit = require("express-rate-limit");
+
+const loginLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 15,
+  message: { message: "Too many login attempts. Try again later." },
+});
 
 // ===== Admin Login Page =====
 router.get("/login", (_, res) => {
@@ -7,37 +14,35 @@ router.get("/login", (_, res) => {
 });
 
 // ===== Handle Admin Login =====
-router.post("/login", async (req, res) => {
+router.post("/login", loginLimiter, async (req, res) => {
   try {
     const { username, password } = req.body;
 
-    // Find user
-    const admin = await User.findOne({ username });
-    if (!admin) return res.status(401).send("User not found");
+    if (typeof username !== "string" || typeof password !== "string") {
+      return res.status(400).json({ message: "Invalid input type" });
+    }
 
-    // Compare hashed password
-    const isValid = await bcrypt.compare(password, admin.password);
-    if (!isValid) return res.status(401).send("Invalid password");
+    const user = await User.findOne({ username: username.trim() });
+    if (!user) return res.status(401).json({ message: "User not found" });
 
-    // Generate token
+    const valid = await bcrypt.compare(password, user.password);
+    if (!valid) return res.status(401).json({ message: "Invalid password" });
+
     const token = jwt.sign(
-      { username: admin.username, role: admin.role },
+      { id: user._id, role: user.role, username: user.username },
       process.env.JWT_SECRET,
-      { expiresIn: "1d" }
+      { expiresIn: "2h" }
     );
 
-    // Set token as cookie
-    res.cookie("token", token, {
-      httpOnly: true,
-      secure: false, // set true if using HTTPS
-      sameSite: "lax",
-    });
+    if (user.role !== "admin") {
+      return res.status(403).json({ message: "Access denied" });
+    }
 
-    // ✅ Redirect to actual admin dashboard route
-    res.redirect("/admin");
+    res.cookie("token", token, { httpOnly: true });
+    res.json({ message: "Login successful", token });
   } catch (err) {
     console.error("Login error:", err);
-    res.status(500).send("Internal server error");
+    res.status(500).json({ message: "Internal server error" });
   }
 });
 

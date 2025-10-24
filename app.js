@@ -37,60 +37,11 @@ app.use((req, res, next) => {
   next();
 });
 
-// ===== LOGIN ROUTE =====
-app.post("/login", async (req, res) => {
-  try {
-    const { username, password } = req.body;
-
-    if (typeof username !== "string" || typeof password !== "string") {
-      return res.status(400).json({ message: "Invalid input type" });
-    }
-
-    const user = await User.findOne({ username: username.trim() });
-    if (!user) return res.status(401).json({ message: "User not found" });
-
-    const valid = await bcrypt.compare(password, user.password);
-    if (!valid) return res.status(401).json({ message: "Invalid password" });
-
-    const token = jwt.sign(
-      { id: user._id, role: user.role, username: user.username },
-      process.env.JWT_SECRET,
-      { expiresIn: "2h" }
-    );
-
-    res.cookie("token", token, { httpOnly: true });
-    res.json({ message: "Login successful", token });
-  } catch (err) {
-    console.error("Login error:", err);
-    res.status(500).json({ message: "Internal server error" });
-  }
-});
-
-// ===== VERIFY TOKEN MIDDLEWARE =====
-function verifyToken(req, res, next) {
-  const token = req.cookies.token;
-
-  if (!token) {
-    console.log("No token found in cookies.");
-    return res.status(403).send("No token provided");
-  }
-
-  try {
-    const decoded = jwt.verify(token, JWT_SECRET);
-    req.user = decoded;
-    next();
-  } catch (err) {
-    console.error("Invalid token:", err.message);
-    res.clearCookie("token");
-    return res.status(401).json({ message: "Invalid or expired token" });
-  }
-}
-
 // ===== ROUTES =====
-const landingPageRoute = require("./routes/landing-page");
-const policiesRoutes = require("./routes/policies");
-const contactRoute = require("./routes/contact");
-const seoAnalysisRoute = require("./routes/seo-analysis");
+const landingPageRoute = require("./routes/user/landing-page");
+const policiesRoutes = require("./routes/user/policies");
+const contactRoute = require("./routes/user/contact");
+const seoAnalysisRoute = require("./routes/user/seo-analysis");
 const authRoutes = require("./routes/admin/auth");
 const adminRoutes = require("./routes/admin/admin");
 
@@ -101,17 +52,6 @@ app.use("/", seoAnalysisRoute);
 
 app.use("/admin", authRoutes);
 app.use("/admin", adminRoutes);
-
-// ===== ADMIN ROUTES =====
-app.get("/admin/login", (_, res) => {
-  res.render("pages/admin/admin-login");
-});
-
-app.get("/admin", verifyToken, (req, res) => {
-  res.render("pages/admin/admin-dashboard", {
-    username: req.user?.username || "Admin",
-  });
-});
 
 // ===== ADMIN LOGOUT =====
 app.post("/admin/logout", (_, res) => {

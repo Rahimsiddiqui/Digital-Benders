@@ -1,4 +1,4 @@
-const { express, loadJSON } = require(`../dependencies`);
+const { express, loadJSON } = require(`../../dependencies`);
 const router = express.Router();
 
 router.get("/", (_, res) => {
@@ -12,7 +12,7 @@ router.get("/", (_, res) => {
   const recentArticles = loadJSON("landing-page/recentArticles.json");
   const trustpilot = loadJSON("misc/trustpilot.json");
 
-  res.render("pages/landing-page", {
+  res.render("pages/user/landing-page", {
     caseStudies,
     services,
     results,

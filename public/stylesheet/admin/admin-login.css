@@ -15,13 +15,14 @@ body {
 #loginForm {
   background: white;
   padding: 70px 15px 33px 15px;
-  border-radius: 12px;
+  border-radius: var(--size-xs);
   display: flex;
   flex-direction: column;
   width: 85%;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 var(--size-xl) rgba(255, 255, 255, 0.1);
 }
 
 h2 {
@@ -29,7 +30,7 @@ h2 {
   color: #333;
   font-weight: 800;
   line-height: 1.2;
-  padding-bottom: 30px;
+  padding-bottom: var(--size-3xl);
 }
 
 input {
@@ -38,12 +39,12 @@ input {
   line-height: 1.5;
   color: #666;
   display: block;
-  width: 76%;
+  width: 100%;
   background: #e6e6e6;
   height: 50px;
   border: none;
-  border-radius: 25px;
-  padding: 0 30px;
+  border-radius: var(--size-2xl);
+  padding: 0 var(--size-3xl);
   outline: none;
   border: none;
   position: relative;
@@ -53,7 +54,7 @@ input {
   }
 
   &:last-of-type {
-    margin-bottom: 30px;
+    margin-bottom: var(--size-3xl);
   }
 }
 
@@ -64,7 +65,7 @@ button {
   line-height: 1.5;
   color: #fff;
   text-transform: uppercase;
-  width: 90%;
+  width: 100%;
   height: 50px;
   border-radius: 25px;
   border: none;
@@ -72,7 +73,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 var(--size-3xl);
   cursor: pointer;
 }
 
@@ -89,12 +90,9 @@ button {
 }
 
 @media (min-width: 576px) {
-  input {
-    max-width: 70%;
-  }
-
+  input,
   button {
-    max-width: 80%;
+    max-width: 75%;
   }
 }
 
@@ -103,7 +101,7 @@ button {
     padding: 63px 35px 63px 45px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: var(--size-md);
     vertical-align: middle;
   }
 
@@ -114,7 +112,7 @@ button {
   }
 
   input {
-    max-width: 70%;
+    max-width: 90%;
   }
 
   button {
@@ -125,10 +123,6 @@ button {
 @media (min-width: 900px) {
   #col-1 {
     margin-left: 35px;
-  }
-
-  input {
-    max-width: 80%;
   }
 }
 
@@ -148,7 +142,8 @@ button {
 
 @media (min-width: 1200px) {
   #loginForm {
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
   }
 
   #col-1 img {

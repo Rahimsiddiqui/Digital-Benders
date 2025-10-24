@@ -6,25 +6,19 @@
     <title>Digital Benders</title>
 
     <!-- All Links -->
-    <%- include(`../all-the-things/links`) %>
-  </head>
-  <body>
+    <%- include(`../../all-the-things/links`) %>
+
     <!-- Restrictions CSS -->
     <link rel="stylesheet" href="/stylesheet/restrictions/restrict.css" />
-
+  </head>
+  <body>
     <!-- Overlay (full-screen) -->
-    <div id="flash"></div>
 
-    <!-- Navbar -->
-    <%- include(`../partials/navbar`) %>
-    <!-- Main Content -->
-    <div id="barba-wrapper" data-barba="wrapper">
+    <div id="barba-wrapper" style="width: 100%" data-barba="wrapper">
       <main data-barba="container"><%- body %></main>
     </div>
-    <!-- Footer -->
-    <%- include(`../partials/footer`) %>
 
     <!-- All Scripts -->
-    <%- include(`../all-the-things/scripts`) %>
+    <%- include(`../../all-the-things/scripts`) %>
   </body>
 </html>

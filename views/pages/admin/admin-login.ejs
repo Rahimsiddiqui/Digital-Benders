@@ -1,57 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Login</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/stylesheet/admin/admin-login.css" />
-  </head>
-  <body>
-    <form id="loginForm">
-      <div class="col" id="col-1">
-        <img src="/assets/images/img-01.png" alt="Login Image" loading="lazy" />
-      </div>
-      <div class="col" id="col-2">
-        <h2>Admin Login</h2>
-        <input type="text" id="username" placeholder="Username" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <button type="submit">Login</button>
-      </div>
-    </form>
+<%- layout(`boilerplate/admin/boilerplate`) %>
 
-    <script>
-      const form = document.getElementById("loginForm");
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
+<!-- CSS -->
+<link rel="stylesheet" href="/stylesheet/admin/admin-login.css" />
 
-        const username = document.getElementById("username").value.trim();
-        const password = document.getElementById("password").value.trim();
+<form id="loginForm">
+  <div class="col" id="col-1">
+    <img src="/assets/images/img-01.png" alt="Login Image" loading="lazy" />
+  </div>
+  <div class="col" id="col-2">
+    <h2>Admin Login</h2>
+    <input type="text" id="username" placeholder="Username" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button type="submit">Login</button>
+  </div>
+</form>
 
-        const res = await fetch("/login", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ username, password }),
-        });
-
-        const data = await res.json();
-
-        if (data.token) {
-          document.cookie = `token=${data.token}; path=/;`;
-          window.location.href = "/admin";
-        } else {
-          alert("Login failed: " + (data.message || "Invalid credentials"));
-        }
-      });
-    </script>
-  </body>
-</html>
+<script src="/javascript/admin/admin-login.js"></script>
