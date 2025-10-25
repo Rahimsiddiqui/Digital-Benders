@@ -2,10 +2,17 @@ const { express, jwt, bcrypt, User } = require(`../../dependencies`);
 const router = express.Router();
 const rateLimit = require("express-rate-limit");
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const loginLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 15,
-  message: { message: "Too many login attempts. Try again later." },
+  handler: (req, res) => {
+    console.warn(`Too many login attempts from IP: ${req.ip}`);
+    res
+      .status(429)
+      .json({ message: "Too many login attempts. Try again later." });
+  },
 });
 
 // ===== Admin Login Page =====
@@ -38,10 +45,16 @@ router.post("/login", loginLimiter, async (req, res) => {
       return res.status(403).json({ message: "Access denied" });
     }
 
-    res.cookie("token", token, { httpOnly: true });
+    res.cookie("token", token, {
+      httpOnly: true,
+      path: "/",
+      secure: isProduction,
+      sameSite: isProduction ? "strict" : "lax",
+      maxAge: 2 * 60 * 60 * 1000,
+    });
     res.json({ message: "Login successful", token });
   } catch (err) {
-    console.error("Login error:", err);
+    console.error("Login error: ", err);
     res.status(500).json({ message: "Internal server error" });
   }
 });

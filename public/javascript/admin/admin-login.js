@@ -1,4 +1,5 @@
 const form = document.getElementById("loginForm");
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -9,14 +10,19 @@ form.addEventListener("submit", async (e) => {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password }),
+    credentials: "include",
   });
 
   const data = await res.json();
 
-  if (data.token) {
-    document.cookie = `token=${data.token}; path=/;`;
+  if (res.ok && data.token) {
     window.location.href = "/admin";
   } else {
-    alert("Login failed: " + (data.message || "Invalid credentials"));
+    Swal.fire({
+      title: "Error!",
+      text: "Invalid Credentials",
+      timer: 2500,
+      icon: "error",
+    });
   }
 });

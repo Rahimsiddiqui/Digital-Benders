@@ -7,8 +7,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow-y: hidden !important;
+  min-height: 100vh;
+  max-height: 100vh;
   background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
