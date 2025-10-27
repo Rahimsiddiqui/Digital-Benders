@@ -5,31 +5,126 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-h1,
-p {
-  text-align: center;
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #272727;
+  color: #ffffff;
 }
 
-h1 {
-  font-weight: 800;
-  padding-top: 3rem;
+.sidebar {
+  background-color: #1f1e1e;
+  min-height: 100vh;
+  max-width: 57.4px;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: max-width 0.5s ease-in-out;
+
+  & ul {
+    padding-left: 0;
+  }
 }
 
-p {
-  font-weight: 500;
+.sidebar-logo {
+  max-width: 9.786rem;
+  margin-bottom: var(--size-3xl);
+  cursor: e-resize;
+  height: auto;
+}
+
+.settings-icon,
+.theme-icon {
+  position: absolute;
+  height: auto;
+  cursor: pointer;
+}
+
+.settings-icon {
+  bottom: 12px;
+  left: 18px;
+  max-width: var(--size-xl);
+  transition: left 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.theme-icon {
+  max-width: var(--size-7xl);
+  bottom: 35px;
+  left: -8px;
+  opacity: 1;
+  transition: left 0.5s ease-in-out, opacity 0.4s ease-in-out;
+
+  &.fade {
+    opacity: 0;
+  }
+}
+
+.change-margin {
+  bottom: 42px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-sm);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.link {
+  font-weight: 600;
+  font-family: var(--mulish-font);
+  cursor: pointer;
+  width: max-content;
+}
+
+.underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  transition: color 0.3s ease-in-out;
+
+  &.active,
+  &:hover {
+    color: rgb(228, 227, 227);
+  }
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--admin-clr-accent);
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+.underline:hover::after,
+.underline.active::after {
+  transform: scaleX(1);
 }
 
 .logoutBtn {
   text-decoration: none;
-  color: #cb1212;
-  background-color: #1c1c1c;
+  color: var(--admin-clr-accent);
+  background-color: #1f1e1e;
   border: none;
-  padding: 15px 35px;
-  border-radius: 8px;
-  display: flex;
-  margin: 25px auto 0 auto;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
   font-weight: 700;
-  cursor: pointer;
+  font-size: var(--size-sm);
 }
 
 .btn-red,

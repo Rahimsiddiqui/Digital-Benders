@@ -24,5 +24,7 @@ form.addEventListener("submit", async (e) => {
       timer: 2500,
       icon: "error",
     });
+
+    form.reset();
   }
 });
