@@ -4,8 +4,6 @@
 <link rel="stylesheet" href="/stylesheet/admin/admin-dashboard.css" />
 
 <div class="admin-dashboard">
-  <button class="logoutBtn">Logout</button>
-
   <aside class="sidebar">
     <header class="sidebar-header">
       <img
@@ -17,20 +15,65 @@
     </header>
 
     <ul class="links">
-      <li id="link-1" class="link"><div class="underline">Overview</div></li>
-      <li id="link-2" class="link"><div class="underline">Members</div></li>
-      <li id="link-3" class="link"><div class="underline">Analytics</div></li>
-      <li id="link-5" class="link">
-        <div class="underline">Reports</div>
+      <li id="link-1" class="link">
+        <div class="link__row">
+          <img
+            src="/icons/overview.png"
+            class="link__image"
+            alt="Overview Icon"
+          />
+          <p class="link__text">Overview</p>
+        </div>
       </li>
+
+      <li id="link-2" class="link">
+        <div class="link__row">
+          <img
+            src="/icons/members.png"
+            class="link__image"
+            alt="Members Icon"
+          />
+          <p class="link__text">Members</p>
+        </div>
+      </li>
+
+      <li id="link-3" class="link">
+        <div class="link__row">
+          <img
+            src="/icons/analytics.png"
+            class="link__image"
+            alt="Analytics Icon"
+          />
+          <p class="link__text">Analytics</p>
+        </div>
+      </li>
+
       <li id="link-4" class="link">
-        <div class="underline">Notifications</div>
+        <div class="link__row">
+          <img
+            src="/icons/reports.png"
+            class="link__image"
+            alt="Reports Icon"
+          />
+          <p class="link__text">Reports</p>
+        </div>
+      </li>
+
+      <li id="link-5" class="link">
+        <div class="link__row">
+          <img
+            src="/icons/notifications.png"
+            class="link__image"
+            alt="Notifications Icon"
+          />
+          <p class="link__text">Notifications</p>
+        </div>
       </li>
     </ul>
 
-    <footer class="misc">
+    <footer class="sidebar__footer">
       <img
-        src="/icons/lightmode - light.png"
+        src="/icons/lightmode - dark.png"
         alt="Light Mode Icon"
         class="theme-icon"
         loading="lazy"
@@ -41,6 +84,13 @@
         class="settings-icon"
         src="/icons/gear.png"
         alt="Settings Icon"
+      />
+
+      <img
+        src="/icons/logout.png"
+        alt="Logout Icon"
+        class="logout-icon"
+        loading="lazy"
       />
     </footer>
   </aside>
