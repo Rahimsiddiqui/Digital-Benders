@@ -72,26 +72,26 @@
     </ul>
 
     <footer class="sidebar__footer">
-      <img
-        src="/icons/lightmode - dark.png"
-        alt="Light Mode Icon"
-        class="theme-icon"
-        loading="lazy"
-      />
-
-      <img
-        loading="lazy"
-        class="settings-icon"
-        src="/icons/gear.png"
-        alt="Settings Icon"
-      />
-
-      <img
-        src="/icons/logout.png"
-        alt="Logout Icon"
-        class="logout-icon"
-        loading="lazy"
-      />
+      <div class="footer__row">
+        <img
+          loading="lazy"
+          class="footer__image"
+          src="/icons/gear.png"
+          alt="Settings Icon"
+          id="settings-icon"
+        />
+        <p class="footer__text">Settings</p>
+      </div>
+      <div class="footer__row">
+        <img
+          src="/icons/logout.png"
+          alt="Logout Icon"
+          class="footer__image"
+          loading="lazy"
+          id="logout-icon"
+        />
+        <p class="footer__text">Logout</p>
+      </div>
     </footer>
   </aside>
 </div>
