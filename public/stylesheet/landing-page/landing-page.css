@@ -1398,8 +1398,16 @@ header .contact-section__subtitle {
 
   .services__card {
     min-width: 45%;
-    padding-right: var(--size-1_5xl);
-    padding-left: var(--size-1_5xl);
+
+    &:not(.active) {
+      padding-right: var(--size-1_5xl);
+      padding-left: var(--size-1_5xl);
+    }
+  }
+
+  .hidden__card .card__header {
+    padding-right: var(--size-4xl);
+    padding-left: var(--size-4xl);
   }
 
   .case-studies-container .case-studies__link {

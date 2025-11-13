@@ -1,10 +1,49 @@
 require("dotenv").config();
 
-const { mongoose, express, path, helmet, ejsMate } = require(`./dependencies`);
+const {
+  mongoose,
+  express,
+  path,
+  helmet,
+  ejsMate,
+  Server,
+  http,
+} = require(`./dependencies`);
 
 const app = express();
 
 const cookieParser = require("cookie-parser");
+
+const server = http.createServer(app);
+const io = new Server(server);
+
+let onlineUsers = 0;
+let sessions = 0;
+let requestsThisMinute = 0;
+
+io.on("connection", (socket) => {
+  sessions++;
+  io.emit("stats-update", { sessions, requests: requestsThisMinute });
+
+  socket.on("disconnect", () => {
+    sessions--;
+    io.emit("stats-update", { sessions, requests: requestsThisMinute });
+  });
+});
+
+setInterval(() => {
+  requestsThisMinute = 0;
+}, 60000);
+
+io.on("connection", (socket) => {
+  onlineUsers++;
+  io.emit("online-users", onlineUsers);
+
+  socket.on("disconnect", () => {
+    onlineUsers--;
+    io.emit("online-users", onlineUsers);
+  });
+});
 
 // ENV
 const PORT = process.env.PORT || 3000;
@@ -30,7 +69,10 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "public")));
-
+app.use((req, res, next) => {
+  requestsThisMinute++;
+  next();
+});
 app.use(
   helmet({
     crossOriginEmbedderPolicy: false,
@@ -157,4 +199,4 @@ app.use((err, req, res, next) => {
 });
 
 // ===== SERVER START =====
-app.listen(PORT, () => console.log(`Server started on port: ${PORT}!`));
+server.listen(PORT, () => console.log(`Server started on port: ${PORT}!`));

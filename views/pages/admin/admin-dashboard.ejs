@@ -94,6 +94,129 @@
       </div>
     </footer>
   </aside>
+
+  <div class="dashboard container-link" id="link-1-container">
+    <main>
+      <canvas id="userChart" width="224" height="250"></canvas>
+
+      <div class="stats__row">
+        <div class="stat__card">
+          <h3>Sessions</h3>
+          <p id="sessionsLoggedInPerMin">13</p>
+        </div>
+        <div class="stat__card">
+          <h3>Requests</h3>
+          <p id="requestsPerMin">20</p>
+        </div>
+      </div>
+
+      <!-- Socket.IO -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
+
+      <script>
+        const socket = io();
+
+        const statsRow = document.querySelector(".stats__row");
+        const sessionsEl = document.getElementById("sessionsLoggedInPerMin");
+        const requestsEl = document.getElementById("requestsPerMin");
+
+        const canvas = document.getElementById("userChart");
+        const ctx = canvas.getContext("2d");
+
+        function centerElements() {
+          const centeredPositionCanvas =
+            (window.innerWidth - canvas.width) / 2 + 32;
+          canvas.style.marginLeft = `${centeredPositionCanvas}px`;
+
+          const centeredPositionStats =
+            (window.innerWidth - statsRow.clientWidth) / 2 + 32;
+          statsRow.style.marginLeft = `${centeredPositionStats}px`;
+        }
+
+        // window.addEventListener("load", centerElements);
+        window.addEventListener("resize", centerElements);
+        centerElements();
+        centerElements();
+        centerElements();
+        centerElements();
+        centerElements();
+        centerElements();
+
+        // Chart data
+        const maxPoints = 50;
+        const data = Array(maxPoints).fill(0);
+        let latestCount = 0;
+
+        // --- SOCKET EVENTS ---
+
+        // Real-time stats (sessions + requests)
+        socket.on("stats-update", ({ sessions, requests }) => {
+          sessionsEl.textContent = sessions;
+          requestsEl.textContent = requests;
+        });
+
+        // Real-time online users for chart
+        socket.on("online-users", (count) => {
+          latestCount = count;
+        });
+
+        // Draw the white dashboard widget
+        function drawChart() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          // Background
+          ctx.fillStyle = "#fff"; // white background
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+          // Subtle border shadow
+          ctx.shadowBlur = 0; // reset
+
+          // Draw line chart
+          ctx.beginPath();
+          ctx.strokeStyle = "#3c71ba"; // main chart line (blueish)
+          ctx.lineWidth = 2;
+          ctx.lineCap = "round";
+
+          data.forEach((value, i) => {
+            const x = (canvas.width / (maxPoints - 1)) * i;
+            const y =
+              canvas.height -
+              (value / Math.max(...data, 1)) * (canvas.height - 100) -
+              20;
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+          });
+
+          ctx.stroke();
+
+          // Current user number
+          ctx.font = "22px Poppins, sans-serif";
+          ctx.fillStyle = "#333333"; // dark grey
+          ctx.textAlign = "right";
+          ctx.fillText(
+            data[data.length - 1],
+            canvas.width - 47,
+            canvas.height / 5.7
+          );
+
+          // Chart Label
+          ctx.font = "16px Poppins, sans-serif";
+          ctx.fillStyle = "#555555";
+          ctx.textAlign = "center";
+          ctx.fillText("Online Users:", canvas.width - 120, canvas.height / 6);
+        }
+
+        // Update chart every 5 seconds
+        setInterval(() => {
+          data.push(latestCount);
+          if (data.length > maxPoints) data.shift();
+          drawChart();
+        }, 3000);
+
+        drawChart();
+      </script>
+    </main>
+  </div>
 </div>
 
 <!-- JS -->
