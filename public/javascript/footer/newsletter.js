@@ -1,6 +1,6 @@
 // Needed Elements
 const form = document.querySelector(".newsletter__form");
-const subscribeInput = document.querySelector(".form__input");
+const subscribeInput = document.querySelector("#newsletter-email");
 const telegramIcon = document.querySelector(".form__tele-icon");
 const spinner = document.querySelector(".newsletter-spinner");
 
