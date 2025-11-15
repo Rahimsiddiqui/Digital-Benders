@@ -1,0 +1,49 @@
+<%- layout(`boilerplate/boilerplate`) %>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/stylesheet/blogs/post.css" />
+
+<div class="blog-container">
+  <header class="blog__header">
+    <div class="col">
+      <h1><span><%= post.firstWord %></span> <%= post.rest %></h1>
+    </div>
+  </header>
+
+  <div class="blog__main-image">
+    <img src="<%= post.image %>.jpg" alt="<%= post.alt %>" />
+  </div>
+
+  <main class="blog__main">
+    <%- post.content %>
+    <br />
+    <p id="date-published">
+      Published On: <span id="date"><%- post.date %></span>
+    </p>
+  </main>
+
+  <hr id="seperator" />
+
+  <div class="blog__footer">
+    <h2>Top 6 <span>Popular</span> Blogs</h2>
+    <div class="top-blogs">
+      <% topBlogs.forEach(topBlog => { %>
+      <div class="top-blog">
+        <div class="top-blog__main-image">
+          <img src="<%= topBlog.image %>.jpg" alt="<%= topBlog.alt %>" />
+        </div>
+        <div class="top-blog__content">
+          <h3>
+            <a href="/blogs/<%= topBlog.slug %>"><%= topBlog.title %></a>
+          </h3>
+          <hr />
+          <div class="top-blog__footer">
+            <p>Published By: Creative Squad</p>
+            <span><%= shortDate %></span>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</div>

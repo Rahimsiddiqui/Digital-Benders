@@ -109,7 +109,7 @@
   text-transform: uppercase;
   font-weight: 600;
   color: white;
-  padding: 0.5rem 2.2rem;
+  padding: var(--size-2xs) 2.2rem;
   border-radius: 4px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 

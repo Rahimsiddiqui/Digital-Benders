@@ -1,11 +1,8 @@
 const express = require(`express`);
 const app = express();
 const path = require(`path`);
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
-const helmet = require("helmet");
+const helmet = require(`helmet`);
 const ejsMate = require(`ejs-mate`);
-const mongoose = require(`mongoose`);
 const fs = require(`fs`);
 
 function loadJSON(file) {
@@ -14,15 +11,18 @@ function loadJSON(file) {
   );
 }
 
+function saveJSON(file, data) {
+  const filePath = path.join(__dirname, "data", file);
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+}
+
 module.exports = {
   express,
   app,
   path,
   ejsMate,
   fs,
+  saveJSON,
   loadJSON,
-  jwt,
-  bcrypt,
-  mongoose,
   helmet,
 };

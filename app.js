@@ -1,14 +1,13 @@
 require("dotenv").config();
 
-const { mongoose, express, path, helmet, ejsMate } = require(`./dependencies`);
+const { express, path, helmet, ejsMate } = require(`./dependencies`);
 
 const app = express();
-
 const cookieParser = require("cookie-parser");
 
 // ENV
-const PORT = process.env.PORT || 3000;
-const MONGO_URI = process.env.MONGO_URI;
+const PORT = process.env.PORT;
+
 // const isProduction = process.env.NODE_ENV === "production";
 
 // MISC MIDDLEWARE
@@ -16,12 +15,6 @@ const MONGO_URI = process.env.MONGO_URI;
 // if (isProduction) {
 //   console.log = () => {};
 // }
-
-// ===== DATABASE CONNECTION =====
-mongoose
-  .connect(MONGO_URI)
-  .then(() => console.log("MongoDB Successfully Connected."))
-  .catch((err) => console.error("MongoDB Connection Error: ", err));
 
 // ===== APP SETUP =====
 app.set("views", path.join(__dirname, "views"));
@@ -95,10 +88,13 @@ app.use(
     },
   })
 );
-
+app.use((req, res, next) => {
+  res.locals.currentRoute = req.path;
+  next();
+});
+app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
 
 // ===== MIDDLEWARE =====
 app.use((req, res, next) => {
@@ -111,21 +107,25 @@ const landingPageRoute = require("./routes/landing-page");
 const policiesRoutes = require("./routes/policies");
 const contactRoute = require("./routes/contact");
 const seoAnalysisRoute = require("./routes/seo-analysis");
+const blogsRoute = require("./routes/blogs");
 
-app.use("/", landingPageRoute);
-app.use("/", policiesRoutes);
-app.use("/", contactRoute);
-app.use("/", seoAnalysisRoute);
+app.use("/", [
+  landingPageRoute,
+  policiesRoutes,
+  contactRoute,
+  seoAnalysisRoute,
+  blogsRoute,
+]);
 
 // ===== ERROR HANDLING =====
 app.use((_, res) => {
   res.status(404).send("404 | Page Not Found");
 });
 
-app.use((err, req, res, next) => {
-  console.error("Uncaught Error: ", err);
-  res.status(500).send("500 | Internal Server Error");
-});
+// app.use((err, req, res, next) => {
+//   console.error("Uncaught Error: ", err);
+//   res.status(500).send("500 | Internal Server Error");
+// });
 
 // ===== SERVER START =====
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}!`));

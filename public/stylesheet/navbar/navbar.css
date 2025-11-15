@@ -5,6 +5,10 @@
   justify-content: center;
 }
 
+.activeLink {
+  color: var(--normal-clr-accent) !important;
+}
+
 .nav {
   margin-top: var(--size-xl);
   margin-left: auto;
@@ -251,9 +255,8 @@
     }
   }
 
-  header {
+  .header {
     justify-content: flex-start;
-    margin: var(--size-2xs) 0 0 var(--size-5xl);
   }
 }
 

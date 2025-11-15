@@ -913,7 +913,7 @@ header .contact-section__subtitle {
   text-transform: uppercase;
   font-weight: 600;
   color: var(--card-red-bg);
-  padding: 0.5rem 2.2rem;
+  padding: var(--size-2xs) 2.2rem;
   border-radius: 3px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 

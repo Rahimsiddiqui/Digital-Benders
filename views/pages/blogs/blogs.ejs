@@ -1,0 +1,48 @@
+<%- layout(`boilerplate/boilerplate`) %>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/stylesheet/blogs/blogs.css" />
+
+<div class="blogs-container">
+  <header class="blogs__header" style="display: grid">
+    <div class="col">
+      <h1><span>Blogs</span> & Insights</h1>
+      <p>
+        Stay tuned as we regularly update our blog with trends, industry news,
+        and expert interviews. Delve into every aspect of digital marketing to
+        stay ahead of the curve.
+      </p>
+    </div>
+  </header>
+
+  <main class="blogs__main">
+    <% posts.forEach(post => { %>
+    <div class="blog">
+      <div class="blog__extra-info">
+        <div class="favicon__icon">
+          <img
+            src="https://www.creativesquad.ca/favicon.png"
+            alt="Brand Logo"
+            loading="lazy"
+          />
+        </div>
+        <div class="blog__date">
+          <h6>
+            Creative Squad <br />
+            <span><%- post.date %></span>
+          </h6>
+        </div>
+      </div>
+      <div class="blog__main-image">
+        <img src="<%= post.image %>.jpg" alt="<%= post.alt %>" />
+      </div>
+      <div class="blog__content">
+        <h3 class="blog__title">
+          <a href="/blogs/<%= post.slug %>"><%= post.title %></a>
+        </h3>
+        <p class="blog__description"><%- post.description %></p>
+      </div>
+    </div>
+    <% }); %>
+  </main>
+</div>

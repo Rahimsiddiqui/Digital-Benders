@@ -1,5 +1,7 @@
 <!-- CSS -->
 <link rel="stylesheet" href="/stylesheet/navbar/navbar.css" />
+
+<!-- Font -->
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -17,14 +19,36 @@
       </a>
     </div>
     <div class="nav__links">
-      <a class="nav__link" href="/digital-media-services-in-pakistan"
+      <a
+        class="nav__link <%= currentRoute === '/digital-media-services-in-pakistan' ? 'activeLink' : '' %>"
+        href="/digital-media-services-in-pakistan"
         >Solutions</a
       >
-      <a class="nav__link" href="/production-service-in-pakistan">Production</a>
-      <a class="nav__link" href="/who-we-are">Company</a>
-      <a class="nav__link" href="/portfolio">Work</a>
-      <a class="nav__link" href="/blogs">Learn</a>
-      <a class="nav__link" href="/contact">Become A Client</a>
+      <a
+        class="nav__link <%= currentRoute === '/production-service-in-pakistan' ? 'activeLink' : '' %>"
+        href="/production-service-in-pakistan"
+        >Production</a
+      >
+      <a
+        class="nav__link <%= currentRoute === '/who-we-are' ? 'activeLink' : '' %>"
+        href="/who-we-are"
+        >Company</a
+      >
+      <a
+        class="nav__link <%= currentRoute === '/portfolio' ? 'activeLink' : '' %>"
+        href="/portfolio"
+        >Work</a
+      >
+      <a
+        class="nav__link <%= currentRoute === '/blogs' ? 'activeLink' : '' %>"
+        href="/blogs"
+        >Learn</a
+      >
+      <a
+        class="nav__link <%= currentRoute === '/contact' ? 'activeLink' : '' %>"
+        href="/contact"
+        >Become A Client</a
+      >
     </div>
     <div class="nav__btns">
       <a class="btn" href="/testimonials">Testimonials</a>
@@ -36,14 +60,32 @@
   </nav>
   <aside class="sidebar__mobile">
     <div class="sidebar__mobile-links">
-      <a href="/digital-media-services-in-pakistan"
+      <a
+        class="<%= currentRoute === '/digital-media-in-pakistan' ? 'activeLink' : '' %>"
+        href="/digital-media-services-in-pakistan"
         >Solutions
         <i class="fa-solid fa-chevron-down"></i>
       </a>
-      <a href="/production-service-in-pakistan">Company</a>
-      <a href="/who-we-are">Work</a>
-      <a href="/blogs">Learn</a>
-      <a href="/contact">Become A Client</a>
+      <a
+        class="<%= currentRoute === '/production-service-in-pakistan' ? 'activeLink' : '' %>"
+        href="/production-service-in-pakistan"
+        >Company</a
+      >
+      <a
+        class="<%= currentRoute === '/who-we-are' ? 'activeLink' : '' %>"
+        href="/who-we-are"
+        >Work</a
+      >
+      <a
+        class="<%= currentRoute === '/blogs' ? 'activeLink' : '' %>"
+        href="/blogs"
+        >Learn</a
+      >
+      <a
+        class="<%= currentRoute === '/contact' ? 'activeLink' : '' %>"
+        href="/contact"
+        >Become A Client</a
+      >
     </div>
     <div class="sidebar__mobile-btns">
       <a class="btn" href="/testimonials">Testimonials</a>
