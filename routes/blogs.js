@@ -18,13 +18,6 @@ function parseDMY(dateStr) {
   return new Date(year, month - 1, day);
 }
 
-// Top 6 Blogs
-function getTopBlogs(limit = 6) {
-  return [...blogsWithSlug]
-    .sort((a, b) => (b.views || 0) - (a.views || 0))
-    .slice(0, limit);
-}
-
 // Shorten Date
 function shortenDate(dateStr) {
   const [day, month, year] = dateStr.split("/");
@@ -37,6 +30,13 @@ const blogsWithSlug = blogs.map((blog) => ({
   ...blog,
   slug: slugify(blog.title),
 }));
+
+// Top 6 Blogs
+function getTopBlogs(limit = 6) {
+  return [...blogsWithSlug]
+    .sort((a, b) => (b.views || 0) - (a.views || 0))
+    .slice(0, limit);
+}
 
 // Blogs page
 router.get("/blogs", (_, res) => {
@@ -73,12 +73,14 @@ router.get("/blogs/:slug", (req, res) => {
     });
   }
 
-  const topBlogs = getTopBlogs(6);
+  const topBlogs = getTopBlogs(6).map((b) => ({
+    ...b,
+    shortDate: shortenDate(b.date),
+  }));
 
   res.render("pages/blogs/post", {
     post: blog,
     topBlogs,
-    shortDate: shortenDate(blog.date),
   });
 });
 

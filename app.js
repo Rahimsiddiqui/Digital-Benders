@@ -108,6 +108,7 @@ const policiesRoutes = require("./routes/policies");
 const contactRoute = require("./routes/contact");
 const seoAnalysisRoute = require("./routes/seo-analysis");
 const blogsRoute = require("./routes/blogs");
+const productionServiceInCanada = require("./routes/production-service-in-canada");
 
 app.use("/", [
   landingPageRoute,
@@ -115,6 +116,7 @@ app.use("/", [
   contactRoute,
   seoAnalysisRoute,
   blogsRoute,
+  productionServiceInCanada,
 ]);
 
 // ===== ERROR HANDLING =====

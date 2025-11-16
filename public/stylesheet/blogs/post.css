@@ -11,8 +11,8 @@
   align-items: center;
   text-align: center;
   color: white;
-  padding-top: 6rem;
-  padding-bottom: 9rem;
+  padding-top: var(--size-8xl);
+  padding-bottom: var(--size-9_5xl);
   height: auto;
   background: linear-gradient(90deg, #1b1b1b, #454545);
 }

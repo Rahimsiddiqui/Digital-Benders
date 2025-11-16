@@ -11,7 +11,7 @@
   </header>
 
   <div class="blog__main-image">
-    <img src="<%= post.image %>.jpg" alt="<%= post.alt %>" />
+    <img src="<%= post.image %>.jpg" alt="<%= post.alt %>" loading="lazy" />
   </div>
 
   <main class="blog__main">
@@ -29,19 +29,23 @@
     <div class="top-blogs">
       <% topBlogs.forEach(topBlog => { %>
       <div class="top-blog">
-        <div class="top-blog__main-image">
-          <img src="<%= topBlog.image %>.jpg" alt="<%= topBlog.alt %>" />
-        </div>
-        <div class="top-blog__content">
-          <h3>
-            <a href="/blogs/<%= topBlog.slug %>"><%= topBlog.title %></a>
-          </h3>
-          <hr />
-          <div class="top-blog__footer">
-            <p>Published By: Creative Squad</p>
-            <span><%= shortDate %></span>
+        <a href="/blogs/<%= topBlog.slug %>">
+          <div class="top-blog__main-image">
+            <img
+              src="<%= topBlog.image %>.jpg"
+              alt="<%= topBlog.alt %>"
+              loading="lazy"
+            />
           </div>
-        </div>
+          <div class="top-blog__content">
+            <h3><%= topBlog.title %></h3>
+            <hr />
+            <div class="top-blog__footer">
+              <p>Published By: Creative Squad</p>
+              <span><%= topBlog.shortDate %></span>
+            </div>
+          </div>
+        </a>
       </div>
       <% }); %>
     </div>

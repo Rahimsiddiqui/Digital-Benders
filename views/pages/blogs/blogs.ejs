@@ -18,30 +18,34 @@
   <main class="blogs__main">
     <% posts.forEach(post => { %>
     <div class="blog">
-      <div class="blog__extra-info">
-        <div class="favicon__icon">
+      <a href="/blogs/<%= post.slug %>">
+        <div class="blog__extra-info">
+          <div class="favicon__icon">
+            <img
+              src="https://www.creativesquad.ca/favicon.png"
+              alt="Brand Logo"
+              loading="lazy"
+            />
+          </div>
+          <div class="blog__date">
+            <h6>
+              Creative Squad <br />
+              <span><%- post.date %></span>
+            </h6>
+          </div>
+        </div>
+        <div class="blog__main-image">
           <img
-            src="https://www.creativesquad.ca/favicon.png"
-            alt="Brand Logo"
+            src="<%= post.image %>.jpg"
+            alt="<%= post.alt %>"
             loading="lazy"
           />
         </div>
-        <div class="blog__date">
-          <h6>
-            Creative Squad <br />
-            <span><%- post.date %></span>
-          </h6>
+        <div class="blog__content">
+          <h3 class="blog__title"><%= post.title %></h3>
+          <p class="blog__description"><%- post.description %></p>
         </div>
-      </div>
-      <div class="blog__main-image">
-        <img src="<%= post.image %>.jpg" alt="<%= post.alt %>" />
-      </div>
-      <div class="blog__content">
-        <h3 class="blog__title">
-          <a href="/blogs/<%= post.slug %>"><%= post.title %></a>
-        </h3>
-        <p class="blog__description"><%- post.description %></p>
-      </div>
+      </a>
     </div>
     <% }); %>
   </main>
