@@ -44,7 +44,7 @@
   }
 }
 
-.col {
+.production-service__header .col {
   max-width: 90%;
   margin: 0 auto;
 
@@ -63,7 +63,8 @@
   margin: 0 auto;
   height: auto;
   position: relative;
-  z-index: 100;
+  z-index: 10;
+  cursor: pointer;
   margin-top: -4.5rem;
   margin-bottom: var(--size-6xl);
 }
@@ -191,6 +192,79 @@
   }
 }
 
+.product-insights {
+  padding: var(--size-7_5xl) 0;
+  width: 100%;
+  background-color: #1f1f1f;
+  text-align: center;
+}
+
+.product-insights h3 {
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: var(--size-1_75xl);
+  margin-bottom: var(--size-4xl);
+
+  & span {
+    color: var(--normal-clr-accent);
+  }
+}
+
+.product-insights .col {
+  max-width: 92%;
+  margin: 0 auto;
+}
+
+.product-insight {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: var(--size-xl);
+  padding: var(--size-3xl);
+  border-radius: var(--size-xs);
+  border: 1px solid #828282;
+  background-color: #3e3e3e;
+
+  &:not(:last-of-type) {
+    margin-bottom: var(--size-2xl);
+  }
+
+  & h6 {
+    font-size: var(--size-md);
+    text-transform: uppercase;
+    margin-top: var(--size-4xs);
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+
+  & p {
+    font-size: var(--size-sm);
+  }
+
+  & span {
+    width: 90px;
+    height: 90px;
+    padding: var(--size-2_5xl);
+    background-color: #636363;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & img {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+  }
+}
+
 /* >= 356px */
 @media (min-width: 356px) {
   .production-service__header h1 {
@@ -241,6 +315,14 @@
   .production-service-swiper img {
     max-width: 75%;
   }
+
+  .product-insights h3 {
+    font-size: var(--size-2_5xl);
+  }
+
+  .product-insight img {
+    width: 38px;
+  }
 }
 
 /* >= 576px */
@@ -267,10 +349,11 @@
     }
   }
 
-  .col,
+  .production-service__header .col,
   .production-service-swiper,
   .design-services,
-  .photography-services {
+  .photography-services,
+  .product-insights .col {
     max-width: 520px;
   }
 }
@@ -314,9 +397,27 @@
     }
   }
 
-  .col,
+  .product-insights h3 {
+    font-size: var(--size-4_5xl);
+    margin-bottom: var(--size-5xl);
+  }
+
+  .product-insight {
+    margin-bottom: var(--size-8xl);
+
+    & h6 {
+      font-size: var(--size-xl);
+    }
+
+    & p {
+      font-size: var(--size-sm);
+    }
+  }
+
+  .production-service__header .col,
   .design-services,
-  .photography-services {
+  .photography-services,
+  .product-insights .col {
     max-width: 720px;
   }
 }
@@ -389,7 +490,7 @@
     margin: 0 auto;
   }
 
-  .col {
+  .production-service__header .col {
     width: 80%;
 
     & img {

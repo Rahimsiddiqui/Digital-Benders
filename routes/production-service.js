@@ -2,9 +2,9 @@ const { express, loadJSON } = require(`../dependencies`);
 const router = express.Router();
 
 router.get("/production-service-in-canada", (_, res) => {
-  const faqs = loadJSON("production-service-in-canada/faqs.json");
+  const data = loadJSON("production-service/data.json");
 
-  res.render("pages/production-service-in-canada", { faqs });
+  res.render("pages/production-service", { data });
 });
 
 module.exports = router;

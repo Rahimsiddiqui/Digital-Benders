@@ -1,0 +1,102 @@
+{
+  "brandLogos": [
+    {
+      "src": "/assets/images/sony-image",
+      "alt": "Sony"
+    },
+    {
+      "src": "/assets/images/arri-image",
+      "alt": "Arri"
+    },
+    {
+      "src": "/assets/images/canon-image",
+      "alt": "Canon"
+    },
+    {
+      "src": "/assets/images/blackmagicdesign-image",
+      "alt": "Black Magic Design"
+    },
+    {
+      "src": "/assets/images/soundforge-image",
+      "alt": "Sound Forge"
+    }
+  ],
+
+  "designImages": [
+    { "src": "/assets/images/photography-image-" },
+    { "src": "/assets/images/photography-image-" },
+    { "src": "/assets/images/photography-image-" },
+    { "src": "/assets/images/photography-image-" },
+    { "src": "/assets/images/photography-image-" },
+    { "src": "/assets/images/photography-image-" },
+    { "src": "/assets/images/photography-image-" },
+    { "src": "/assets/images/photography-image-" },
+    { "src": "/assets/images/photography-image-" }
+  ],
+
+  "photographyServices": [
+    {
+      "src": "/assets/images/photography-services-image-",
+      "title": "Video Ads & <br /> <span>Digital Commerce</span>",
+      "description": "Transform concepts into captivating stories with our video ads and digital commercials. Engage your audience and leave a lasting impact with dynamic visuals and narratives.",
+      "role": "odd"
+    },
+    {
+      "src": "/assets/images/photography-services-image-",
+      "title": "Fashion <br /> <span>Photography</span>",
+      "description": "Capture the essence of style with our fashion photography. Elevate your brand's image through expertly crafted visuals that showcase your designs in all their glory.",
+      "role": "even"
+    },
+    {
+      "src": "/assets/images/photography-services-image-",
+      "title": "E-commerce <br /> <span>Photogprahy</span>",
+      "description": "Transform concepts into captivating stories with our video ads and digital commercials. Engage your audience and leave a lasting impact with dynamic visuals and narratives.",
+      "role": "odd"
+    },
+    {
+      "src": "/assets/images/photography-services-image-",
+      "title": "Food <br /> <span>Photography</span>",
+      "description": "Savour the art of cuisine with our delectable food photography. From tantalising dishes to culinary creations, we capture the flavours that make your food irresistible.",
+      "role": "even"
+    }
+  ],
+
+  "productInsights": [
+    {
+      "src": "/assets/images/product-insights-image-",
+      "alt": "Product Insight Video",
+      "title": "Corporate Video",
+      "description": "Elevate your brand narrative with our corporate video services. From conceptualization to production, we craft compelling visuals that convey your message, values, and achievements, captivating your audience effortlessly."
+    },
+    {
+      "src": "/assets/images/product-insights-image-",
+      "alt": "Product Insight Laptop",
+      "title": "Digital Video Commercial",
+      "description": "Transform ideas into captivating narratives with our digital video commercials. Our dynamic visuals and strategic storytelling resonate with viewers, etching your brand deep in their memory."
+    },
+    {
+      "src": "/assets/images/product-insights-image-",
+      "alt": "Product Insight 3-container",
+      "title": "Video Animation",
+      "description": "Ignite imagination through our vibrant video animation. From charismatic characters to mesmerising motion graphics, we craft visuals that breathe life into your message, making it truly unforgettable."
+    },
+    {
+      "src": "/assets/images/product-insights-image-",
+      "alt": "Product Insight Explainer",
+      "title": "Explainer Video",
+      "description": "Simplify complexities with our concise explainer videos. We distil intricate concepts into engaging visuals and succinct narratives, ensuring your audience comprehends and retains your message effortlessly."
+    },
+    {
+      "src": "/assets/images/product-insights-image-",
+      "alt": "Product Insight Editing",
+      "title": "Video Editing",
+      "description": "Refine and perfect your content with our expert video editing. Seamlessly weaving footage, transitions, and effects, we create a polished, immersive experience that captivates and resonates with your viewers."
+    },
+    {
+      "src": "/assets/images/product-insights-image-",
+      "alt": "Product Insight Analytical Insight",
+      "title": "Analytical Insight",
+      "description": "We provide in-depth analytics and reporting to give you valuable insights into your email campaign performance. From open rates and click-through rates to conversion tracking, our analytics help you understand what needs improvement."
+    }
+  ]
+}

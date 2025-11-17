@@ -1,0 +1,119 @@
+<%- layout(`boilerplate/boilerplate`) %>
+
+<!-- CSS -->
+<link
+  rel="stylesheet"
+  href="/stylesheet/production-service/production-service.css"
+/>
+
+<div class="production-service-container">
+  <header class="production-service__header">
+    <div class="column-container">
+      <div class="col">
+        <h1><span>Product</span> Photography</h1>
+        <p>Picture perfect product photography and videography in Canada</p>
+        <a href="/contact" id="contact-btn">Get Started</a>
+      </div>
+      <div class="col">
+        <div class="production-service__main-image">
+          <img
+            src="/assets/images/photography-header-image.png"
+            alt="Photography Image"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PRODUCTION SERVICE SWIPER -->
+    <div class="production-service-swiper swiper">
+      <div class="swiper-wrapper">
+        <% data.brandLogos.forEach(logo => { %>
+        <div class="swiper-slide">
+          <img
+            src="<%= logo.src %>.png"
+            alt="<%= logo.alt %> Image"
+            loading="lazy"
+          />
+        </div>
+        <% }); %>
+      </div>
+    </div>
+
+    <!-- DESIGN SERVICES -->
+    <section class="design-services">
+      <h3>Eye-catching <span>Visuals</span></h3>
+      <p>
+        Visit our portfolio to witness the magic we have created for other
+        satisfied clients - shaping brands
+      </p>
+
+      <div class="design-services__swiper swiper">
+        <div class="swiper-wrapper">
+          <% data.designImages.forEach((designService, i) => {%>
+          <div class="swiper-slide">
+            <img
+              src="<%= designService.src %><%= i + 1 %>.png"
+              alt="Photography Image"
+              loading="lazy"
+            />
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTOGRAPHY SERVICES -->
+    <section class="photography-services">
+      <% data.photographyServices.forEach((photographyService, i) => { %>
+      <div class="photography-service <%= photographyService.role %>">
+        <div class="photography-service__main-image">
+          <img
+            src="<%= photographyService.src %><%= i + 1 %>.png"
+            alt="Photography Image"
+            loading="lazy"
+          />
+        </div>
+        <div class="photography-service__content">
+          <h4 id="heading-<%= i + 1 %>"><%- photographyService.title %></h4>
+          <p><%= photographyService.description %></p>
+          <a href="/contact">Get Started</a>
+        </div>
+      </div>
+      <% }); %>
+    </section>
+
+    <!-- PRODUCT INSIGHTS -->
+    <section class="product-insights">
+      <div class="col">
+        <h3>
+          High Resolution <br />
+          <span>Product Photography</span>
+        </h3>
+      </div>
+      <div class="col">
+        <% data.productInsights.forEach((productInsight, i) => { %>
+        <div class="product-insight">
+          <span>
+            <img
+              src="<%= productInsight.src %><%= i + 1 %>.png"
+              alt="<%= productInsight.alt %> Image"
+              loading="lazy"
+            />
+          </span>
+          <h6><%= productInsight.title %></h6>
+          <p><%= productInsight.description %></p>
+        </div>
+        <% }); %>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Swiper.js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- JS -->
+<script src="/javascript/production-service-in-canada/swiper.js"></script>
