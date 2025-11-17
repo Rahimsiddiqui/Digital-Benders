@@ -51,8 +51,6 @@ header .reassuring-text {
   cursor: pointer;
   font-family: var(--mulish-font);
   display: flex;
-  align-self: center;
-  text-align: center;
 
   & .faq__toggle {
     margin-left: auto;

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "What types of products do you photograph?",
+    "answer": "We photograph a wide range of products including cosmetics, electronics, accessories, clothing, food items, jewelry, and more. Whether your product is small, large, glossy, or textured, we create high-quality visuals tailored to your brand."
+  },
+  {
+    "id": 2,
+    "question": "How long does a typical product photography project take?",
+    "answer": "Most product photoshoots are completed within 2–5 business days depending on the number of items and the complexity of the shots. Larger or highly detailed projects may take slightly longer."
+  },
+  {
+    "id": 3,
+    "question": "Do you offer product videography along with photography?",
+    "answer": "Yes, we provide high-resolution product videography including 360° videos, smooth product reels, lifestyle clips, and social-media-optimized formats. You can combine photo and video packages for extra value."
+  },
+  {
+    "id": 4,
+    "question": "Can I ship my products to you for the shoot?",
+    "answer": "Absolutely. Clients across Canada can safely ship their products to our studio. Once the project is completed, we can return the items or store them for future shoots based on your preference."
+  },
+  {
+    "id": 5,
+    "question": "Do you provide editing and retouching?",
+    "answer": "Yes. Every photo you receive is fully edited, retouched, color-corrected, and optimized for both web and print. We ensure your products look clean, sharp, and consistent with your brand identity."
+  }
+]
