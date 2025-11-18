@@ -1,0 +1,57 @@
+{
+  "contactDetails": [
+    {
+      "src": "/assets/images/phone-contact",
+      "alt": "Phone Contact",
+      "text": "XXX-XXXX-XXXX"
+    },
+    {
+      "src": "/assets/images/email-contact",
+      "alt": "Email Contact",
+      "text": "info@creativesquad.ca"
+    },
+    {
+      "src": "/assets/images/location-contact",
+      "alt": "Location Contact",
+      "text": "2300 Yonge St, Suite 1600 Toronto"
+    }
+  ],
+
+  "formInputs": [
+    { "type": "text", "specialClass": false, "placeholder": "Your Full Name" },
+    {
+      "type": "email",
+      "specialClass": false,
+      "placeholder": "Your Email Address"
+    },
+    {
+      "type": "text",
+      "specialClass": true,
+      "placeholder": "Your Phone Number"
+    },
+    { "type": "text", "specialClass": false, "placeholder": "Your Message" }
+  ],
+
+  "faqs": [
+    {
+      "id": 1,
+      "question": "Why should I hire a digital marketing agency?",
+      "answer": "Hiring a digital media agency brings expertise and specialized knowledge to your marketing efforts and can help optimize your online presence."
+    },
+    {
+      "id": 2,
+      "question": "What services does your digital marketing agency provide?",
+      "answer": "We offer a wide range of digital media services, including Web Design & Development, SEO, Google Ads PPC, Social Media Marketing & Management, Content & Email marketing, CRO, and more."
+    },
+    {
+      "id": 3,
+      "question": "How can digital marketing help my business?",
+      "answer": "Digital marketing helps businesses to increase brand visibility, attract and engage target audiences, generate leads, drive website traffic, and boost conversions."
+    },
+    {
+      "id": 4,
+      "question": "Do you work with businesses of all sizes?",
+      "answer": "Absolutely! We work with businesses of all sizes, from startups to large enterprises. Our solutions are customized to fit the unique goals and requirements."
+    }
+  ]
+}

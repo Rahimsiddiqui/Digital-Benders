@@ -157,7 +157,7 @@ footer {
 }
 
 .spinner {
-  margin-bottom: var(--size-xs);
+  margin: var(--size-md) 0 var(--size-xs) 0;
 }
 
 /* xs */

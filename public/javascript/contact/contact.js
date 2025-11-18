@@ -1,4 +1,4 @@
-const numberInput = document.getElementById("customNumberInput");
+const numberInput = document.querySelector(".customNumberInput");
 const inputs = document.querySelectorAll(".form__input");
 const contactSpinner = document.querySelector(".company-contact-spinner");
 const submitButton = document.querySelector(".submit__form");

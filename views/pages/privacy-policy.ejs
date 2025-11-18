@@ -8,10 +8,12 @@
     <h1 class="privacy-policies__title">Privacy Policy</h1>
   </header>
   <div class="privacy-policies">
-    <% privacyPolicy.forEach(policy => { %>
+    <% data.privacyPolicies.forEach(privacyPolicy => { %>
     <div class="privacy-policy">
-      <h2 class="privacy-policy__title"><%= policy.title %></h2>
-      <p class="privacy-policy__description"><%= policy.description %></p>
+      <h2 class="privacy-policy__title"><%= privacyPolicy.title %></h2>
+      <p class="privacy-policy__description">
+        <%= privacyPolicy.description %>
+      </p>
     </div>
     <% }); %>
   </div>

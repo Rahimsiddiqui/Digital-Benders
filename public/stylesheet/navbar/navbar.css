@@ -114,16 +114,6 @@
       font-weight: bold;
       padding-bottom: var(--size-xs);
       margin-bottom: var(--size-xl);
-
-      &:first-child {
-        position: relative;
-      }
-
-      &:first-child i {
-        position: absolute;
-        top: 2px;
-        right: 0;
-      }
     }
   }
 

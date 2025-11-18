@@ -23,7 +23,7 @@
   </header>
 
   <div class="faqs">
-    <% faqs.forEach(faq => { %>
+    <% data.faqs.forEach(faq => { %>
     <div class="faq">
       <h4 class="faq__question">
         <%= faq.question %>
@@ -33,8 +33,9 @@
           aria-controls="faq-<%- faq.id %>"
         >
           <img
-            src="https://www.creativesquad.ca/images/faqs_plus.svg"
+            src="/assets/images/faqs-plus-icon.svg"
             alt="Plus Icon Image"
+            loading="lazy"
           />
         </button>
       </h4>

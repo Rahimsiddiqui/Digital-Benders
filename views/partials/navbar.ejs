@@ -19,73 +19,33 @@
       </a>
     </div>
     <div class="nav__links">
+      <% navbarData.desktopNavLinks.forEach(desktopNavLink => { %>
       <a
-        class="nav__link <%= currentRoute === '/digital-media-services-in-canada' ? 'activeLink' : '' %>"
-        href="/digital-media-services-in-canada"
-        >Solutions</a
+        class="nav__link <%= currentRoute === desktopNavLink.link ? 'activeLink' : '' %>"
+        href="<%= desktopNavLink.link %>"
       >
-      <a
-        class="nav__link <%= currentRoute === '/production-service-in-canada' ? 'activeLink' : '' %>"
-        href="/production-service-in-canada"
-        >Production</a
-      >
-      <a
-        class="nav__link <%= currentRoute === '/who-we-are' ? 'activeLink' : '' %>"
-        href="/who-we-are"
-        >Company</a
-      >
-      <a
-        class="nav__link <%= currentRoute === '/portfolio' ? 'activeLink' : '' %>"
-        href="/portfolio"
-        >Work</a
-      >
-      <a
-        class="nav__link <%= currentRoute === '/blogs' ? 'activeLink' : '' %>"
-        href="/blogs"
-        >Learn</a
-      >
-      <a
-        class="nav__link <%= currentRoute === '/contact' ? 'activeLink' : '' %>"
-        href="/contact"
-        >Become A Client</a
-      >
+        <%= desktopNavLink.text %>
+      </a>
+      <% }); %>
     </div>
     <div class="nav__btns">
       <a class="btn" href="/testimonials">Testimonials</a>
       <a class="btn" href="/contact">Get Started</a>
     </div>
     <button class="nav__hamburger">
-      <img src="/icons/hamburger.svg" loading="lazy" alt="Hamburger" />
+      <img src="/assets/images/hamburger.svg" loading="lazy" alt="Hamburger" />
     </button>
   </nav>
   <aside class="sidebar__mobile">
     <div class="sidebar__mobile-links">
+      <% navbarData.mobileNavLinks.forEach(mobileNavLink => { %>
       <a
-        class="<%= currentRoute === '/digital-media-in-canada' ? 'activeLink' : '' %>"
-        href="/digital-media-services-in-canada"
-        >Solutions
-        <i class="fa-solid fa-chevron-down"></i>
+        class="nav__link <%= currentRoute === mobileNavLink.link ? 'activeLink' : '' %>"
+        href="<%= mobileNavLink.link %>"
+      >
+        <%= mobileNavLink.text %>
       </a>
-      <a
-        class="<%= currentRoute === '/production-service-in-canada' ? 'activeLink' : '' %>"
-        href="/production-service-in-canada"
-        >Company</a
-      >
-      <a
-        class="<%= currentRoute === '/who-we-are' ? 'activeLink' : '' %>"
-        href="/who-we-are"
-        >Work</a
-      >
-      <a
-        class="<%= currentRoute === '/blogs' ? 'activeLink' : '' %>"
-        href="/blogs"
-        >Learn</a
-      >
-      <a
-        class="<%= currentRoute === '/contact' ? 'activeLink' : '' %>"
-        href="/contact"
-        >Become A Client</a
-      >
+      <% }); %>
     </div>
     <div class="sidebar__mobile-btns">
       <a class="btn" href="/testimonials">Testimonials</a>

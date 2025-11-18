@@ -1,7 +1,7 @@
-const customNumberInput = document.querySelector(".customNumberInput");
+const customNumberInput = document.querySelector(".customNumberInputContact");
 const allInputs = document.querySelectorAll(".contact-section__input");
 const seoAnalysisSpinner = document.querySelector(".seo-analysis-spinner");
-const formSubmitBtn = document.querySelector(".submit__form");
+const formSubmitBtn = document.querySelector(".contact-form__submit");
 const seoAnalysisForm = document.querySelector("#contact__form");
 
 customNumberInput.addEventListener("input", function () {

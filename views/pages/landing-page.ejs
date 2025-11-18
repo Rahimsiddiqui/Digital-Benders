@@ -30,60 +30,17 @@
       </header>
       <div class="hero__swiper swiper">
         <div class="swiper-wrapper">
+          <% data.badges.forEach(badge => { %>
           <div class="swiper-slide">
-            <a href="#">
+            <a href="<%= badge.link %>">
               <img
-                src="https://www.gstatic.com/partners/badge/images/2024/PartnerBadgeClickable.svg"
-                alt="..."
                 class="swiper__image"
+                src="<%= badge.src %>"
+                alt="<%= badge.alt %> Badge"
               />
             </a>
           </div>
-          <div class="swiper-slide">
-            <a href="#">
-              <img
-                src="https://www.creativesquad.ca/images/clutch.svg"
-                alt="..."
-                class="swiper__image"
-              />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-              <img
-                src="https://www.creativesquad.ca/images/design_rush.jpeg"
-                alt="..."
-                class="swiper__image"
-              />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-              <img
-                src="https://www.creativesquad.ca/images/trustpilot.svg"
-                alt="..."
-                class="swiper__image"
-              />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-              <img
-                src="https://www.creativesquad.ca/images/bni.jpg"
-                alt="..."
-                class="swiper__image"
-              />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-              <img
-                src="https://www.creativesquad.ca/images/top1.svg"
-                alt="..."
-                class="swiper__image"
-              />
-            </a>
-          </div>
+          <% }); %>
         </div>
       </div>
     </div>
@@ -107,7 +64,7 @@
 
       <!-- Results Cards -->
       <div class="results-cards">
-        <% results.forEach(result => { %>
+        <% data.results.forEach(result => { %>
         <article class="card">
           <div class="card__image">
             <img
@@ -127,7 +84,7 @@
 
     <!-- Testimonials -->
     <div class="testimonials-cards-container">
-      <% testimonials.forEach(testimonial => { %>
+      <% data.testimonials.forEach(testimonial => { %>
       <div class="card">
         <div class="card__video">
           <iframe
@@ -187,128 +144,33 @@
         </p>
         <div class="about-company__lists">
           <ul class="about-company__list">
+            <% data.aboutCompanyLists1.forEach(aboutCompanyList1 => { %>
             <li class="about-company__list-item">
               <span class="list-item__image">
                 <img
-                  src="https://www.creativesquad.ca/images/icons/portfolio_sport.png"
-                  alt="Professional Sports Image"
+                  src="<%= aboutCompanyList1.src %>.png"
+                  alt="<%= aboutCompanyList1.alt %> Image"
                   loading="lazy"
                 />
               </span>
-              Professional Sports
+              <%= aboutCompanyList1.text %>
             </li>
-            <li class="about-company__list-item">
-              <span class="list-item__image">
-                <img
-                  src="https://www.creativesquad.ca/images/icons/portfolio_construction.png"
-                  alt="Construction Image"
-                  loading="lazy"
-                />
-              </span>
-              Construction
-            </li>
-            <li class="about-company__list-item">
-              <span class="list-item__image">
-                <img
-                  src="https://www.creativesquad.ca/images/icons/portfolio_healthcare.png"
-                  alt="Healthcare Image"
-                  loading="lazy"
-                />
-              </span>
-              Healthcare
-            </li>
-            <li class="about-company__list-item">
-              <span class="list-item__image">
-                <img
-                  src="https://www.creativesquad.ca/images/icons/portfolio_hospitality.png"
-                  alt="Hospitality Image"
-                  loading="lazy"
-                />
-              </span>
-              Hospitality
-            </li>
-            <li class="about-company__list-item">
-              <span class="list-item__image">
-                <img
-                  src="https://www.creativesquad.ca/images/icons/portfolio_realestate.png"
-                  alt="Real Estate Image"
-                  loading="lazy"
-                />
-              </span>
-              Real Estate
-            </li>
-            <li class="about-company__list-item">
-              <span class="list-item__image">
-                <img
-                  src="https://www.creativesquad.ca/images/icons/portfolio_education.png"
-                  alt="Education Image"
-                  loading="lazy"
-                />
-              </span>
-              Education
-            </li>
+            <% }); %>
           </ul>
+
           <ul class="about-company__list">
+            <% data.aboutCompanyLists2.forEach(aboutCompanyList2 => { %>
             <li class="about-company__list-item">
               <span class="list-item__image">
                 <img
-                  src="https://www.creativesquad.ca/images/icons/portfolio_automotive.png"
-                  alt="Automotive Image"
+                  src="<%= aboutCompanyList2.src %>.png"
+                  alt="<%= aboutCompanyList2.alt %> Image"
                   loading="lazy"
                 />
               </span>
-              Automotive
+              <%= aboutCompanyList2.text %>
             </li>
-            <li class="about-company__list-item">
-              <span class="list-item__image">
-                <img
-                  src="https://www.creativesquad.ca/images/icons/portfolio_technology.png"
-                  alt="Technology Image"
-                  loading="lazy"
-                />
-              </span>
-              Technology
-            </li>
-            <li class="about-company__list-item">
-              <span class="list-item__image">
-                <img
-                  src="https://www.creativesquad.ca/images/icons/portfolio_ecommerce.png"
-                  alt="E-commerce Image"
-                  loading="lazy"
-                />
-              </span>
-              E-commerce
-            </li>
-            <li class="about-company__list-item">
-              <span class="list-item__image">
-                <img
-                  src="https://www.creativesquad.ca/images/icons/portfolio_finance.png"
-                  alt="Finance Image"
-                  loading="lazy"
-                />
-              </span>
-              Finance
-            </li>
-            <li class="about-company__list-item">
-              <span class="list-item__image">
-                <img
-                  src="https://www.creativesquad.ca/images/icons/portfolio_retail.png"
-                  alt="Retail Image"
-                  loading="lazy"
-                />
-              </span>
-              Retail
-            </li>
-            <li class="about-company__list-item">
-              <span class="list-item__image">
-                <img
-                  src="https://www.creativesquad.ca/images/icons/portfolio_legal.png"
-                  alt="Legal Image"
-                  loading="lazy"
-                />
-              </span>
-              Legal
-            </li>
+            <% }); %>
           </ul>
         </div>
       </header>
@@ -329,7 +191,7 @@
           <span>Solutions for your business goals</span>
         </h3>
         <div class="brand-growing__btns">
-          <% brandGrowing.forEach(card => { %>
+          <% data.brandGrowing.forEach(card => { %>
           <button class="brand-growing__btn" data-card="<%= card.id %>">
             <%- card.button %>
           </button>
@@ -338,7 +200,7 @@
       </header>
 
       <div class="brand-growing__cards">
-        <% brandGrowing.forEach(card => { %>
+        <% data.brandGrowing.forEach(card => { %>
         <div class="brand-growing__card" id="<%= card.id %>">
           <div class="card__main-image">
             <img src="<%= card.image %>" alt="<%= card.alt %>" loading="lazy" />
@@ -379,7 +241,7 @@
       </header>
 
       <div class="services-cards-container">
-        <% services.forEach(service => { %>
+        <% data.services.forEach(service => { %>
         <div class="services__card" id="<%= service.id %>">
           <!-- Shown Card -->
           <div class="shown__card">
@@ -468,7 +330,7 @@
 
       <div class="case-studies__swiper swiper">
         <div class="swiper-wrapper">
-          <% caseStudies.forEach(study => { %>
+          <% data.caseStudies.forEach(study => { %>
           <div class="swiper-slide" id="<%= study.id %>">
             <div class="swiper__image">
               <img
@@ -523,7 +385,7 @@
           <span>For Inspiring Online Experiences</span>
         </h3>
         <div class="process__btns-container">
-          <% developmentProcess.forEach(card => { %>
+          <% data.developmentProcess.forEach(card => { %>
           <button class="process__btn" data-card="<%= card.id %>">
             <%- card.button %>
           </button>
@@ -536,7 +398,7 @@
         </div>
       </header>
       <div class="process__cards-container">
-        <% developmentProcess.forEach(card => { %>
+        <% data.developmentProcess.forEach(card => { %>
         <div class="process__card" id="<%= card.id %>">
           <div class="card__main-image">
             <img
@@ -573,7 +435,7 @@
       </header>
       <div class="recent-articles__swiper swiper">
         <div class="swiper-wrapper">
-          <% recentArticles.forEach(article => { %>
+          <% data.recentArticles.forEach(article => { %>
           <div class="swiper-slide">
             <div class="swiper__main-image">
               <img
@@ -634,31 +496,14 @@
           Enter your details below to get started.
         </p>
         <div class="contact-section__inputs">
+          <% data.contactSectionInputs.forEach(contactSectionInput => { %>
           <input
-            type="text"
-            class="contact-section__input"
-            placeholder="Your Full Name"
+            class="contact-section__input <%= contactSectionInput.specialClass ? 'customNumberInput' : '' %>"
+            type="<%= contactSectionInput.type %>"
+            placeholder="<%= contactSectionInput.placeholder %>"
             required
           />
-          <input
-            type="text"
-            class="contact-section__input"
-            placeholder="Your Phone Number"
-            id="customNumberInput"
-            required
-          />
-          <input
-            type="email"
-            class="contact-section__input"
-            placeholder="Your Email Address"
-            required
-          />
-          <input
-            type="text"
-            class="contact-section__input"
-            placeholder="Enter Project Type"
-            required
-          />
+          <% }); %>
         </div>
 
         <div id="spinner-overlay" style="z-index: 9999">

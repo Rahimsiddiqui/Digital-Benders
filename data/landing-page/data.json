@@ -1,0 +1,545 @@
+{
+  "badges": [
+    { "link": "#", "src": "/assets/images/bni-image.jpg", "alt": "BNI" },
+    { "link": "#", "src": "/assets/images/top1-image.svg", "alt": "Top 1" },
+    {
+      "link": "#",
+      "src": "/assets/images/google-partner-badge-image.svg",
+      "alt": "Google Partner"
+    },
+    { "link": "#", "src": "/assets/images/clutch-image.svg", "alt": "Clutch" },
+    {
+      "link": "#",
+      "src": "/assets/images/design-rush-image.jpeg",
+      "alt": "Design Rush"
+    },
+    {
+      "link": "#",
+      "src": "/assets/images/top2-image.svg",
+      "alt": "Top 2"
+    },
+    {
+      "link": "#",
+      "src": "/assets/images/trustpilot-image.svg",
+      "alt": "Trustpilot"
+    }
+  ],
+
+  "aboutCompanyLists1": [
+    {
+      "src": "/assets/images/sport-image",
+      "alt": "Professional Sports",
+      "text": "Professional Sports"
+    },
+    {
+      "src": "/assets/images/construction-image",
+      "alt": "Construction",
+      "text": "Construction"
+    },
+    {
+      "src": "/assets/images/healthcare-image",
+      "alt": "Healthcare",
+      "text": "Healthcare"
+    },
+    {
+      "src": "/assets/images/hospitality-image",
+      "alt": "Hospitality",
+      "text": "Hospitality"
+    },
+    {
+      "src": "/assets/images/realestate-image",
+      "alt": "Real Estate",
+      "text": "Real Estate"
+    },
+    {
+      "src": "/assets/images/education-image",
+      "alt": "Education",
+      "text": "Education"
+    }
+  ],
+
+  "aboutCompanyLists2": [
+    {
+      "src": "/assets/images/automotive-image",
+      "alt": "Automotive",
+      "text": "Automotive"
+    },
+    {
+      "src": "/assets/images/technology-image",
+      "alt": "Technology",
+      "text": "Technology"
+    },
+    {
+      "src": "/assets/images/ecommerce-image",
+      "alt": "E-commerce",
+      "text": "E-commerce"
+    },
+    {
+      "src": "/assets/images/finance-image",
+      "alt": "Finance",
+      "text": "Finance"
+    },
+    { "src": "/assets/images/retail-image", "alt": "Retail", "text": "Retail" },
+    { "src": "/assets/images/legal-image", "alt": "Legal", "text": "Legal" }
+  ],
+
+  "brandGrowing": [
+    {
+      "id": "card-1",
+      "button": "Custom <br /> Development",
+      "title": "Custom Development",
+      "image": "https://www.creativesquad.ca/images/creatives/BG_web.webp",
+      "alt": "Custom Development Image",
+      "link": "/web-design-and-development-service-in-canada",
+      "features": [
+        {
+          "heading": "Scalable Solutions",
+          "description": "We create tailored web solutions that grow with your business. Each project is built to handle future demands efficiently."
+        },
+        {
+          "heading": "Seamless Integration",
+          "description": "Our custom systems connect smoothly with your existing tools. This saves you time and avoids unnecessary complexity."
+        },
+        {
+          "heading": "Optimized Performance",
+          "description": "Every solution is designed for speed, reliability, and efficiency. You get tools that work faster while consuming fewer resources."
+        }
+      ]
+    },
+    {
+      "id": "card-2",
+      "button": "Digital <br /> Marketing",
+      "title": "Digital Marketing",
+      "image": "https://www.creativesquad.ca/images/creatives/BG_digital.webp",
+      "alt": "Digital Marketing Image",
+      "link": "/social-media-marketing-service-in-canada",
+      "features": [
+        {
+          "heading": "Data-Driven Campaigns",
+          "description": "We focus on strategies backed by real analytics for maximum impact. This ensures your budget delivers stronger results."
+        },
+        {
+          "heading": "Social Media Growth",
+          "description": "Build a strong presence across platforms with engaging content. We craft campaigns that actually drive interaction and trust."
+        },
+        {
+          "heading": "SEO Excellence",
+          "description": "Our SEO methods improve visibility and attract organic traffic. You’ll rank higher while reaching the right audience faster."
+        }
+      ]
+    },
+    {
+      "id": "card-3",
+      "button": "App <br /> Development",
+      "title": "App Development",
+      "image": "https://www.creativesquad.ca/images/creatives/BG_app.webp",
+      "alt": "App Development Image",
+      "link": "/app-development-service-in-canada",
+      "features": [
+        {
+          "heading": "Cross-Platform Apps",
+          "description": "We develop apps that run smoothly on Android and iOS alike. This way, your users get a consistent experience everywhere."
+        },
+        {
+          "heading": "User-Friendly Design",
+          "description": "Apps are designed with intuitive interfaces and smooth navigation. The result is higher engagement and satisfied users."
+        },
+        {
+          "heading": "Secure & Reliable",
+          "description": "We prioritize app security with reliable protection methods. Your users enjoy safe, stable, and worry-free performance."
+        }
+      ]
+    },
+    {
+      "id": "card-4",
+      "button": "Creative <br /> Services",
+      "title": "Creative Services",
+      "image": "https://www.creativesquad.ca/images/creatives/BG_creative.webp",
+      "alt": "Creative Services Image",
+      "link": "/user-interface-experience-service-in-canada",
+      "features": [
+        {
+          "heading": "Engaging Designs",
+          "description": "Our team produces visuals that capture attention instantly. Every design communicates your brand’s unique identity effectively."
+        },
+        {
+          "heading": "Strong Branding",
+          "description": "We help your business stand out with bold, creative concepts. This builds trust and a memorable impression in the market."
+        },
+        {
+          "heading": "Multimedia Content",
+          "description": "From videos to graphics, we deliver dynamic creative assets. These materials are tailored to keep your audience engaged longer."
+        }
+      ]
+    },
+    {
+      "id": "card-5",
+      "button": "Marketing <br /> Strategy",
+      "title": "Marketing Strategy",
+      "image": "https://www.creativesquad.ca/images/creatives/BG_marketing.webp",
+      "alt": "Marketing Strategy Image",
+      "link": "/marketing-strategy-service-in-canada",
+      "features": [
+        {
+          "heading": "Targeted Planning",
+          "description": "We design marketing strategies that focus directly on your goals. This ensures every campaign is both purposeful and efficient."
+        },
+        {
+          "heading": "Market Insights",
+          "description": "Our research identifies trends and opportunities to guide your growth. You gain a clear advantage in decision-making and execution."
+        },
+        {
+          "heading": "Performance Tracking",
+          "description": "We measure campaign results with precision for ongoing improvement. This allows strategies to stay aligned with your objectives."
+        }
+      ]
+    }
+  ],
+
+  "caseStudies": [
+    {
+      "id": "case-1",
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734104206009-Thumbnail.webp",
+      "alt": "E-Commerce Growth",
+      "title": "Revitalizing Digital Marketing for PhysioTec Rehab & Wellness"
+    },
+    {
+      "id": "case-2",
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734103764829-Thumbnail.webp",
+      "alt": "Brand Awareness",
+      "title": "Habster Boutique’s E-Commerce Revamp"
+    },
+    {
+      "id": "case-3",
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734103482235-Thumbnail.webp",
+      "alt": "Digital Transformation",
+      "title": "Inner Find’s Digital Transformation"
+    },
+    {
+      "id": "case-4",
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734103180748-Thumbnail.webp",
+      "alt": "Driving Sales with Optimized Google Ads for Fully Promoted Heartland",
+      "title": "Driving Sales with Optimized Google Ads for Fully Promoted Heartland"
+    },
+    {
+      "id": "case-5",
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734102941258-Thumbnail.webp",
+      "alt": "Driving Sales with Optimized Google Ads for Fully Promoted Meadowville",
+      "title": "Driving Sales with Optimized Google Ads for Fully Promoted Meadowville"
+    },
+    {
+      "id": "case-6",
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734101468252-Thumbnail.webp",
+      "alt": "Driving Sales with Optimized Google Ads for Fully Promoted Richmond Hill",
+      "title": "Driving Sales with Optimized Google Ads for Fully Promoted Richmond Hill"
+    },
+    {
+      "id": "case-7",
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734100654262-Thumbnail.webp",
+      "alt": "Strengthening Personal Branding",
+      "title": "Strengthening Personal Branding for Raj Kalsi Real Estate"
+    },
+    {
+      "id": "case-8",
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734100227582-Thumbnail.jpg",
+      "alt": "Social Media & SEO Transformation",
+      "title": "Social Media & SEO Transformation for Graha Chaal"
+    },
+    {
+      "id": "case-9",
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734101063699-Thumbnail.jpg",
+      "alt": "SEO and Google Ads Revamp",
+      "title": "SEO and Google Ads Revamp for Tutor Doctor"
+    },
+    {
+      "id": "case-10",
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734098952230-Thumbnail.webp",
+      "alt": "Comprehensive Marketing Boost",
+      "title": "Comprehensive Marketing Boost for Triplets Homes"
+    }
+  ],
+
+  "developmentProcess": [
+    {
+      "id": "card-1",
+      "button": "Strategic Planning",
+      "title": "Strategic Planning",
+      "description": "Our design & development team collaborates to understand your demands and users by lining them up with your company dynamics for an exceptional digital experience.",
+      "image": "https://www.creativesquad.ca/images/discover.webp",
+      "alt": "Strategic Planning Image",
+      "link": "/web-design-and-development-service-in-canada"
+    },
+    {
+      "id": "card-2",
+      "button": "Content Creation",
+      "title": "Content Creation",
+      "description": "Our experienced content creators will develop a content strategy (website copy, blog articles, social media posts, or video scrip) tailored to your target audience and business objectives.",
+      "image": "https://www.creativesquad.ca/images/development.webp",
+      "alt": "Content Creation Image",
+      "link": "/content-marketing-service-in-canada"
+    },
+    {
+      "id": "card-3",
+      "button": "Performance Marketing",
+      "title": "Performance Marketing",
+      "description": "To accelerate your online growth, we leverage paid advertising channels. Our digital advertising experts create highly targeted campaigns that maximize your return on investment (ROI).",
+      "image": "https://www.creativesquad.ca/images/testing.webp",
+      "alt": "Performance Marketing Image",
+      "link": "/google-ads-service-in-canada"
+    },
+    {
+      "id": "card-4",
+      "button": "Analytics",
+      "title": "Analytics",
+      "description": "We analyze the data to gain insights into user behavior and areas for improvement. We continuously optimize your campaigns to achieve your marketing objectives.",
+      "image": "https://www.creativesquad.ca/images/deployment.webp",
+      "alt": "Analytics Image",
+      "link": "/analytics-report-service-in-canada"
+    },
+    {
+      "id": "card-5",
+      "button": "Optimization",
+      "title": "Optimization",
+      "description": "We believe in data-driven decision-making. Our team utilizes advanced analytics tools to track and measure the performance of your marketing campaigns.",
+      "image": "https://www.creativesquad.ca/images/maintainance.webp",
+      "alt": "Optimization Image",
+      "link": "/search-engine-optimization-service-in-canada"
+    }
+  ],
+
+  "faqs": [
+    {
+      "id": 1,
+      "question": "Why should I hire a Canadian digital marketing company?",
+      "answer": "Hiring a digital marketing company offers several advantages. They have the expertise and knowledge of the local market, allowing them to tailor strategies that resonate with the target audience in the region."
+    },
+    {
+      "id": 2,
+      "question": "How can a digital marketing company help my business grow?",
+      "answer": "A digital marketing company can help your business grow by implementing targeted strategies that attract qualified leads, boost brand visibility, and improve conversions."
+    },
+    {
+      "id": 3,
+      "question": "How do I choose the right digital marketing company in Canada?",
+      "answer": "When selecting a digital marketing company, consider factors such as their experience, reputation, client portfolio, and range of services offered."
+    },
+    {
+      "id": 4,
+      "question": "How do you measure the success of digital marketing campaigns?",
+      "answer": "We employ various key performance indicators (KPIs) such as website traffic, conversion rates, engagement metrics, and ROI to gauge the effectiveness of our strategies."
+    }
+  ],
+
+  "recentArticles": [
+    {
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1733517641561-Web%20Development%20and%20Design%20Services%20in%20Toronto.jpg",
+      "alt": "Professional Web Development and Design Services Image",
+      "date": "6/12/2024",
+      "heading": "Building a Strong Digital Presence: The Importance of Professional Web Development and Design Services",
+      "description": "A business’s website is often the first point of contact between the company and potential customers. This makes web development and web design services not just important but absolutely essential for creating a strong online presence. A professio...",
+      "link": "building-a-strong-digital-presence-the-importance-of-professional-web-development-and-design-services"
+    },
+    {
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1736255854403-Search%20Engine%20Optimization.jpg",
+      "alt": "Comprehensive Optimization Services Image",
+      "date": "7/1/2025",
+      "heading": "Optimize Your Website for Success with Comprehensive Optimization Services",
+      "description": "Your website is often the first impression customers have of your business. A well-designed website is crucial, but without optimization, even the most stunning site may fall short in driving traffic and achieving conversions. This is where websit...",
+      "link": "optimize-your-website-for-success-with-comprehensive-optimization-services"
+    },
+    {
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1736257265315-Google+Advertising.jpg",
+      "alt": "Guide to Local Success Image",
+      "date": "7/1/2025",
+      "heading": "Harness the Power of Google Advertising: Your Guide to Local Success",
+      "description": "Advertising on Google is more than just a marketing strategy—it's a necessity for businesses aiming to stay competitive. Whether you’re targeting a global audience or focusing on local customers, Google advertising offers tools and features to mat...",
+      "link": "harness-the-power-of-google-advertising-your-guide-to-local-success"
+    },
+    {
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1739220540870-SEO%20Services%20in%20Canada.png",
+      "alt": "Expert Website Optimization Services Image",
+      "date": "10/2/2025",
+      "heading": "Transform Your Online Presence with Expert Website Optimization Services",
+      "description": "Your website is the face of your business. If it’s slow, outdated, or difficult to navigate, potential customers may leave before they even get to know your brand. That’s where website optimization services come into play. By improving the structu...",
+      "link": "transform-your-online-presence-with-expert-website-optimization-services"
+    },
+    {
+      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1739305508909-Ecommerce%20Development%20in%20Canada.png",
+      "alt": "Leading Ecommerce Website Development Company Image",
+      "date": "11/2/2025",
+      "heading": "Elevate Your Online Store with a Leading Ecommerce Website Development Company",
+      "description": "The ecommerce landscape is booming, making it essential for businesses to have a polished and functional online store. Whether you’re launching a new business or upgrading your existing website, collaborating with an ecommerce website developm...",
+      "link": "elevate-your-online-store-with-a-leading-ecommerce-website-development-company"
+    }
+  ],
+
+  "results": [
+    {
+      "id": "result-1",
+      "image": "https://www.creativesquad.ca/images/icons/roi_icon1.svg",
+      "title": "Innovative Ideas",
+      "description": "Explore a wide range of groundbreaking and creative ideas to enhance your digital media endeavors."
+    },
+    {
+      "id": "result-2",
+      "image": "https://www.creativesquad.ca/images/icons/roi_icon2.svg",
+      "title": "Personalized Solutions",
+      "description": "Receive customized and bespoke digital marketing and web solutions designed specifically for your individual business requirements."
+    },
+    {
+      "id": "result-3",
+      "image": "https://www.creativesquad.ca/images/icons/roi_icon3.svg",
+      "title": "ROI Focused",
+      "description": "Achieve a laser-focused approach on return on investment (ROI), utilizing strategies that deliver tangible and quantifiable outcomes."
+    }
+  ],
+
+  "services": [
+    {
+      "id": "service-1",
+      "title": "Design & Build",
+      "shown": {
+        "icon": "https://www.creativesquad.ca/images/icons/img1.svg",
+        "description": "From intuitive navigation to seamless responsiveness across devices, we prioritize every aspect to deliver an exceptional user experience through exceptional web design & development services."
+      },
+      "hidden": {
+        "icon": "https://www.creativesquad.ca/images/icons/img4.svg",
+        "links": [
+          {
+            "text": "Custom Web Dev",
+            "url": "/website-design-and-development-service-in-canada"
+          },
+          {
+            "text": "CMS Development",
+            "url": "/cms-development-service-in-canada"
+          },
+          {
+            "text": "E-commerce Dev",
+            "url": "/ecommerce-development-service-in-canada"
+          },
+          {
+            "text": "Application Dev",
+            "url": "/app-development-service-in-canada"
+          },
+          { "text": "Landing Page", "url": "/landing-page-service-in-canada" },
+          {
+            "text": "UI/UX Design",
+            "url": "/user-interface-experience-service-in-canada"
+          },
+          { "text": "Branding", "url": "/branding-service-in-canada" }
+        ]
+      }
+    },
+    {
+      "id": "service-2",
+      "title": "Create & Market",
+      "shown": {
+        "icon": "https://www.creativesquad.ca/images/icons/img2.svg",
+        "description": "Make the world talk about you with Creative Squad, the leading digital marketing powerhouse in Canada. Our marketing solutions cover everything from strategic ad campaigns to management."
+      },
+      "hidden": {
+        "icon": "https://www.creativesquad.ca/images/icons/img6.svg",
+        "links": [
+          {
+            "text": "Marketing Strategy",
+            "url": "/marketing-strategy-service-in-canada"
+          },
+          { "text": "Google Ads", "url": "/ppc-marketing-service-in-canada" },
+          {
+            "text": "SEO Optimization",
+            "url": "/search-engine-optimization-service-in-canada"
+          },
+          {
+            "text": "SM Marketing",
+            "url": "/social-media-marketing-service-in-canada"
+          },
+          {
+            "text": "Content Marketing",
+            "url": "/content-marketing-service-in-canada"
+          },
+          {
+            "text": "Reputation Management",
+            "url": "/reputation-managment-service-in-canada"
+          },
+          {
+            "text": "Email Marketing",
+            "url": "/email-marketing-service-in-canada"
+          }
+        ]
+      }
+    },
+    {
+      "id": "service-3",
+      "title": "Automate & Scale",
+      "shown": {
+        "icon": "https://www.creativesquad.ca/images/icons/img3.svg",
+        "description": "Leverage the potential of automation and scalability with Creative Squad, the premier digital marketing agency in Canada. Enhance your brand's online impact through our wide-ranging services."
+      },
+      "hidden": {
+        "icon": "https://www.creativesquad.ca/images/icons/img7.svg",
+        "links": [
+          {
+            "text": "Call Action Tracking",
+            "url": "/call-action-tracking-in-canada"
+          },
+          {
+            "text": "Data Analytics & Reporting",
+            "url": "/analytics-reporting-service-in-canada"
+          },
+          {
+            "text": "API Integration",
+            "url": "/api-integration-service-in-canada"
+          },
+          {
+            "text": "Live Chat Solutions",
+            "url": "/live-website-chat-service-in-canada"
+          },
+          {
+            "text": "CRM Integration",
+            "url": "/crm-integrations-solutions-in-canada"
+          }
+        ]
+      }
+    }
+  ],
+
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "video": "https://www.youtube.com/embed/U1USZs8AoQ0",
+      "title": "Tru Off Grid",
+      "description": "Their satisfaction motivates us."
+    },
+    {
+      "id": "testimonial-2",
+      "video": "https://www.youtube.com/embed/L_thYvisr8s",
+      "title": "Empowerment Project",
+      "description": "Proud to highlight our client's journey."
+    },
+    {
+      "id": "testimonial-3",
+      "video": "https://www.youtube.com/embed/emRxmtX9FNE",
+      "title": "Meadows Equine",
+      "description": "Proud to highlight our client's journey."
+    }
+  ],
+
+  "contactSectionInputs": [
+    { "type": "text", "placeholder": "Your Full Name", "specialClass": false },
+    {
+      "type": "text",
+      "placeholder": "Your Phone Number",
+      "specialClass": true
+    },
+    {
+      "type": "email",
+      "placeholder": "Your Email Address",
+      "specialClass": false
+    },
+    {
+      "type": "text",
+      "placeholder": "Enter Project Type",
+      "specialClass": false
+    }
+  ]
+}

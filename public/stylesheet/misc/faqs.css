@@ -42,7 +42,13 @@ header .reassuring-text {
   border-bottom: 1px solid #d4d4d4;
   padding-bottom: 0;
   max-width: 92%;
-  margin: 0 auto var(--size-lg) auto;
+  margin: var(--size-2xl) auto var(--size-lg) auto;
+
+  &:not(.open) {
+    & .faq__answer {
+      margin-top: 0;
+    }
+  }
 }
 
 .faq__question {

@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const { express, path, helmet, ejsMate } = require(`./dependencies`);
+const { express, path, helmet, ejsMate, loadJSON } = require(`./dependencies`);
 
 const app = express();
 const cookieParser = require("cookie-parser");
@@ -15,6 +15,14 @@ const PORT = process.env.PORT;
 // if (isProduction) {
 //   console.log = () => {};
 // }
+
+// LOAD FOOTER & NAVBAR JSON
+const footerData = loadJSON("footer/data.json");
+const navbarData = loadJSON("navbar/data.json");
+
+// SITE-WIDE DATA
+app.locals.footerData = footerData;
+app.locals.navbarData = navbarData;
 
 // ===== APP SETUP =====
 app.set("views", path.join(__dirname, "views"));

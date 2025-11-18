@@ -1,0 +1,18 @@
+{
+  "desktopNavLinks": [
+    { "link": "/digital-media-services-in-canada", "text": "Solutions" },
+    { "link": "/production-service-in-canada", "text": "Production" },
+    { "link": "/who-we-are", "text": "Company" },
+    { "link": "/portfolio", "text": "Work" },
+    { "link": "/blogs", "text": "Learn" },
+    { "link": "/contact", "text": "Become A Client" }
+  ],
+
+  "mobileNavLinks": [
+    { "link": "/digital-media-services-in-canada", "text": "Solutions" },
+    { "link": "/production-service-in-canada", "text": "Production" },
+    { "link": "/who-we-are", "text": "Company" },
+    { "link": "/blogs", "text": "Learn" },
+    { "link": "/contact", "text": "Become A Client" }
+  ]
+}

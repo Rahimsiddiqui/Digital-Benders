@@ -118,6 +118,7 @@ header h4 {
   font-weight: 500;
   border-radius: 50px;
   width: 160px;
+  height: 57px;
   margin: 0 var(--size-sm);
   font-size: var(--size-sm);
   padding: var(--size-xs) var(--size-4xl);

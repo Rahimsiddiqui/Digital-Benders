@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+  <g id="Group_478" data-name="Group 478" transform="translate(536 -707)">
+    <g id="Ellipse_16" data-name="Ellipse 16" transform="translate(-536 707)" fill="none" stroke="#fff" stroke-width="1">
+      <circle cx="15.5" cy="15.5" r="15.5" stroke="none"/>
+      <circle cx="15.5" cy="15.5" r="15" fill="none"/>
+    </g>
+    <path id="Icon_awesome-phone-alt" data-name="Icon awesome-phone-alt" d="M11.515,8.376,8.922,7.265a.556.556,0,0,0-.648.16l-1.148,1.4a8.581,8.581,0,0,1-4.1-4.1l1.4-1.148a.554.554,0,0,0,.16-.648L3.475.336A.559.559,0,0,0,2.838.014L.431.57A.556.556,0,0,0,0,1.112,10.741,10.741,0,0,0,10.742,11.853a.556.556,0,0,0,.542-.431l.556-2.408A.562.562,0,0,0,11.515,8.376Z" transform="translate(-526.241 717.214)" fill="#fff"/>
+  </g>
+</svg>

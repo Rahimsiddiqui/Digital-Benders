@@ -21,25 +21,14 @@
         </div>
 
         <form class="seo-analysis__form">
+          <% data.seoAnalysisInputs.forEach(seoAnalysisInput => { %>
           <input
-            type="text"
-            class="seo-analysis__input"
-            required
-            placeholder="Enter Name"
-          />
-          <input
-            type="email"
-            class="seo-analysis__input"
-            required
-            placeholder="Enter Email Address"
-          />
-          <input
-            type="text"
-            id="customNumberInput"
-            class="seo-analysis__input"
-            placeholder="Enter Phone Number"
+            class="seo-analysis__input <%= seoAnalysisInput.specialClass ? 'customNumberInput' : '' %>"
+            type="<%= seoAnalysisInput.type %>"
+            placeholder="<%= seoAnalysisInput.placeholder %>"
             required
           />
+          <% }); %>
           <div class="url__checking-row">
             <input
               type="url"
@@ -66,7 +55,7 @@
           <span>Website Audit</span>
         </h3>
         <div class="brand-growing__btns">
-          <% brandGrowing.forEach(card => { %>
+          <% data.brandGrowing.forEach(card => { %>
           <button class="brand-growing__btn" data-card="<%= card.id %>">
             <%- card.button %>
           </button>
@@ -75,7 +64,7 @@
       </div>
 
       <div class="brand-growing__cards">
-        <% brandGrowing.forEach(card => { %>
+        <% data.brandGrowing.forEach(card => { %>
         <div class="brand-growing__card" id="<%= card.id %>">
           <div class="card__main-image">
             <img src="<%= card.image %>" alt="<%= card.alt %>" loading="lazy" />
@@ -107,7 +96,7 @@
 
       <div class="column">
         <div class="scoring-cards-container">
-          <% scoringCards.forEach(card => { %>
+          <% data.scoringCards.forEach(card => { %>
           <div class="scoring-card <%= card.id %>">
             <h6 class="scoring-card__title"><%- card.title %></h6>
             <p class="scoring-card__description"><%- card.description %></p>
@@ -137,30 +126,14 @@
           Enter your details to get started.
         </p>
         <div class="contact-section__inputs">
+          <% data.contactSectionInputs.forEach(contactSectionInput => { %>
           <input
-            type="text"
-            class="contact-section__input"
-            placeholder="Your Full Name"
+            class="contact-section__input <%= contactSectionInput.specialClass ? 'customNumberInputContact' : '' %>"
+            type="<%= contactSectionInput.type %>"
+            placeholder="<%= contactSectionInput.placeholder %>"
             required
           />
-          <input
-            type="text"
-            class="contact-section__input customNumberInput"
-            placeholder="Your Phone Number"
-            required
-          />
-          <input
-            type="email"
-            class="contact-section__input"
-            placeholder="Your Email Address"
-            required
-          />
-          <input
-            type="text"
-            class="contact-section__input"
-            placeholder="Enter Project Type"
-            required
-          />
+          <% }); %>
         </div>
 
         <div
@@ -174,7 +147,9 @@
           ></div>
         </div>
 
-        <button class="submit__form" type="submit">Submit</button>
+        <button class="submit__form contact-form__submit" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   </section>

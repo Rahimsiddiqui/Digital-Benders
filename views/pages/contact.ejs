@@ -15,31 +15,16 @@
         expertise and innovation.
       </div>
       <div class="contact__details">
-        <div class="contact-detail">
-          <span>
-            <img
-              src="https://www.creativesquad.ca/images/icons/phone-contact.svg"
-              alt="Phone Contact Icon"
-            />
-          </span>
-          XXX-XXXX-XXXX
-        </div>
+        <% data.contactDetails.forEach(contactDetail => { %>
         <div class="contact-detail">
           <span
             ><img
-              src="https://www.creativesquad.ca/images/icons/email-contact.svg"
-              alt="Email Icon"
+              src="<%= contactDetail.src %>.svg"
+              alt="<%= contactDetail.alt %> Image"
           /></span>
-          info@creativesquad.ca
+          <%= contactDetail.text %>
         </div>
-        <div class="contact-detail">
-          <span
-            ><img
-              src="https://www.creativesquad.ca/images/icons/loc-contact.svg"
-              alt="Location Icon"
-          /></span>
-          Block-K, North Nazimabad, Karachi
-        </div>
+        <% }); %>
       </div>
     </div>
 
@@ -51,31 +36,14 @@
           value.
         </p>
         <div class="form__inputs">
+          <% data.formInputs.forEach(formInput => { %>
           <input
-            class="form__input"
-            type="text"
-            placeholder="Your Full Name"
+            type="<%= formInput.type %>"
+            class="form__input <%= formInput.specialClass ? 'customNumberInput' : '' %>"
+            placeholder="<%= formInput.placeholder %>"
             required
           />
-          <input
-            class="form__input"
-            type="email"
-            placeholder="Your Email Address"
-            required
-          />
-          <input
-            class="form__input"
-            type="text"
-            id="customNumberInput"
-            placeholder="Phone Number"
-            required
-          />
-          <input
-            class="form__input"
-            type="text"
-            placeholder="Your Message"
-            required
-          />
+          <% }); %>
         </div>
 
         <div id="spinner-overlay" class="overlay" style="z-index: 9999">

@@ -1,4 +1,4 @@
-const numberInput = document.getElementById("customNumberInput");
+const numberInput = document.querySelector(".customNumberInput");
 const inputs = document.querySelectorAll(".seo-analysis__input");
 const analysisSpinner = document.querySelector(".analysis-spinner");
 const submitButton = document.querySelector(".submit__form");

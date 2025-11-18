@@ -6,7 +6,9 @@ faqs.forEach((faq) => {
   const question = faq.querySelector(".faq__question");
   const answer = faq.querySelector(".faq__answer");
 
-  // Reusable toggle function
+  const openIcon = "/assets/images/faqs-minus-icon.svg";
+  const closeIcon = "/assets/images/faqs-plus-icon.svg";
+
   const toggleFaq = () => {
     const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
 
@@ -14,22 +16,27 @@ faqs.forEach((faq) => {
     faq.classList.toggle("open", !isExpanded);
 
     if (!isExpanded) {
+      // ↓ Open
       answer.style.maxHeight = answer.scrollHeight + "px";
       answer.style.marginTop = "var(--size-md)";
-      icon.src = "https://www.creativesquad.ca/images/faqs_minus.svg";
+      icon.src = openIcon;
     } else {
+      // ↓ Close
       answer.style.maxHeight = "0";
-      setTimeout(() => {
-        answer.style.marginTop = "0";
-      }, 400); // match CSS transition time
-      icon.src = "https://www.creativesquad.ca/images/faqs_plus.svg";
+      answer.addEventListener(
+        "transitionend",
+        () => {
+          answer.style.marginTop = "0";
+        },
+        { once: true }
+      );
+      icon.src = closeIcon;
     }
   };
 
-  // Click both the question text *and* the button
   toggleBtn.addEventListener("click", toggleFaq);
+
   question.addEventListener("click", (e) => {
-    // Prevent double trigger if button is clicked
     if (!e.target.closest(".faq__toggle")) {
       toggleFaq();
     }

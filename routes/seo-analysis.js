@@ -2,10 +2,9 @@ const { express, loadJSON } = require(`../dependencies`);
 const router = express.Router();
 
 router.get("/seo-analysis", (_, res) => {
-  const brandGrowing = loadJSON("seo-analysis/brandGrowing.json");
-  const scoringCards = loadJSON("seo-analysis/scoringCards.json");
+  const data = loadJSON("seo-analysis/data.json");
 
-  res.render("pages/seo-analysis", { brandGrowing, scoringCards });
+  res.render("pages/seo-analysis", { data });
 });
 
 module.exports = router;

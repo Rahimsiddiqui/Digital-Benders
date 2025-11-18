@@ -6,7 +6,7 @@ const mobileSidebar = document.querySelector(".sidebar__mobile");
 // Function to close sidebar
 function closeSidebar() {
   mobileSidebar.classList.remove("show");
-  hamburgerImg.src = "/icons/hamburger.svg";
+  hamburgerImg.src = "/assets/images/hamburger.svg";
   hamburger.setAttribute("aria-expanded", "false");
 }
 
@@ -15,7 +15,9 @@ hamburger.addEventListener("click", () => {
   const isOpen = mobileSidebar.classList.toggle("show");
 
   // Swap icon
-  hamburgerImg.src = isOpen ? "/icons/cross.svg" : "/icons/hamburger.svg";
+  hamburgerImg.src = isOpen
+    ? "/assets/images/cross.svg"
+    : "/assets/images/hamburger.svg";
 
   // Accessibility
   hamburger.setAttribute("aria-expanded", isOpen);
