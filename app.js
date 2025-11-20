@@ -116,7 +116,8 @@ const policiesRoutes = require("./routes/policies");
 const contactRoute = require("./routes/contact");
 const seoAnalysisRoute = require("./routes/seo-analysis");
 const blogsRoute = require("./routes/blogs");
-const productionServiceInCanada = require("./routes/production-service");
+const productionService = require("./routes/production-service");
+const portfolioRoute = require("./routes/portfolio");
 
 app.use("/", [
   landingPageRoute,
@@ -124,7 +125,8 @@ app.use("/", [
   contactRoute,
   seoAnalysisRoute,
   blogsRoute,
-  productionServiceInCanada,
+  productionService,
+  portfolioRoute,
 ]);
 
 // ===== ERROR HANDLING =====

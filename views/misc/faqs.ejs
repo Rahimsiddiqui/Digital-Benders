@@ -30,7 +30,7 @@
         <button
           class="faq__toggle"
           aria-expanded="false"
-          aria-controls="faq-<%- faq.id %>"
+          aria-controls="faq-<%= faq.id %>"
         >
           <img
             src="/assets/images/faqs-plus-icon.svg"
@@ -39,7 +39,7 @@
           />
         </button>
       </h4>
-      <p id="faq-<%- faq.id %>" class="faq__answer"><%= faq.answer %></p>
+      <p id="faq-<%= faq.id %>" class="faq__answer"><%= faq.answer %></p>
     </div>
     <% }) %>
   </div>

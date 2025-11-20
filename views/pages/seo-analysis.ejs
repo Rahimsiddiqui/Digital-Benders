@@ -70,8 +70,8 @@
             <img src="<%= card.image %>" alt="<%= card.alt %>" loading="lazy" />
           </div>
           <div class="card__content">
-            <h3 class="brand-growing__title"><%- card.title %></h3>
-            <p class="card__description"><%- card.description %></p>
+            <h3 class="brand-growing__title"><%= card.title %></h3>
+            <p class="card__description"><%= card.description %></p>
             <a class="card__button btn-invert" href="/contact">Let's Connect</a>
           </div>
         </div>
@@ -98,8 +98,8 @@
         <div class="scoring-cards-container">
           <% data.scoringCards.forEach(card => { %>
           <div class="scoring-card <%= card.id %>">
-            <h6 class="scoring-card__title"><%- card.title %></h6>
-            <p class="scoring-card__description"><%- card.description %></p>
+            <h6 class="scoring-card__title"><%= card.title %></h6>
+            <p class="scoring-card__description"><%= card.description %></p>
           </div>
           <% }) %>
         </div>
@@ -143,6 +143,7 @@
         >
           <div
             class="spinner-border spinner seo-analysis-spinner text-white spinner-border-md"
+            style="margin: 0.125rem 0 0.875rem 0"
             role="status"
           ></div>
         </div>

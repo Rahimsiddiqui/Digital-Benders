@@ -57,6 +57,7 @@ header .reassuring-text {
   cursor: pointer;
   font-family: var(--mulish-font);
   display: flex;
+  margin-bottom: 0;
 
   & .faq__toggle {
     margin-left: auto;
@@ -100,6 +101,7 @@ header .reassuring-text {
 
   .faq__question {
     font-size: var(--size-lg);
+    margin-bottom: 0.5rem;
   }
 }
 

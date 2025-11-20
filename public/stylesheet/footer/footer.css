@@ -156,10 +156,6 @@ footer {
   font-size: var(--size-sm);
 }
 
-.spinner {
-  margin: var(--size-md) 0 var(--size-xs) 0;
-}
-
 /* xs */
 /* @media (min-width: 475px) {} */
 

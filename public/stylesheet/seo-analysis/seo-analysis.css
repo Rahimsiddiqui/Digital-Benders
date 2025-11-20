@@ -83,7 +83,7 @@ header h4 {
 /* BRAND GROWING */
 .brand-growing-container {
   max-width: 90%;
-  padding: var(--size-3xl) 0;
+  padding: var(--size-5_5xl) 0;
   margin: auto;
 }
 
@@ -174,7 +174,7 @@ header h4 {
 }
 
 .website-scrolling-analysis-container {
-  padding: var(--size-3_5xl) 0;
+  padding: var(--size-5_5xl) 0;
   background-color: #191919;
 
   & .column {

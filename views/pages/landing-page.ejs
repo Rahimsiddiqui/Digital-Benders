@@ -387,7 +387,7 @@
         <div class="process__btns-container">
           <% data.developmentProcess.forEach(card => { %>
           <button class="process__btn" data-card="<%= card.id %>">
-            <%- card.button %>
+            <%= card.button %>
           </button>
           <img
             src="https://www.creativesquad.ca/images/dev_process_chevronleft.svg"
@@ -402,15 +402,15 @@
         <div class="process__card" id="<%= card.id %>">
           <div class="card__main-image">
             <img
-              src="<%- card.image %>"
-              alt="<%- card.title %>"
+              src="<%= card.image %>"
+              alt="<%= card.title %>"
               loading="lazy"
             />
           </div>
           <div class="card__content">
             <h4 class="card__header"><%= card.title %></h4>
             <p class="card__paragraph"><%= card.description %></p>
-            <a href="<%- card.link %>" class="card__link">Read More</a>
+            <a href="<%= card.link %>" class="card__link">Read More</a>
           </div>
         </div>
         <% }) %>
@@ -435,22 +435,20 @@
       </header>
       <div class="recent-articles__swiper swiper">
         <div class="swiper-wrapper">
-          <% data.recentArticles.forEach(article => { %>
+          <% blogs.forEach(blog => { %>
           <div class="swiper-slide">
             <div class="swiper__main-image">
               <img
-                src="<%- article.image %>"
-                alt="<%- article.alt %>"
+                src="<%= blog.image %>.jpg"
+                alt="<%= blog.alt %>"
                 loading="lazy"
               />
             </div>
             <div class="swiper__content">
-              <span class="swiper__date"><%= article.date %></span>
-              <h4 class="swiper__heading"><%= article.heading %></h4>
-              <p class="swiper__description"><%= article.description %></p>
-              <a
-                href="/blogs/<%- article.link %>"
-                class="swiper__link btn-invert"
+              <span class="swiper__date"><%= blog.date %></span>
+              <h4 class="swiper__heading"><%= blog.title %></h4>
+              <p class="swiper__description"><%= blog.description %></p>
+              <a href="/blogs/<%= blog.slug %>" class="swiper__link btn-invert"
                 >Read More</a
               >
             </div>
@@ -509,6 +507,7 @@
         <div id="spinner-overlay" style="z-index: 9999">
           <div
             class="spinner-border spinner contact-spinner text-white spinner-border-md"
+            style="margin-top: 0.25rem; margin-bottom: 0.95rem"
             role="status"
           ></div>
         </div>

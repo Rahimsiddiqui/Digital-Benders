@@ -190,7 +190,8 @@
 
 /* SECTION 3 */
 .section-3 {
-  background-color: var(--section-bg);
+  background-color: var(--section-bg) !important;
+  padding-bottom: 0 !important;
 }
 
 /* ABOUT COMPANY */
@@ -815,7 +816,7 @@ header .text-horizontal-line {
 }
 
 .recent-articles__swiper .swiper__description {
-  margin-bottom: var(--size-2xl);
+  margin: var(--size-2xl) 0 var(--size-3xl) 0;
 }
 
 .recent-articles__swiper .swiper__link {
