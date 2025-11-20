@@ -81,7 +81,7 @@ const router = express.Router();
 router.get("/${fileName}", (_, res) => {
   const data = loadJSON("${fileName}/data.json");
 
-  res.render("pages/${fileName}", data);
+  res.render("pages/${fileName}", {data});
 });
 
 module.exports = router;
