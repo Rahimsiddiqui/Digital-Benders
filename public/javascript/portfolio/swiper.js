@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Styles For Case Studies Swiper
   new Swiper(".case-studies-swiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 100,
     grabCursor: true,
     autoplay: {
       delay: 1750,
@@ -12,8 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    speed: 500,
+    speed: 750,
     loop: true,
-    breakpoints: {},
+    breakpoints: {
+      1400: { spaceBetween: 250 },
+      1900: { spaceBetween: 450 },
+      2300: { spaceBetween: 750 },
+    },
   });
 });

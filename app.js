@@ -131,13 +131,13 @@ app.use("/", [
 
 // ===== ERROR HANDLING =====
 app.use((_, res) => {
-  res.status(404).send("404 | Page Not Found");
+  res.status(404).render("pages/404-error");
 });
 
-// app.use((err, req, res, next) => {
-//   console.error("Uncaught Error: ", err);
-//   res.status(500).send("500 | Internal Server Error");
-// });
+app.use((err, req, res, next) => {
+  console.error("Uncaught Error: ", err);
+  res.status(500).render("pages/500-error");
+});
 
 // ===== SERVER START =====
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}!`));

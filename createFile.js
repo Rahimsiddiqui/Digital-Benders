@@ -50,6 +50,9 @@ const ejsTemplate = `
   <header class="${fileName}-header"></header>
   <main class="${fileName}-main"></main>
 </div>
+
+<!-- JS -->
+<script src="/javascript/${fileName}/ex.js"></script>
 `.trim();
 
 const cssTemplate = `
@@ -105,6 +108,7 @@ function safeWrite(filePath, content) {
 // Create Files
 // -----------------------------
 safeWrite(path.join(ROOT, "views", "pages", `${fileName}.ejs`), ejsTemplate);
+safeWrite(path.join(ROOT, "public", "javascript", fileName, `ex.js`));
 safeWrite(
   path.join(ROOT, "public", "stylesheet", fileName, `${fileName}.css`),
   cssTemplate
