@@ -1,8 +1,9 @@
 require("dotenv").config();
+
 const fs = require("fs");
 const path = require("path");
 const mongoose = require("mongoose");
-const Blog = require("./models/Blog");
+const Blog = require("../models/Blog");
 
 const slugify = (text) => {
   if (!text) return "";
@@ -21,7 +22,7 @@ const parseDate = (dateStr) => {
   return new Date(year, month - 1, day);
 };
 
-const jsonPath = path.join(__dirname, "data/blogs/blogs.json");
+const jsonPath = path.join(__dirname, "../data/blogs/blogs.json");
 
 const seedDB = async () => {
   try {

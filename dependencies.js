@@ -1,5 +1,4 @@
 const express = require(`express`);
-
 const app = express();
 const path = require(`path`);
 const helmet = require(`helmet`);
@@ -29,18 +28,6 @@ function slugify(title) {
     .replace(/\-\-+/g, "-");
 }
 
-const getCaseStudies = () => {
-  const data = loadJSON("portfolio/data.json");
-
-  data.caseStudies.forEach((study) => {
-    if (!study.slug) {
-      study.slug = slugify(study.title);
-    }
-  });
-
-  return data;
-};
-
 module.exports = {
   express,
   app,
@@ -50,7 +37,6 @@ module.exports = {
   saveJSON,
   loadJSON,
   slugify,
-  getCaseStudies,
   helmet,
   Blog,
 };

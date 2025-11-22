@@ -210,27 +210,27 @@
           "intro": "Focus on these proven practices to create sustainable growth, higher conversions, and stronger brand trust.",
           "items": [
             {
-              "emphasis": "Do understand your target audience deeply.",
+              "emphasis": "Do understand your target audience deeply:",
               "text": "Before creating a campaign, know who your audience is, what they want, and what problems they need solved. The clearer the picture, the higher the conversion rate."
             },
             {
-              "emphasis": "Do create high-quality, valuable content.",
+              "emphasis": "Do create high-quality, valuable content:",
               "text": "Content that educates, solves problems, or entertains builds trust and increases repeat visitors — two essential ingredients for conversion."
             },
             {
-              "emphasis": "Do optimize your website and content for SEO.",
+              "emphasis": "Do optimize your website and content for SEO:",
               "text": "Even the best campaigns fail if your website isn’t discoverable. A strong SEO foundation ensures your audience finds you when they need you."
             },
             {
-              "emphasis": "Do use analytics to drive decision-making.",
+              "emphasis": "Do use analytics to drive decision-making:",
               "text": "Track everything — impressions, clicks, bounce rates, user paths. Data reveals what’s working and what’s wasting your budget."
             },
             {
-              "emphasis": "Do maintain consistent branding across all platforms.",
+              "emphasis": "Do maintain consistent branding across all platforms:",
               "text": "Consistency builds recognition. Whether someone sees your ad, Instagram post, or email, the experience should feel familiar and trustworthy."
             },
             {
-              "emphasis": "Do engage with your audience.",
+              "emphasis": "Do engage with your audience:",
               "text": "Responding to comments, messages, and emails builds loyalty. People buy from brands that make them feel heard."
             }
           ]
@@ -241,23 +241,23 @@
           "intro": "These are the common mistakes that silently ruin campaigns and drain your budget.",
           "items": [
             {
-              "emphasis": "Don’t post content without a strategy.",
+              "emphasis": "Don’t post content without a strategy:",
               "text": "Random posting leads to random results. Every piece of content should have a clear purpose — awareness, engagement, or conversion."
             },
             {
-              "emphasis": "Don’t focus only on selling.",
+              "emphasis": "Don’t focus only on selling:",
               "text": "Constantly pushing offers makes your brand look desperate. Strike a balance between value-driven content and promotional content."
             },
             {
-              "emphasis": "Don’t ignore your website experience.",
+              "emphasis": "Don’t ignore your website experience:",
               "text": "Slow load times, broken links, and cluttered layouts can destroy conversions. Users leave within seconds if the experience feels frustrating."
             },
             {
-              "emphasis": "Don’t underutilize retargeting.",
+              "emphasis": "Don’t underutilize retargeting:",
               "text": "People rarely buy on the first visit. Retargeting brings them back and dramatically increases conversion rates."
             },
             {
-              "emphasis": "Don’t expect instant results.",
+              "emphasis": "Don’t expect instant results:",
               "text": "Digital marketing is a long-term investment. Brands that quit early never experience the compounding benefits of consistent strategy."
             }
           ]
@@ -266,6 +266,489 @@
           "type": "text",
           "title": "Final Thoughts: Digital Marketing Wins When Strategy Meets Consistency",
           "content": "Successful digital marketing isn’t magic — it’s the outcome of doing the right things repeatedly and avoiding common traps. If you commit to strategy, high-quality content, audience understanding, and continuous optimization, your brand will grow steadily and predictably."
+        }
+      ]
+    }
+  },
+
+  {
+    "src": "/assets/images/constant-site-crashes-image.jpg",
+    "alt": "Constant Site Crashes",
+    "title": "Tired of Constant Site Crashes? Custom Web Development Keeps Your Business Online",
+    "description": "Running a business online isn’t just about great products or services. If your website keeps crashing, you’re losing more than visitors—you’re losing revenue, credibility, and customer trust. Frequent downtime frustrates users and can seriously ha...",
+    "date": "19/9/2025",
+    "post": {
+      "intro": "Few things hurt a business more than a website that keeps crashing. Whether it’s during peak traffic, product launches, or random hours of the day, site downtime instantly kills trust, revenue, and user experience. If this sounds familiar, you’re not alone — and it’s a major sign that you need <b>custom web development</b>.",
+      "sections": [
+        {
+          "type": "list",
+          "title": "Why Do Websites Crash?",
+          "intro": "Most site crashes happen because the site isn’t built to handle real-world traffic and performance demands. Common causes include:",
+          "items": [
+            {
+              "emphasis": "Shared hosting overload:",
+              "text": "Cheap shared hosting cannot handle traffic spikes."
+            },
+            {
+              "emphasis": "Poorly optimized code:",
+              "text": "Heavy scripts, bloated plugins, and inefficient backend logic slow everything down."
+            },
+            {
+              "emphasis": "Traffic spikes:",
+              "text": "Sudden visitor surges cause server overload."
+            },
+            {
+              "emphasis": "Insecure systems:",
+              "text": "Outdated code makes you vulnerable to attacks that crash your site."
+            },
+            {
+              "emphasis": "Too many plugins:",
+              "text": "Especially with WordPress, plugin conflict is a leading cause of crashes."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "The Hidden Cost of Frequent Crashes",
+          "intro": "Every minute your site is down, your business loses potential customers. Here’s how crashes silently ruin conversions:",
+          "items": [
+            {
+              "text": "Users leave instantly when a site doesn’t load."
+            },
+            {
+              "text": "Google lowers your ranking due to poor reliability."
+            },
+            {
+              "text": "Returning customers stop trusting your brand."
+            },
+            {
+              "text": "Ad campaigns become wasted money if landing pages break."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Why Custom Web Development Fixes the Problem",
+          "intro": "Unlike template-based or plugin-heavy websites, custom-built sites are optimized for performance, scalability, and stability. Here’s what custom development brings:",
+          "items": [
+            {
+              "emphasis": "Optimized backend architecture:",
+              "text": "Clean, efficient code designed for speed."
+            },
+            {
+              "emphasis": "Improved server performance:",
+              "text": "Built around technologies that match your business scale."
+            },
+            {
+              "emphasis": "Crash-proof handling:",
+              "text": "Proper caching, load balancing, and optimized queries."
+            },
+            {
+              "emphasis": "Security-first approach:",
+              "text": "Reduces vulnerability to attacks and downtime."
+            },
+            {
+              "emphasis": "Zero plugin dependency:",
+              "text": "Custom features mean fewer conflicts and failures."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "How Custom Web Development Keeps You Online",
+          "intro": "A well-developed custom website ensures:",
+          "items": [
+            { "text": "Consistent uptime — even during traffic surges." },
+            { "text": "Fast load times across all devices." },
+            { "text": "Scalability as your business grows." },
+            {
+              "text": "Stable integrations with APIs, payment systems, and databases."
+            },
+            {
+              "text": "Better search ranking due to performance and reliability."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Final Thoughts",
+          "content": "If your website crashes often, it’s not just an inconvenience — it’s a sign your business is outgrowing your system. Custom web development provides the stability, performance, and scalability your business needs to stay online 24/7 and convert visitors into loyal customers. Your website shouldn’t be your weakest link; it should be your strongest asset."
+        }
+      ]
+    }
+  },
+
+  {
+    "src": "/assets/images/custom-web-development-image.jpg",
+    "alt": "Custom Website Development",
+    "title": "Why Custom Website Development is Worth the Investment",
+    "description": "In today’s competitive digital world, your website is often the first point of contact for potential customers. It serves as the online face of your business, making it crucial to create a positive and lasting impression. While DIY website builder...",
+    "date": "28/9/2025",
+    "post": {
+      "intro": "Your website is one of the most important assets your business owns. It’s where first impressions are made, customers take action, and sales happen. But if you're relying on a cookie-cutter template or a plugin-heavy build, you're eventually going to run into limitations. <b>Custom website development</b> solves these issues and gives your business a long-term competitive advantage.",
+      "sections": [
+        {
+          "type": "list",
+          "title": "1. Your Website Should Match Your Brand — Not the Other Way Around",
+          "intro": "Templates force your brand to fit inside pre-made layouts. Custom development gives you total design freedom so your website truly reflects your business identity. Every section, animation, and interaction is built specifically for you.",
+          "items": [
+            {
+              "emphasis": "Unique UI/UX",
+              "text": "that matches your brand's personality."
+            },
+            {
+              "emphasis": "Custom layouts",
+              "text": "designed to convert better."
+            },
+            {
+              "emphasis": "No template restrictions",
+              "text": "on structure or layout."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "2. Custom Websites Perform Better",
+          "intro": "Performance affects your SEO, conversions, and user trust. Custom-built sites skip the unnecessary plugins and heavy code that slow down template-based websites.",
+          "items": [
+            {
+              "emphasis": "Faster load times",
+              "text": "thanks to clean, optimized code."
+            },
+            {
+              "emphasis": "No bloated plugins",
+              "text": "that slow down performance."
+            },
+            {
+              "emphasis": "Stable architecture",
+              "text": "that scales with your business."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "3. Better SEO From Day One",
+          "intro": "SEO isn't just about keywords — it's about website structure, speed, user experience, and code quality. A custom-built website gives Google exactly what it's looking for:",
+          "items": [
+            {
+              "emphasis": "Proper heading structure",
+              "text": "for better crawling."
+            },
+            {
+              "emphasis": "Optimized images and scripts",
+              "text": "for faster indexing."
+            },
+            {
+              "emphasis": "Clean HTML/CSS",
+              "text": "that reduces ranking issues."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "4. Higher Conversions Through Tailored User Experience",
+          "intro": "When your website is built around your business model, you can design pages and funnels that guide users toward taking action.",
+          "items": [
+            {
+              "emphasis": "Strategic placements",
+              "text": "of CTAs."
+            },
+            {
+              "emphasis": "Tailored customer journeys",
+              "text": "for your ideal audience."
+            },
+            {
+              "emphasis": "Custom features",
+              "text": "that match how your business operates."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "5. Fewer Technical Issues And Long-Term Stability",
+          "intro": "Template websites often rely on third-party plugins that break, conflict, or require constant updates. Custom development eliminates these dependencies.",
+          "items": [
+            {
+              "emphasis": "No plugin conflicts",
+              "text": "that cause crashes."
+            },
+            {
+              "emphasis": "Better security",
+              "text": "with professionally written code."
+            },
+            {
+              "emphasis": "Reduced maintenance costs",
+              "text": "over time."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "6. Scalability Without Limits",
+          "intro": "As your business grows, your website should grow with you — not hold you back.",
+          "items": [
+            {
+              "emphasis": "Add new features",
+              "text": "without breaking your site."
+            },
+            {
+              "emphasis": "Scale traffic",
+              "text": "without crashing."
+            },
+            {
+              "emphasis": "Customize",
+              "text": "anything at any time."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Final Thoughts",
+          "content": "Custom website development is more than an expense — it's a long-term investment in your brand, performance, and business growth. While templates are quick and cheap, they limit your potential. A custom site gives you complete control, better SEO, stronger performance, and a platform that grows with your business."
+        }
+      ]
+    }
+  },
+
+  {
+    "src": "/assets/images/constant-site-crashes-image.jpg",
+    "alt": "Constant Site Crashes",
+    "title": "Tired of Constant Site Crashes? Custom Web Development Keeps Your Business Online",
+    "description": "Running a business online isn’t just about great products or services. If your website keeps crashing, you’re losing more than visitors—you’re losing revenue, credibility, and customer trust. Frequent downtime frustrates users and can seriously ha...",
+    "date": "19/9/2025",
+    "post": {
+      "intro": "Few things hurt a business more than a website that keeps crashing. Whether it’s during peak traffic, product launches, or random hours of the day, site downtime instantly kills trust, revenue, and user experience. If this sounds familiar, you’re not alone — and it’s a major sign that you need <b>custom web development</b>.",
+      "sections": [
+        {
+          "type": "list",
+          "title": "Why Do Websites Crash?",
+          "intro": "Most site crashes happen because the site isn’t built to handle real-world traffic and performance demands. Common causes include:",
+          "items": [
+            {
+              "emphasis": "Shared hosting overload:",
+              "text": "Cheap shared hosting cannot handle traffic spikes."
+            },
+            {
+              "emphasis": "Poorly optimized code:",
+              "text": "Heavy scripts, bloated plugins, and inefficient backend logic slow everything down."
+            },
+            {
+              "emphasis": "Traffic spikes:",
+              "text": "Sudden visitor surges cause server overload."
+            },
+            {
+              "emphasis": "Insecure systems:",
+              "text": "Outdated code makes you vulnerable to attacks that crash your site."
+            },
+            {
+              "emphasis": "Too many plugins:",
+              "text": "Especially with WordPress, plugin conflict is a leading cause of crashes."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "The Hidden Cost of Frequent Crashes",
+          "intro": "Every minute your site is down, your business loses potential customers. Here’s how crashes silently ruin conversions:",
+          "items": [
+            {
+              "text": "Users leave instantly when a site doesn’t load."
+            },
+            {
+              "text": "Google lowers your ranking due to poor reliability."
+            },
+            {
+              "text": "Returning customers stop trusting your brand."
+            },
+            {
+              "text": "Ad campaigns become wasted money if landing pages break."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Why Custom Web Development Fixes the Problem",
+          "intro": "Unlike template-based or plugin-heavy websites, custom-built sites are optimized for performance, scalability, and stability. Here’s what custom development brings:",
+          "items": [
+            {
+              "emphasis": "Optimized backend architecture:",
+              "text": "Clean, efficient code designed for speed."
+            },
+            {
+              "emphasis": "Improved server performance:",
+              "text": "Built around technologies that match your business scale."
+            },
+            {
+              "emphasis": "Crash-proof handling:",
+              "text": "Proper caching, load balancing, and optimized queries."
+            },
+            {
+              "emphasis": "Security-first approach:",
+              "text": "Reduces vulnerability to attacks and downtime."
+            },
+            {
+              "emphasis": "Zero plugin dependency:",
+              "text": "Custom features mean fewer conflicts and failures."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "How Custom Web Development Keeps You Online",
+          "intro": "A well-developed custom website ensures:",
+          "items": [
+            {
+              "text": "Consistent uptime — even during traffic surges."
+            },
+            {
+              "text": "Fast load times across all devices."
+            },
+            {
+              "text": "Scalability as your business grows."
+            },
+            {
+              "text": "Stable integrations with APIs, payment systems, and databases."
+            },
+            {
+              "text": "Better search ranking due to performance and reliability."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Final Thoughts",
+          "content": "If your website crashes often, it’s not just an inconvenience — it’s a sign your business is outgrowing your system. Custom web development provides the stability, performance, and scalability your business needs to stay online 24/7 and convert visitors into loyal customers. Your website shouldn’t be your weakest link; it should be your strongest asset."
+        }
+      ]
+    }
+  },
+  {
+    "src": "/assets/images/custom-web-development-image.jpg",
+    "alt": "Custom Website Development",
+    "title": "Why Custom Website Development is Worth the Investment",
+    "description": "In today’s competitive digital world, your website is often the first point of contact for potential customers. It serves as the online face of your business, making it crucial to create a positive and lasting impression. While DIY website builder...",
+    "date": "28/9/2025",
+    "post": {
+      "intro": "Your website is one of the most important assets your business owns. It’s where first impressions are made, customers take action, and sales happen. But if you're relying on a cookie-cutter template or a plugin-heavy build, you're eventually going to run into limitations. <b>Custom website development</b> solves these issues and gives your business a long-term competitive advantage.",
+      "sections": [
+        {
+          "type": "list",
+          "title": "1. Your Website Should Match Your Brand — Not the Other Way Around",
+          "intro": "Templates force your brand to fit inside pre-made layouts. Custom development gives you total design freedom so your website truly reflects your business identity. Every section, animation, and interaction is built specifically for you.",
+          "items": [
+            {
+              "emphasis": "Unique UI/UX",
+              "text": "that matches your brand's personality."
+            },
+            {
+              "emphasis": "Custom layouts",
+              "text": "designed to convert better."
+            },
+            {
+              "emphasis": "No template restrictions",
+              "text": "on structure or layout."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "2. Custom Websites Perform Better",
+          "intro": "Performance affects your SEO, conversions, and user trust. Custom-built sites skip the unnecessary plugins and heavy code that slow down template-based websites.",
+          "items": [
+            {
+              "emphasis": "Faster load times",
+              "text": "thanks to clean, optimized code."
+            },
+            {
+              "emphasis": "No bloated plugins",
+              "text": "that slow down performance."
+            },
+            {
+              "emphasis": "Stable architecture",
+              "text": "that scales with your business."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "3. Better SEO From Day One",
+          "intro": "SEO isn't just about keywords — it's about website structure, speed, user experience, and code quality. A custom-built website gives Google exactly what it's looking for:",
+          "items": [
+            {
+              "emphasis": "Proper heading structure",
+              "text": "for better crawling."
+            },
+            {
+              "emphasis": "Optimized images and scripts",
+              "text": "for faster indexing."
+            },
+            {
+              "emphasis": "Clean HTML/CSS",
+              "text": "that reduces ranking issues."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "4. Higher Conversions Through Tailored User Experience",
+          "intro": "When your website is built around your business model, you can design pages and funnels that guide users toward taking action.",
+          "items": [
+            {
+              "emphasis": "Strategic placements",
+              "text": "of CTAs."
+            },
+            {
+              "emphasis": "Tailored customer journeys",
+              "text": "for your ideal audience."
+            },
+            {
+              "emphasis": "Custom features",
+              "text": "that match how your business operates."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "5. Fewer Technical Issues And Long-Term Stability",
+          "intro": "Template websites often rely on third-party plugins that break, conflict, or require constant updates. Custom development eliminates these dependencies.",
+          "items": [
+            {
+              "emphasis": "No plugin conflicts",
+              "text": "that cause crashes."
+            },
+            {
+              "emphasis": "Better security",
+              "text": "with professionally written code."
+            },
+            {
+              "emphasis": "Reduced maintenance costs",
+              "text": "over time."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "6. Scalability Without Limits",
+          "intro": "As your business grows, your website should grow with you — not hold you back.",
+          "items": [
+            {
+              "emphasis": "Add new features",
+              "text": "without breaking your site."
+            },
+            {
+              "emphasis": "Scale traffic",
+              "text": "without crashing."
+            },
+            {
+              "emphasis": "Customize",
+              "text": "anything at any time."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Final Thoughts",
+          "content": "Custom website development is more than an expense — it's a long-term investment in your brand, performance, and business growth. While templates are quick and cheap, they limit your potential. A custom site gives you complete control, better SEO, stronger performance, and a platform that grows with your business."
         }
       ]
     }
