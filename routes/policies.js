@@ -4,11 +4,15 @@ const router = express.Router();
 const data = loadJSON("policies/data.json");
 
 router.get("/privacy-policy", (_, res) => {
-  res.render("pages/privacy-policy", { data });
+  const privacyPolicies = data.privacyPolicies;
+
+  res.render("pages/privacy-policy", { privacyPolicies });
 });
 
 router.get("/refund-policy", (_, res) => {
-  res.render("pages/refund-policy", { data });
+  const refundPolicies = data.refundPolicies;
+
+  res.render("pages/refund-policy", { refundPolicies });
 });
 
 module.exports = router;

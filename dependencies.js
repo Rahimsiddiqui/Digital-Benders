@@ -16,6 +16,28 @@ function saveJSON(file, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 }
 
+function slugify(title) {
+  return title
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-");
+}
+
+const getCaseStudies = () => {
+  const data = loadJSON("portfolio/data.json");
+
+  data.caseStudies.forEach((study) => {
+    if (!study.slug) {
+      study.slug = slugify(study.title);
+    }
+  });
+
+  return data;
+};
+
 module.exports = {
   express,
   app,
@@ -24,5 +46,7 @@ module.exports = {
   fs,
   saveJSON,
   loadJSON,
+  slugify,
+  getCaseStudies,
   helmet,
 };

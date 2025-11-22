@@ -1,16 +1,7 @@
-const { express, saveJSON, loadJSON } = require(`../dependencies`);
+const { express, saveJSON, loadJSON, slugify } = require(`../dependencies`);
 
 const router = express.Router();
 const blogs = loadJSON("blogs/blogs.json");
-
-// Convert title → URL-friendly slug
-function slugify(title) {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, "")
-    .replace(/\s+/g, "-")
-    .trim();
-}
 
 // Parse DD/MM/YYYY string to a Date object
 function parseDMY(dateStr) {
@@ -54,8 +45,8 @@ router.get("/blogs/:slug", (req, res) => {
   if (!blog) return res.status(404).send("Page not found");
 
   const words = blog.title.split(" ");
-  blog.firstWord = words.shift();
-  blog.rest = words.join(" ");
+  const firstWord = words[0];
+  const rest = words.slice(1).join(" ");
 
   const cookieName = `viewed_${slugParam}`;
   const hasViewed = req.cookies && req.cookies[cookieName];
@@ -81,6 +72,8 @@ router.get("/blogs/:slug", (req, res) => {
   res.render("pages/blogs/post", {
     post: blog,
     topBlogs,
+    firstWord,
+    rest,
   });
 });
 

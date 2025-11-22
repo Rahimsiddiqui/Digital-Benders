@@ -8,7 +8,7 @@
     <h1 class="refund-policies__title">Refund Policy</h1>
   </header>
   <div class="refund-policies">
-    <% data.refundPolicies.forEach(refundPolicy => { %>
+    <% refundPolicies.forEach(refundPolicy => { %>
     <div class="refund-policy">
       <h2 class="refund-policy__title"><%= refundPolicy.title %></h2>
       <p class="refund-policy__description"><%= refundPolicy.description %></p>

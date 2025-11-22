@@ -25,62 +25,71 @@
     }
   ],
 
-  "aboutCompanyLists1": [
+  "aboutCompanyLists": [
     {
-      "src": "/assets/images/sport-image",
-      "alt": "Professional Sports",
-      "text": "Professional Sports"
+      "aboutCompanyList": [
+        {
+          "src": "/assets/images/sport-image",
+          "alt": "Professional Sports",
+          "text": "Professional Sports"
+        },
+        {
+          "src": "/assets/images/construction-image",
+          "alt": "Construction",
+          "text": "Construction"
+        },
+        {
+          "src": "/assets/images/healthcare-image",
+          "alt": "Healthcare",
+          "text": "Healthcare"
+        },
+        {
+          "src": "/assets/images/hospitality-image",
+          "alt": "Hospitality",
+          "text": "Hospitality"
+        },
+        {
+          "src": "/assets/images/realestate-image",
+          "alt": "Real Estate",
+          "text": "Real Estate"
+        },
+        {
+          "src": "/assets/images/education-image",
+          "alt": "Education",
+          "text": "Education"
+        }
+      ]
     },
     {
-      "src": "/assets/images/construction-image",
-      "alt": "Construction",
-      "text": "Construction"
-    },
-    {
-      "src": "/assets/images/healthcare-image",
-      "alt": "Healthcare",
-      "text": "Healthcare"
-    },
-    {
-      "src": "/assets/images/hospitality-image",
-      "alt": "Hospitality",
-      "text": "Hospitality"
-    },
-    {
-      "src": "/assets/images/realestate-image",
-      "alt": "Real Estate",
-      "text": "Real Estate"
-    },
-    {
-      "src": "/assets/images/education-image",
-      "alt": "Education",
-      "text": "Education"
+      "aboutCompanyList": [
+        {
+          "src": "/assets/images/automotive-image",
+          "alt": "Automotive",
+          "text": "Automotive"
+        },
+        {
+          "src": "/assets/images/technology-image",
+          "alt": "Technology",
+          "text": "Technology"
+        },
+        {
+          "src": "/assets/images/ecommerce-image",
+          "alt": "E-commerce",
+          "text": "E-commerce"
+        },
+        {
+          "src": "/assets/images/finance-image",
+          "alt": "Finance",
+          "text": "Finance"
+        },
+        {
+          "src": "/assets/images/retail-image",
+          "alt": "Retail",
+          "text": "Retail"
+        },
+        { "src": "/assets/images/legal-image", "alt": "Legal", "text": "Legal" }
+      ]
     }
-  ],
-
-  "aboutCompanyLists2": [
-    {
-      "src": "/assets/images/automotive-image",
-      "alt": "Automotive",
-      "text": "Automotive"
-    },
-    {
-      "src": "/assets/images/technology-image",
-      "alt": "Technology",
-      "text": "Technology"
-    },
-    {
-      "src": "/assets/images/ecommerce-image",
-      "alt": "E-commerce",
-      "text": "E-commerce"
-    },
-    {
-      "src": "/assets/images/finance-image",
-      "alt": "Finance",
-      "text": "Finance"
-    },
-    { "src": "/assets/images/retail-image", "alt": "Retail", "text": "Retail" },
-    { "src": "/assets/images/legal-image", "alt": "Legal", "text": "Legal" }
   ],
 
   "brandGrowing": [
@@ -193,69 +202,6 @@
           "description": "We measure campaign results with precision for ongoing improvement. This allows strategies to stay aligned with your objectives."
         }
       ]
-    }
-  ],
-
-  "caseStudies": [
-    {
-      "id": "case-1",
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734104206009-Thumbnail.webp",
-      "alt": "E-Commerce Growth",
-      "title": "Revitalizing Digital Marketing for PhysioTec Rehab & Wellness"
-    },
-    {
-      "id": "case-2",
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734103764829-Thumbnail.webp",
-      "alt": "Brand Awareness",
-      "title": "Habster Boutique’s E-Commerce Revamp"
-    },
-    {
-      "id": "case-3",
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734103482235-Thumbnail.webp",
-      "alt": "Digital Transformation",
-      "title": "Inner Find’s Digital Transformation"
-    },
-    {
-      "id": "case-4",
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734103180748-Thumbnail.webp",
-      "alt": "Driving Sales with Optimized Google Ads for Fully Promoted Heartland",
-      "title": "Driving Sales with Optimized Google Ads for Fully Promoted Heartland"
-    },
-    {
-      "id": "case-5",
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734102941258-Thumbnail.webp",
-      "alt": "Driving Sales with Optimized Google Ads for Fully Promoted Meadowville",
-      "title": "Driving Sales with Optimized Google Ads for Fully Promoted Meadowville"
-    },
-    {
-      "id": "case-6",
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734101468252-Thumbnail.webp",
-      "alt": "Driving Sales with Optimized Google Ads for Fully Promoted Richmond Hill",
-      "title": "Driving Sales with Optimized Google Ads for Fully Promoted Richmond Hill"
-    },
-    {
-      "id": "case-7",
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734100654262-Thumbnail.webp",
-      "alt": "Strengthening Personal Branding",
-      "title": "Strengthening Personal Branding for Raj Kalsi Real Estate"
-    },
-    {
-      "id": "case-8",
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734100227582-Thumbnail.jpg",
-      "alt": "Social Media & SEO Transformation",
-      "title": "Social Media & SEO Transformation for Graha Chaal"
-    },
-    {
-      "id": "case-9",
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734101063699-Thumbnail.jpg",
-      "alt": "SEO and Google Ads Revamp",
-      "title": "SEO and Google Ads Revamp for Tutor Doctor"
-    },
-    {
-      "id": "case-10",
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1734098952230-Thumbnail.webp",
-      "alt": "Comprehensive Marketing Boost",
-      "title": "Comprehensive Marketing Boost for Triplets Homes"
     }
   ],
 

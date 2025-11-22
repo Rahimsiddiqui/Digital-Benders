@@ -30,7 +30,7 @@
       </header>
       <div class="hero__swiper swiper">
         <div class="swiper-wrapper">
-          <% data.badges.forEach(badge => { %>
+          <% badges.forEach(badge => { %>
           <div class="swiper-slide">
             <a href="<%= badge.link %>">
               <img
@@ -64,7 +64,7 @@
 
       <!-- Results Cards -->
       <div class="results-cards">
-        <% data.results.forEach(result => { %>
+        <% results.forEach(result => { %>
         <article class="card">
           <div class="card__image">
             <img
@@ -84,7 +84,7 @@
 
     <!-- Testimonials -->
     <div class="testimonials-cards-container">
-      <% data.testimonials.forEach(testimonial => { %>
+      <% testimonials.forEach(testimonial => { %>
       <div class="card">
         <div class="card__video">
           <iframe
@@ -143,35 +143,22 @@
           educational institutions.
         </p>
         <div class="about-company__lists">
+          <% aboutCompanyLists.forEach(item => { %>
           <ul class="about-company__list">
-            <% data.aboutCompanyLists1.forEach(aboutCompanyList1 => { %>
+            <% item.aboutCompanyList.forEach(list => { %>
             <li class="about-company__list-item">
               <span class="list-item__image">
                 <img
-                  src="<%= aboutCompanyList1.src %>.png"
-                  alt="<%= aboutCompanyList1.alt %> Image"
+                  src="<%= list.src %>.png"
+                  alt="<%= list.alt %> Image"
                   loading="lazy"
                 />
               </span>
-              <%= aboutCompanyList1.text %>
+              <%= list.text %>
             </li>
             <% }); %>
           </ul>
-
-          <ul class="about-company__list">
-            <% data.aboutCompanyLists2.forEach(aboutCompanyList2 => { %>
-            <li class="about-company__list-item">
-              <span class="list-item__image">
-                <img
-                  src="<%= aboutCompanyList2.src %>.png"
-                  alt="<%= aboutCompanyList2.alt %> Image"
-                  loading="lazy"
-                />
-              </span>
-              <%= aboutCompanyList2.text %>
-            </li>
-            <% }); %>
-          </ul>
+          <% }) %>
         </div>
       </header>
       <div class="about-company__main-image">
@@ -191,7 +178,7 @@
           <span>Solutions for your business goals</span>
         </h3>
         <div class="brand-growing__btns">
-          <% data.brandGrowing.forEach(card => { %>
+          <% brandGrowing.forEach(card => { %>
           <button class="brand-growing__btn" data-card="<%= card.id %>">
             <%- card.button %>
           </button>
@@ -200,7 +187,7 @@
       </header>
 
       <div class="brand-growing__cards">
-        <% data.brandGrowing.forEach(card => { %>
+        <% brandGrowing.forEach(card => { %>
         <div class="brand-growing__card" id="<%= card.id %>">
           <div class="card__main-image">
             <img src="<%= card.image %>" alt="<%= card.alt %>" loading="lazy" />
@@ -241,7 +228,7 @@
       </header>
 
       <div class="services-cards-container">
-        <% data.services.forEach(service => { %>
+        <% services.forEach(service => { %>
         <div class="services__card" id="<%= service.id %>">
           <!-- Shown Card -->
           <div class="shown__card">
@@ -330,12 +317,12 @@
 
       <div class="case-studies__swiper swiper">
         <div class="swiper-wrapper">
-          <% data.caseStudies.forEach(study => { %>
-          <div class="swiper-slide" id="<%= study.id %>">
+          <% caseStudies.forEach(study => { %>
+          <div class="swiper-slide">
             <div class="swiper__image">
               <img
-                src="<%= study.image %>"
-                alt="<%= study.alt %>"
+                src="<%= study.src %>"
+                alt="Portfolio Image"
                 loading="lazy"
               />
             </div>
@@ -345,7 +332,7 @@
                 View <br />
                 Case <br />
                 Study
-                <a href="/casestudy/<%= study.id %>">
+                <a href="/casestudy/<%= study.slug %>">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
@@ -385,7 +372,7 @@
           <span>For Inspiring Online Experiences</span>
         </h3>
         <div class="process__btns-container">
-          <% data.developmentProcess.forEach(card => { %>
+          <% developmentProcess.forEach(card => { %>
           <button class="process__btn" data-card="<%= card.id %>">
             <%= card.button %>
           </button>
@@ -398,7 +385,7 @@
         </div>
       </header>
       <div class="process__cards-container">
-        <% data.developmentProcess.forEach(card => { %>
+        <% developmentProcess.forEach(card => { %>
         <div class="process__card" id="<%= card.id %>">
           <div class="card__main-image">
             <img
@@ -472,49 +459,10 @@
       </div>
     </div>
   </section>
-  <section class="full-width section-9">
-    <%- include('../misc/faqs.ejs') %>
-  </section>
-  <%- include('../misc/trustpilot.ejs') %>
+  <section class="full-width section-9"><%- include('../misc/faqs') %></section>
+  <%- include('../misc/trustpilot') %>
   <section class="section-10 trustpilot-section">
-    <div class="contact-section-container">
-      <header>
-        <h6 class="contact-section__subtitle">Let's Talk</h6>
-        <h3 class="contact-section__title">
-          Got an Idea? <br />
-          <span>Let's get in touch!</span>
-        </h3>
-        <p class="contact-section__description">
-          Let’s discuss your project and find out what we can do to provide
-          value.
-        </p>
-      </header>
-      <form class="contact-section__form">
-        <p class="inputs__detail-paragraph">
-          Enter your details below to get started.
-        </p>
-        <div class="contact-section__inputs">
-          <% data.contactSectionInputs.forEach(contactSectionInput => { %>
-          <input
-            class="contact-section__input <%= contactSectionInput.specialClass ? 'customNumberInput' : '' %>"
-            type="<%= contactSectionInput.type %>"
-            placeholder="<%= contactSectionInput.placeholder %>"
-            required
-          />
-          <% }); %>
-        </div>
-
-        <div id="spinner-overlay" style="z-index: 9999">
-          <div
-            class="spinner-border spinner contact-spinner text-white spinner-border-md"
-            style="margin-top: 0.25rem; margin-bottom: 0.95rem"
-            role="status"
-          ></div>
-        </div>
-
-        <button class="submit__form" type="submit">Submit</button>
-      </form>
-    </div>
+    <%- include('../misc/contactForm') %>
   </section>
 </div>
 
@@ -526,4 +474,3 @@
 <script src="/javascript/landing-page/growing-business.js"></script>
 <script src="/javascript/landing-page/development-process.js"></script>
 <script src="/javascript/landing-page/services-card.js"></script>
-<script src="/javascript/landing-page/contact-section.js"></script>

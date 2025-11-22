@@ -27,11 +27,14 @@
       </div>
       <div class="col testimonials-summary">
         <video
-          src="<%- caseStudy.post.videoSrc %>"
+          src="<%= caseStudy.post.videoSrc %>"
           preload="auto"
           controls
-          style="width: 100%; height: 100%"
+          muted
+          loop
+          playsinline
           autoplay
+          style="width: 100%; height: 100%"
         ></video>
       </div>
     </div>
@@ -100,47 +103,5 @@
     </div>
   </section>
 
-  <section class="contact-section-main-container">
-    <div class="contact-section-container">
-      <header>
-        <h6 class="contact-section__subtitle">Let's Talk</h6>
-        <h3 class="contact-section__title">
-          Got an Idea? <br />
-          <span>Let's get in touch!</span>
-        </h3>
-        <p class="contact-section__description">
-          Let’s discuss your project and find out what we can do to provide
-          value.
-        </p>
-      </header>
-      <form class="contact-section__form">
-        <p class="inputs__detail-paragraph">
-          Enter your details below to get started.
-        </p>
-        <div class="contact-section__inputs">
-          <% contactSectionInputs.forEach(contactSectionInput => { %>
-          <input
-            class="contact-section__input <%= contactSectionInput.specialClass ? 'customNumberInput' : '' %>"
-            type="<%= contactSectionInput.type %>"
-            placeholder="<%= contactSectionInput.placeholder %>"
-            required
-          />
-          <% }); %>
-        </div>
-
-        <div id="spinner-overlay" style="z-index: 9999">
-          <div
-            class="spinner-border spinner contact-spinner text-white spinner-border-md"
-            style="margin-top: 0.25rem; margin-bottom: 0.95rem"
-            role="status"
-          ></div>
-        </div>
-
-        <button class="submit__form" type="submit">Submit</button>
-      </form>
-    </div>
-  </section>
+  <%- include("../../misc/contactForm") %>
 </div>
-
-<!-- JS -->
-<script src="/javascript/portfolio/form.js"></script>

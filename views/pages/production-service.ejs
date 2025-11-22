@@ -30,7 +30,7 @@
     <!-- PRODUCTION SERVICE SWIPER -->
     <div class="production-service-swiper swiper">
       <div class="swiper-wrapper">
-        <% data.brandLogos.forEach(logo => { %>
+        <% brandLogos.forEach(logo => { %>
         <div class="swiper-slide">
           <img
             src="<%= logo.src %>.png"
@@ -52,7 +52,7 @@
 
       <div class="design-services__swiper swiper">
         <div class="swiper-wrapper">
-          <% data.designImages.forEach((designService, i) => {%>
+          <% designImages.forEach((designService, i) => {%>
           <div class="swiper-slide">
             <img
               src="<%= designService.src %><%= i + 1 %>.png"
@@ -67,7 +67,7 @@
 
     <!-- PHOTOGRAPHY SERVICES -->
     <section class="photography-services">
-      <% data.photographyServices.forEach((photographyService, i) => { %>
+      <% photographyServices.forEach((photographyService, i) => { %>
       <div class="photography-service <%= photographyService.role %>">
         <div class="photography-service__main-image">
           <img
@@ -77,7 +77,7 @@
           />
         </div>
         <div class="photography-service__content">
-          <h4 id="heading-<%= i + 1 %>"><%= photographyService.title %></h4>
+          <h4 id="heading-<%= i + 1 %>"><%- photographyService.title %></h4>
           <p><%= photographyService.description %></p>
           <a href="/contact">Get Started</a>
         </div>
@@ -94,7 +94,7 @@
         </h3>
       </div>
       <div class="col">
-        <% data.productInsights.forEach((productInsight, i) => { %>
+        <% productInsights.forEach((productInsight, i) => { %>
         <div class="product-insight">
           <span>
             <img

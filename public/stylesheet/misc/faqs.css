@@ -110,6 +110,7 @@ header .reassuring-text {
   .faqs-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     max-width: 90%;
   }
 

@@ -1,27 +1,8 @@
-const { express, saveJSON, loadJSON } = require("../dependencies");
-const ejs = require("ejs");
-const { v4: uuidv4 } = require("uuid");
+const { express, getCaseStudies } = require("../dependencies");
 
 const router = express.Router();
 
-const data = loadJSON("portfolio/caseStudies.json");
-const caseStudies = data.caseStudies;
-const contactSectionInputs = data.contactSectionInputs;
-
-// Add slug to each case study
-let changed = false;
-caseStudies.forEach((study) => {
-  if (!study.slug) {
-    study.slug = uuidv4();
-    changed = true;
-  }
-});
-
-// Save JSON only once at startup
-if (changed) {
-  data.caseStudies = caseStudies;
-  saveJSON("portfolio/caseStudies.json", data);
-}
+const { caseStudies, contactSectionInputs } = getCaseStudies();
 
 // Case Studies page
 router.get("/portfolio", (_, res) => {

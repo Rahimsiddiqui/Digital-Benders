@@ -21,7 +21,7 @@
         </div>
 
         <form class="seo-analysis__form">
-          <% data.seoAnalysisInputs.forEach(seoAnalysisInput => { %>
+          <% seoAnalysisInputs.forEach(seoAnalysisInput => { %>
           <input
             class="seo-analysis__input <%= seoAnalysisInput.specialClass ? 'customNumberInput' : '' %>"
             type="<%= seoAnalysisInput.type %>"
@@ -55,7 +55,7 @@
           <span>Website Audit</span>
         </h3>
         <div class="brand-growing__btns">
-          <% data.brandGrowing.forEach(card => { %>
+          <% brandGrowing.forEach(card => { %>
           <button class="brand-growing__btn" data-card="<%= card.id %>">
             <%- card.button %>
           </button>
@@ -64,7 +64,7 @@
       </div>
 
       <div class="brand-growing__cards">
-        <% data.brandGrowing.forEach(card => { %>
+        <% brandGrowing.forEach(card => { %>
         <div class="brand-growing__card" id="<%= card.id %>">
           <div class="card__main-image">
             <img src="<%= card.image %>" alt="<%= card.alt %>" loading="lazy" />
@@ -96,7 +96,7 @@
 
       <div class="column">
         <div class="scoring-cards-container">
-          <% data.scoringCards.forEach(card => { %>
+          <% scoringCards.forEach(card => { %>
           <div class="scoring-card <%= card.id %>">
             <h6 class="scoring-card__title"><%= card.title %></h6>
             <p class="scoring-card__description"><%= card.description %></p>
@@ -107,55 +107,9 @@
     </div>
   </section>
 
-  <section class="section-4">
-    <div class="contact-section-container">
-      <header>
-        <h6 class="contact-section__subtitle">Let's Talk</h6>
-        <h3 class="contact-section__title">
-          Got a Website? <br />
-          <span>Let's Optimize Your Prescence!</span>
-        </h3>
-        <p class="contact-section__description">
-          Take the first step towards digital dominance by <br />
-          requesting your personalised SEO analysis now!
-        </p>
-      </header>
-
-      <form id="contact__form">
-        <p class="inputs__detail-paragraph">
-          Enter your details to get started.
-        </p>
-        <div class="contact-section__inputs">
-          <% data.contactSectionInputs.forEach(contactSectionInput => { %>
-          <input
-            class="contact-section__input <%= contactSectionInput.specialClass ? 'customNumberInputContact' : '' %>"
-            type="<%= contactSectionInput.type %>"
-            placeholder="<%= contactSectionInput.placeholder %>"
-            required
-          />
-          <% }); %>
-        </div>
-
-        <div
-          id="spinner-overlay"
-          class="seo-analysis__spinner"
-          style="z-index: 9999"
-        >
-          <div
-            class="spinner-border spinner seo-analysis-spinner text-white spinner-border-md"
-            style="margin: 0.125rem 0 0.875rem 0"
-            role="status"
-          ></div>
-        </div>
-
-        <button class="submit__form contact-form__submit" type="submit">
-          Submit
-        </button>
-      </form>
-    </div>
-  </section>
+  <%- include("../misc/contactForm") %>
 </div>
 
+<!-- JS -->
 <script src="/javascript/seo-analysis/contact.js"></script>
 <script src="/javascript/seo-analysis/growing-business.js"></script>
-<script src="/javascript/seo-analysis/contact-section.js"></script>

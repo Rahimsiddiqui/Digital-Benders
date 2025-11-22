@@ -1,7 +1,7 @@
 const numberInput = document.querySelector(".customNumberInput");
 const inputs = document.querySelectorAll(".contact-section__input");
 const contactSpinner = document.querySelector(".contact-spinner");
-const submitButton = document.querySelector(".submit__form");
+const submitButton = document.querySelector(".contact.submit__form");
 const contactForm = document.querySelector(".contact-section__form");
 
 numberInput.addEventListener("input", function () {
