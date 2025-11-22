@@ -4,7 +4,9 @@ const { v4: uuidv4 } = require("uuid");
 
 const router = express.Router();
 
-const caseStudies = loadJSON("portfolio/caseStudies.json");
+const data = loadJSON("portfolio/caseStudies.json");
+const caseStudies = data.caseStudies;
+const contactSectionInputs = data.contactSectionInputs;
 
 // Add slug to each case study
 let changed = false;
@@ -15,14 +17,18 @@ caseStudies.forEach((study) => {
   }
 });
 
-// Save JSON only once at startup (NOT inside route)
+// Save JSON only once at startup
 if (changed) {
-  saveJSON("portfolio/caseStudies.json", caseStudies);
+  data.caseStudies = caseStudies;
+  saveJSON("portfolio/caseStudies.json", data);
 }
 
 // Case Studies page
 router.get("/portfolio", (_, res) => {
-  res.render("pages/portfolio/portfolio", { caseStudies });
+  res.render("pages/portfolio/portfolio", {
+    caseStudies,
+    contactSectionInputs,
+  });
 });
 
 // Single Case Study page
@@ -39,12 +45,10 @@ router.get("/casestudy/:slug", (req, res) => {
     ? caseStudies[index + 1]
     : caseStudies[0];
 
-  const content = ejs.render(caseStudy.content, { caseStudy, nextCaseStudy });
-
   res.render("pages/portfolio/post", {
     caseStudy,
     nextCaseStudy,
-    content,
+    contactSectionInputs,
   });
 });
 

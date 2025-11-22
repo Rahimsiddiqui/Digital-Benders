@@ -42,14 +42,14 @@
                   >INDUSTRY:
                   <b class="b-600"><%= caseStudy.industry %></b></span
                 >
-                <p class="small-explanation"><%= caseStudy.industry %></p>
+                <p class="small-explanation"><%= caseStudy.explanation %></p>
                 <span>SERVICES:</span>
                 <div class="case-study-services">
                   <% caseStudy.caseStudyServices.forEach(caseStudyService => {
                   %>
                   <div class="case-study-service">
                     <img
-                      src="<%= caseStudyService.src %>.png"
+                      src="<%= caseStudyService.src %>"
                       alt="<%= caseStudyService.alt %> Image"
                       class="secondaryImage"
                       loading="lazy"
@@ -61,7 +61,7 @@
               </div>
               <div class="col main-image">
                 <img
-                  src="<%= caseStudy.src %>.webp"
+                  src="<%= caseStudy.src %>"
                   alt="Case Study Main Image"
                   loading="lazy"
                 />
@@ -86,25 +86,25 @@
           <span class="industry"
             >INDUSTRY: <b class="b-600"><%= caseStudy.industry %></b></span
           >
-          <p class="small-explanation"><%= caseStudy.industry %></p>
+          <p class="small-explanation"><%= caseStudy.explanation %></p>
           <span class="services">SERVICES:</span>
           <div class="case-study-services">
             <% caseStudy.caseStudyServices.forEach(caseStudyService => { %>
             <div class="case-study-service">
               <img
-                src="<%= caseStudyService.src %>.png"
-                alt="<%= caseStudyService.alt %> Image"
+                src="<%= caseStudyService.src %>"
+                alt="<%= caseStudyService.text %> Image"
                 class="secondaryImage"
                 loading="lazy"
               />
-              <p><%- caseStudyService.text %></p>
+              <p><%= caseStudyService.text %></p>
             </div>
             <% }); %>
           </div>
         </div>
         <div class="col main-image">
           <img
-            src="<%= caseStudy.src %>.webp"
+            src="<%= caseStudy.src %>"
             alt="Case Study Main Image"
             loading="lazy"
           />
@@ -115,5 +115,5 @@
   </main>
 </div>
 
-// JS
+<!-- JS -->
 <script src="/javascript/portfolio/swiper.js"></script>

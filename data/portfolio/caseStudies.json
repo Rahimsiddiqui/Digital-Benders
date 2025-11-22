@@ -1,217 +1,66 @@
-[
-  {
-    "src": "/assets/images/thumbnail-1",
-    "title": "Boosting PSW To The Rescue's Social Media Presence",
-    "industry": "Personal Support",
-    "changeAlignment": false,
-    "content": "<header class=\"case-study-header\">\n  <div class=\"col-container\">\n    <div class=\"col\">\n      <h1><%= caseStudy.post.title %></h1>\n      <span>INDUSTRY: <b class=\"b-700\"><%= caseStudy.industry %></b></span>\n      <p class=\"short-explanation\"><%= caseStudy.explanation %></p>\n      <span>SERVICES:</span>\n      <div class=\"case-study-services\">\n        <% caseStudy.caseStudyServices.forEach(service => { %>\n          <div class=\"case-study-service\">\n            <img src=\"<%= service.src %>.png\" alt=\"<%= service.alt %> Image\" class=\"secondaryImage\" loading=\"lazy\" />\n            <p><%- service.text %></p>\n          </div>\n        <% }) %>\n      </div>\n    </div>\n    <div class=\"col testimonials-summary\">\n      <video src=\"<%- caseStudy.post.videoSrc %>.mp4\" preload=\"auto\" controls style=\"width:100%; height:100%\" autoplay></video>\n    </div>\n  </div>\n</header>\n\n<main class=\"case-study-main\">\n  <section class=\"problems-N-solutions\">\n    <div class=\"problem\">\n      <h3>Problem: weak social media marketing & management</h3>\n      <p>\n        Vanessa and Maria, owners of PSW To The Rescue, faced challenges in building an impactful social media presence for their personal support service business. They struggled with low engagement, inconsistent posting, and an unclear brand message, resulting in minimal online visibility and limited client inquiries.\n      </p>\n      <img src=\"/assets/images/thumbnail-1-subimage-1.webp\" alt=\"Thumbnail Subimage\" />\n    </div>\n    <div class=\"solution\">\n      <h3>Solution: Tailored Social Media Marketing & Management</h3>\n      <p>\n        Creative Squad crafted a personalized approach to enhance PSW To The Rescue's digital footprint: Strategic Content Creation: Developed a cohesive content strategy that highlighted the caring and professional nature of their services. Posts included testimonials, educational health tips, and behind-the-scenes content to humanize the brand. Brand Positioning: Established a distinct visual identity and tone that appealed to their target audience, positioning PSW To The Rescue as a trustworthy and compassionate service provider. Engagement Campaigns: Implemented interactive posts, client success stories, and community engagement initiatives to encourage meaningful interactions with followers and increase brand loyalty.\n      </p>\n      <img src=\"/assets/images/thumbnail-1-subimage-2.webp\" alt=\"Thumbnail Subimage\" />\n    </div>\n  </section>\n\n  <section class=\"results-N-strategy\">\n    <div class=\"results\">\n      <h3>RESULTS</h3>\n      <p>\n        Creative Squad’s approach generated impressive results for PSW To The Rescue: Social media followers increased by 90%, enhancing brand awareness within their community and attracting potential clients. Engagement rates soared by 75%, with more likes, shares, and comments on their posts, indicating stronger client trust and interest in their services. Additionally, social media engagement increased by 62%, and social media reach grew by 63%, further amplifying their online presence and audience interaction.\n      </p>\n    </div>\n    <div class=\"strategy full-width\">\n      <div class=\"col-container\">\n        <div class=\"col\">\n          <h3>STRATEGY</h3>\n        </div>\n        <div class=\"col\">\n          <p style=\"color: white\">\n            Through strategic social media marketing and management, Creative Squad transformed PSW To The Rescue's online presence.\n          </p>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"outcomes-container\">\n    <h3>OUTCOMES</h3>\n    <div class=\"outcomes\">\n      <div class=\"outcome\">\n        <h4>90%</h4>\n        <p>Increase In Social Media Followers</p>\n      </div>\n      <div class=\"outcome\">\n        <h4>75%</h4>\n        <p>Increase In Engagement Rates</p>\n      </div>\n      <div class=\"outcome\">\n        <h4>62%</h4>\n        <p>Increase In SM Engagement</p>\n      </div>\n      <div class=\"outcome\">\n        <h4>63%</h4>\n        <p>Rise In SM Reach</p>\n      </div>\n    </div>\n  </section>\n\n  <a href=\"/casestudy/<%= nextCaseStudy.slug %>\">Go to other casestudy</a>\n</main>",
-    "explanation": "Personal Support Is good",
-    "post": {
-      "title": "Vanessa & Maria",
-      "videoSrc": "/assets/videos/thumbnail-1-video"
+{
+  "caseStudies": [
+    {
+      "src": "/assets/images/thumbnail-1.webp",
+      "title": "Boosting PSW To The Rescue's Social Media Presence",
+
+      "industry": "Personal Support",
+      "explanation": "Personal Support",
+
+      "post": {
+        "title": "Vanessa & Maria",
+        "videoSrc": "/assets/videos/thumbnail-1-video.mp4",
+
+        "problemTitle": "Weak Social Media Marketing & Management ",
+        "problemText": "Vanessa and Maria, owners of PSW To The Rescue, faced challenges in building an impactful social media presence for their personal support service business. They struggled with low engagement, inconsistent posting, and an unclear brand message, resulting in minimal online visibility and limited client inquiries.",
+        "problemImage": "/assets/images/thumbnail-1-subimage-1.webp",
+
+        "solutionTitle": "Tailored Social Media Marketing & Management",
+        "solutionText": "Creative Squad crafted a personalized approach to enhance PSW To The Rescue's digital footprint:   Strategic Content Creation: Developed a cohesive content strategy that highlighted the caring and professional nature of their services. Posts included testimonials, educational health tips, and behind-the-scenes content to humanize the brand.   Brand Positioning: Established a distinct visual identity and tone that appealed to their target audience, positioning PSW To The Rescue as a trustworthy and compassionate service provider.   Engagement Campaigns: Implemented interactive posts, client success stories, and community engagement initiatives to encourage meaningful interactions with followers and increase brand loyalty.",
+        "solutionImage": "/assets/images/thumbnail-1-subimage-2.webp",
+
+        "resultsText": "Creative Squad’s approach generated impressive results for PSW To The Rescue: Social media followers increased by 90%, enhancing brand awareness within their community and attracting potential clients. Engagement rates soared by 75%, with more likes, shares, and comments on their posts, indicating stronger client trust and interest in their services. Additionally, social media engagement increased by 62%, and social media reach grew by 63%, further amplifying their online presence and audience interaction.",
+        "strategyText": "Through strategic social media marketing and management, Creative Squad transformed PSW To The Rescue's online presence.",
+
+        "outcomes": [
+          { "value": "90%", "text": "Increase in social media followers" },
+          { "value": "75%", "text": "Increase in engagement rates" },
+          { "value": "62%", "text": "Increase in SM engagement" },
+          { "value": "63%", "text": "Rise in SM reach" }
+        ]
+      },
+
+      "caseStudyServices": [
+        { "src": "/assets/images/case-speaker.png", "text": "SMM" },
+        {
+          "src": "/assets/images/case-speaker.png",
+          "text": "Marketing Strategy"
+        }
+      ],
+
+      "slug": "69cd4128-fd42-4a8d-8d85-164b8642ddd3"
+    }
+  ],
+  "contactSectionInputs": [
+    {
+      "type": "text",
+      "placeholder": "Your Full Name",
+      "specialClass": false
     },
-    "caseStudyServices": [
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "SMM",
-        "text": "SMM"
-      },
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "Marketing Strategy",
-        "text": "Marketing Strategy"
-      }
-    ],
-    "slug": "135b4932-32a3-413f-9212-73c85d8a0563"
-  },
-  {
-    "src": "/assets/images/thumbnail-1",
-    "title": "Boosting PSW To The Rescue's Social Media Presence",
-    "industry": "Personal Support",
-    "changeAlignment": true,
-    "caseStudyServices": [
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "SMM",
-        "text": "SMM"
-      },
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "Marketing Strategy",
-        "text": "Marketing Strategy"
-      }
-    ],
-    "slug": "21845409-9a04-4205-b340-ea200b2c5159"
-  },
-  {
-    "src": "/assets/images/thumbnail-1",
-    "title": "Boosting PSW To The Rescue's Social Media Presence",
-    "industry": "Personal Support",
-    "changeAlignment": false,
-    "caseStudyServices": [
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "SMM",
-        "text": "SMM"
-      },
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "Marketing Strategy",
-        "text": "Marketing Strategy"
-      }
-    ],
-    "slug": "c28461b9-b470-45c1-bafc-cc74cac9c7ff"
-  },
-  {
-    "src": "/assets/images/thumbnail-1",
-    "title": "Boosting PSW To The Rescue's Social Media Presence",
-    "industry": "Personal Support",
-    "changeAlignment": true,
-    "caseStudyServices": [
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "SMM",
-        "text": "SMM"
-      },
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "Marketing Strategy",
-        "text": "Marketing Strategy"
-      }
-    ],
-    "slug": "3ae2cdf8-423b-494e-9f47-63a187002aa9"
-  },
-  {
-    "src": "/assets/images/thumbnail-1",
-    "title": "Boosting PSW To The Rescue's Social Media Presence",
-    "industry": "Personal Support",
-    "changeAlignment": false,
-    "caseStudyServices": [
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "SMM",
-        "text": "SMM"
-      },
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "Marketing Strategy",
-        "text": "Marketing Strategy"
-      }
-    ],
-    "slug": "1f36cdf5-263f-429c-a8e9-cd191c85e52d"
-  },
-  {
-    "src": "/assets/images/thumbnail-1",
-    "title": "Boosting PSW To The Rescue's Social Media Presence",
-    "industry": "Personal Support",
-    "changeAlignment": true,
-    "caseStudyServices": [
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "SMM",
-        "text": "SMM"
-      },
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "Marketing Strategy",
-        "text": "Marketing Strategy"
-      }
-    ],
-    "slug": "fce79522-6df0-4125-8eed-66f40790b67e"
-  },
-  {
-    "src": "/assets/images/thumbnail-1",
-    "title": "Boosting PSW To The Rescue's Social Media Presence",
-    "industry": "Personal Support",
-    "changeAlignment": false,
-    "caseStudyServices": [
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "SMM",
-        "text": "SMM"
-      },
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "Marketing Strategy",
-        "text": "Marketing Strategy"
-      }
-    ],
-    "slug": "4b00810b-9daa-4177-9d47-d8da54068b14"
-  },
-  {
-    "src": "/assets/images/thumbnail-1",
-    "title": "Boosting PSW To The Rescue's Social Media Presence",
-    "industry": "Personal Support",
-    "changeAlignment": true,
-    "caseStudyServices": [
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "SMM",
-        "text": "SMM"
-      },
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "Marketing Strategy",
-        "text": "Marketing Strategy"
-      }
-    ],
-    "slug": "43585b1d-6323-400e-9f4e-59961433944b"
-  },
-  {
-    "src": "/assets/images/thumbnail-1",
-    "title": "Boosting PSW To The Rescue's Social Media Presence",
-    "industry": "Personal Support",
-    "changeAlignment": false,
-    "caseStudyServices": [
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "SMM",
-        "text": "SMM"
-      },
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "Marketing Strategy",
-        "text": "Marketing Strategy"
-      }
-    ],
-    "slug": "9119c016-4346-4b58-b342-2963784c58da"
-  },
-  {
-    "src": "/assets/images/thumbnail-1",
-    "title": "Boosting PSW To The Rescue's Social Media Presence",
-    "industry": "Personal Support",
-    "changeAlignment": true,
-    "caseStudyServices": [
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "SMM",
-        "text": "SMM"
-      },
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "Marketing Strategy",
-        "text": "Marketing Strategy"
-      }
-    ],
-    "slug": "6e10e59e-8584-4e32-9007-c5822adf3f1e"
-  },
-  {
-    "src": "/assets/images/thumbnail-1",
-    "title": "Boosting PSW To The Rescue's Social Media Presence",
-    "industry": "Personal Support",
-    "changeAlignment": false,
-    "caseStudyServices": [
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "SMM",
-        "text": "SMM"
-      },
-      {
-        "src": "/assets/images/case-speaker",
-        "alt": "Marketing Strategy",
-        "text": "Marketing Strategy"
-      }
-    ],
-    "slug": "62a4aacb-b9d1-4764-a6de-33db39cea607"
-  }
-]
+    {
+      "type": "text",
+      "placeholder": "Your Phone Number",
+      "specialClass": true
+    },
+    {
+      "type": "email",
+      "placeholder": "Your Email Address",
+      "specialClass": false
+    },
+    {
+      "type": "text",
+      "placeholder": "Enter Project Type",
+      "specialClass": false
+    }
+  ]
+}

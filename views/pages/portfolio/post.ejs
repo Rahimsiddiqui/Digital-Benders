@@ -3,4 +3,144 @@
 <!-- CSS -->
 <link rel="stylesheet" href="/stylesheet/portfolio/post.css" />
 
-<div class="case-study-container"><%- content %></div>
+<div class="case-study-container">
+  <header class="case-study-header">
+    <div class="col-container">
+      <div class="col">
+        <h1><%= caseStudy.post.title %></h1>
+        <span>INDUSTRY: <b class="b-700"><%= caseStudy.industry %></b></span>
+        <p class="short-explanation"><%= caseStudy.explanation %></p>
+        <span>SERVICES:</span>
+        <div class="case-study-services">
+          <% caseStudy.caseStudyServices.forEach(service => { %>
+          <div class="case-study-service">
+            <img
+              src="<%= service.src %>"
+              alt="<%= service.text %> Image"
+              class="secondaryImage"
+              loading="lazy"
+            />
+            <p><%= service.text %></p>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+      <div class="col testimonials-summary">
+        <video
+          src="<%- caseStudy.post.videoSrc %>"
+          preload="auto"
+          controls
+          style="width: 100%; height: 100%"
+          autoplay
+        ></video>
+      </div>
+    </div>
+  </header>
+
+  <main class="case-study-main">
+    <section class="problems-N-solutions">
+      <div class="problem">
+        <h3>Problem: <%= caseStudy.post.problemTitle %></h3>
+        <p><%= caseStudy.post.problemText %></p>
+        <img
+          src="<%= caseStudy.post.problemImage %>"
+          alt="Thumbnail Subimage"
+        />
+      </div>
+      <div class="solution">
+        <h3>Solution: <%= caseStudy.post.solutionTitle %></h3>
+        <p><%= caseStudy.post.solutionText %></p>
+        <img
+          src="<%= caseStudy.post.solutionImage %>"
+          alt="Thumbnail Subimage"
+        />
+      </div>
+    </section>
+
+    <section class="results-N-strategy">
+      <div class="results">
+        <h3>RESULTS</h3>
+        <p><%= caseStudy.post.resultsText %></p>
+      </div>
+      <div class="strategy full-width">
+        <div class="col-container">
+          <div class="col">
+            <h3>STRATEGY</h3>
+          </div>
+          <div class="col">
+            <p style="color: white"><%= caseStudy.post.strategyText %></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="outcomes-container">
+      <h3>OUTCOMES</h3>
+      <div class="outcomes">
+        <% caseStudy.post.outcomes.forEach(outcome => { %>
+        <div class="outcome">
+          <h4><%= outcome.value %></h4>
+          <p><%= outcome.text %></p>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+  </main>
+
+  <section class="next-case-study-container">
+    <div class="col">
+      <span>Next case study</span>
+      <h2><%= nextCaseStudy.post.title %></h2>
+      <a href="/casestudy/<%= nextCaseStudy.slug %>">
+        <img
+          src="/assets/images/chevron-down-icon.svg"
+          alt="Chevron (Down) Image"
+        />
+      </a>
+    </div>
+  </section>
+
+  <section class="contact-section-main-container">
+    <div class="contact-section-container">
+      <header>
+        <h6 class="contact-section__subtitle">Let's Talk</h6>
+        <h3 class="contact-section__title">
+          Got an Idea? <br />
+          <span>Let's get in touch!</span>
+        </h3>
+        <p class="contact-section__description">
+          Let’s discuss your project and find out what we can do to provide
+          value.
+        </p>
+      </header>
+      <form class="contact-section__form">
+        <p class="inputs__detail-paragraph">
+          Enter your details below to get started.
+        </p>
+        <div class="contact-section__inputs">
+          <% contactSectionInputs.forEach(contactSectionInput => { %>
+          <input
+            class="contact-section__input <%= contactSectionInput.specialClass ? 'customNumberInput' : '' %>"
+            type="<%= contactSectionInput.type %>"
+            placeholder="<%= contactSectionInput.placeholder %>"
+            required
+          />
+          <% }); %>
+        </div>
+
+        <div id="spinner-overlay" style="z-index: 9999">
+          <div
+            class="spinner-border spinner contact-spinner text-white spinner-border-md"
+            style="margin-top: 0.25rem; margin-bottom: 0.95rem"
+            role="status"
+          ></div>
+        </div>
+
+        <button class="submit__form" type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- JS -->
+<script src="/javascript/portfolio/form.js"></script>
