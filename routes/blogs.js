@@ -1,80 +1,75 @@
-const { express, saveJSON, loadJSON, slugify } = require(`../dependencies`);
+const { express, Blog } = require(`../dependencies`);
 
 const router = express.Router();
-const blogs = loadJSON("blogs/blogs.json");
 
-// Parse DD/MM/YYYY string to a Date object
-function parseDMY(dateStr) {
-  const [day, month, year] = dateStr.split("/").map(Number);
-  return new Date(year, month - 1, day);
+function formatDate(dateObj) {
+  if (!dateObj) return "";
+  const d = new Date(dateObj);
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const year = String(d.getFullYear()).slice(-2);
+  return `${day}/${month}/${year}`;
 }
 
-// Shorten Date
-function shortenDate(dateStr) {
-  const [day, month, year] = dateStr.split("/");
-  const shortYear = year.slice(-2);
-  return `${day}/${month}/${shortYear}`;
-}
+router.get("/blogs", async (_, res) => {
+  try {
+    const blogs = await Blog.find({}).sort({ date: -1 }).lean();
 
-// Add slug to each blog
-const blogsWithSlug = blogs.map((blog) => ({
-  ...blog,
-  slug: slugify(blog.title),
-}));
+    const formattedBlogs = blogs.map((b) => ({
+      ...b,
+      date: formatDate(b.date),
+    }));
 
-// Top 6 Blogs
-function getTopBlogs(limit = 6) {
-  return [...blogsWithSlug]
-    .sort((a, b) => (b.views || 0) - (a.views || 0))
-    .slice(0, limit);
-}
-
-// Blogs page
-router.get("/blogs", (_, res) => {
-  const sortedBlogs = [...blogsWithSlug].sort(
-    (a, b) => parseDMY(b.date) - parseDMY(a.date)
-  );
-
-  res.render("pages/blogs/blogs", { posts: sortedBlogs });
+    res.render("pages/blogs/blogs", { posts: formattedBlogs });
+  } catch (err) {
+    console.error("Database Error: ", err);
+    res.status(500).render("pages/500-error");
+  }
 });
 
-// Single blog page
-router.get("/blogs/:slug", (req, res) => {
-  const slugParam = req.params.slug;
-  const blog = blogsWithSlug.find((b) => b.slug === slugParam);
-  if (!blog) return res.status(404).send("Page not found");
+router.get("/blogs/:slug", async (req, res) => {
+  try {
+    const slug = req.params.slug;
+    const [blog, topBlogsRaw] = await Promise.all([
+      Blog.findOne({ slug }),
+      Blog.find({}).sort({ views: -1 }).limit(6).lean(),
+    ]);
 
-  const words = blog.title.split(" ");
-  const firstWord = words[0];
-  const rest = words.slice(1).join(" ");
+    if (!blog) return res.status(404).render("pages/404-error");
 
-  const cookieName = `viewed_${slugParam}`;
-  const hasViewed = req.cookies && req.cookies[cookieName];
+    const cookieName = `viewed_${slug}`;
+    if (!req.cookies[cookieName]) {
+      await Blog.updateOne({ slug }, { $inc: { views: 1 } });
+      blog.views += 1;
+      res.cookie(cookieName, "1", {
+        maxAge: 43200000,
+        httpOnly: true,
+      });
+    }
 
-  if (!hasViewed) {
-    blog.views = (blog.views || 0) + 1;
+    const words = blog.title.split(" ");
+    const firstWord = words[0];
+    const rest = words.slice(1).join(" ");
 
-    // Save to JSON
-    saveJSON("blogs/blogs.json", blogsWithSlug);
+    const topBlogs = topBlogsRaw.map((b) => ({
+      ...b,
+      shortDate: formatDate(b.date),
+    }));
 
-    // Set cookie for 24 hours
-    res.cookie(cookieName, "1", {
-      maxAge: 24 * 60 * 60 * 1000, // 1 day
-      httpOnly: true,
+    const blogForView = blog.toObject();
+    blogForView.date = formatDate(blog.date);
+
+    res.render("pages/blogs/post", {
+      blog: blogForView,
+      post: blogForView.post,
+      rest,
+      firstWord,
+      topBlogs,
     });
+  } catch (err) {
+    console.error("Error Occurred: ", err);
+    res.status(500).render("pages/500-error");
   }
-
-  const topBlogs = getTopBlogs(6).map((b) => ({
-    ...b,
-    shortDate: shortenDate(b.date),
-  }));
-
-  res.render("pages/blogs/post", {
-    post: blog,
-    topBlogs,
-    firstWord,
-    rest,
-  });
 });
 
 module.exports = router;

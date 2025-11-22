@@ -11,14 +11,35 @@
   </header>
 
   <div class="blog__main-image">
-    <img src="<%= post.image %>.jpg" alt="<%= post.alt %>" loading="lazy" />
+    <img src="<%= blog.src %>" alt="<%= blog.alt %>" loading="lazy" />
   </div>
 
   <main class="blog__main">
-    <%- post.content %>
+    <p><%- post.intro %></p>
+
+    <% blog.post.sections.forEach(section => { %>
+    <h3><%= section.title %></h3>
+
+    <% if (section.type === "text") { %>
+    <p><%- section.content %></p>
+    <% } %> <% if (section.type === "list") { %> <% if (section.intro) { %>
+    <p><%- section.intro %></p>
+    <% } %>
+
+    <ul>
+      <% section.items.forEach(item => { %>
+      <li>
+        <% if (item.emphasis) { %>
+        <strong><%= item.emphasis %></strong>
+        <% } %> <% if (item.text) { %> <%= item.text %> <% } else if
+        (item.description) { %> <%= item.description %> <% } %>
+      </li>
+      <% }) %>
+    </ul>
+    <% } %> <% }) %>
     <br />
     <p id="date-published">
-      Published On: <span id="date"><%- post.date %></span>
+      Published On: <span id="date"><%= blog.date %></span>
     </p>
   </main>
 
@@ -32,7 +53,7 @@
         <a href="/blogs/<%= topBlog.slug %>">
           <div class="top-blog__main-image">
             <img
-              src="<%= topBlog.image %>.jpg"
+              src="<%= topBlog.src %>"
               alt="<%= topBlog.alt %>"
               loading="lazy"
             />

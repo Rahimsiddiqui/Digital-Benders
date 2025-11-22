@@ -3,10 +3,13 @@ require("dotenv").config();
 const { express, path, helmet, ejsMate, loadJSON } = require(`./dependencies`);
 
 const app = express();
+
+const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 
 // ENV
 const PORT = process.env.PORT;
+const MONGO_URI = process.env.MONGO_URI;
 
 // const isProduction = process.env.NODE_ENV === "production";
 
@@ -15,6 +18,11 @@ const PORT = process.env.PORT;
 // if (isProduction) {
 //   console.log = () => {};
 // }
+
+mongoose
+  .connect(MONGO_URI)
+  .then(() => console.log("MongoDB Connected!"))
+  .catch((err) => console.log("MongoDB Error: ", err));
 
 // LOAD FOOTER & NAVBAR JSON
 const footerData = loadJSON("footer/data.json");
