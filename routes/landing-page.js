@@ -1,4 +1,4 @@
-const { express, loadJSON } = require(`../dependencies`);
+const { express, loadJSON, formatDate } = require(`../dependencies`);
 const router = express.Router();
 
 const data = loadJSON("landing-page/data.json");
@@ -14,9 +14,14 @@ router.get("/", async (_, res) => {
       Blog.find({}).sort({ date: -1 }).lean(),
     ]);
 
+    const formattedBlogs = blogs.map((b) => ({
+      ...b,
+      date: formatDate(b.date),
+    }));
+
     res.render("pages/landing-page", {
       ...data,
-      blogs,
+      blogs: formattedBlogs,
       trustpilot,
       caseStudies,
     });

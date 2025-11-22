@@ -28,6 +28,15 @@ function slugify(title) {
     .replace(/\-\-+/g, "-");
 }
 
+function formatDate(dateObj) {
+  if (!dateObj) return "";
+  const d = new Date(dateObj);
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const year = String(d.getFullYear()).slice(-2);
+  return `${day}/${month}/${year}`;
+}
+
 module.exports = {
   express,
   app,
@@ -39,4 +48,5 @@ module.exports = {
   slugify,
   helmet,
   Blog,
+  formatDate,
 };

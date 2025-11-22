@@ -124,6 +124,7 @@
 
 .providing-results-container header {
   max-width: 90vw;
+  margin-top: 0 !important;
   margin: auto;
 }
 
@@ -1328,9 +1329,13 @@ header .contact-section__subtitle {
   .brand-growing__btns {
     border-radius: 50px;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     box-shadow: var(--card-shadow);
     gap: 0;
+  }
+
+  .brand-growing__btn {
+    margin: 0;
   }
 
   /* Show only active card as grid on large screens */

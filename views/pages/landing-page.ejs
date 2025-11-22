@@ -425,11 +425,7 @@
           <% blogs.forEach(blog => { %>
           <div class="swiper-slide">
             <div class="swiper__main-image">
-              <img
-                src="<%= blog.image %>.jpg"
-                alt="<%= blog.alt %>"
-                loading="lazy"
-              />
+              <img src="<%= blog.src %>" alt="<%= blog.alt %>" loading="lazy" />
             </div>
             <div class="swiper__content">
               <span class="swiper__date"><%= blog.date %></span>
