@@ -1,20 +1,9 @@
 require("dotenv").config();
 
-const fs = require("fs");
-const path = require("path");
-const mongoose = require("mongoose");
-const Blog = require("../models/Blog");
+const { Blog, mongoose, fs, path, slugify } = require("../dependencies");
 
-const slugify = (text) => {
-  if (!text) return "";
-  return text
-    .toString()
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w\-]+/g, "")
-    .replace(/\-\-+/g, "-");
-};
+// ENV
+const MONGO_URI = process.env.MONGO_URI;
 
 const parseDate = (dateStr) => {
   if (!dateStr) return new Date();
@@ -30,11 +19,11 @@ const seedDB = async () => {
       throw new Error(`File not found: ${jsonPath}`);
     const rawData = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
 
-    await mongoose.connect(process.env.MONGO_URI);
-    console.log("✅ Connected to MongoDB");
+    await mongoose.connect(MONGO_URI);
+    console.log("Connected to MongoDB");
 
     await Blog.deleteMany({});
-    console.log("🗑️  Old database data cleared");
+    console.log("Old database data cleared");
 
     const uniqueBlogsMap = new Map();
 
@@ -53,16 +42,14 @@ const seedDB = async () => {
           post: b.post,
         });
       } else {
-        console.log(`⚠️ Skipped duplicate in JSON file: "${b.title}"`);
+        console.log(`Skipped duplicate in JSON file: "${b.title}"`);
       }
     });
 
     const blogsToInsert = Array.from(uniqueBlogsMap.values());
 
     await Blog.insertMany(blogsToInsert);
-    console.log(
-      `🚀 Successfully uploaded ${blogsToInsert.length} unique blogs!`
-    );
+    console.log(`Successfully uploaded ${blogsToInsert.length} unique blogs!`);
 
     process.exit();
   } catch (err) {

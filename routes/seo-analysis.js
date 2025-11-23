@@ -1,19 +1,15 @@
-const { express, loadJSON } = require(`../dependencies`);
+const { express, loadJSON } = require(`../dependencies`); // Import necessary modules, helpers
+
+// Initialize Express router
 const router = express.Router();
 
+// Import Seo Analysis data
+const data = loadJSON("seo-analysis/data.json");
+
 router.get("/seo-analysis", (_, res) => {
-  const data = loadJSON("seo-analysis/data.json");
-
-  const seoAnalysisInputs = data.seoAnalysisInputs;
-  const contactSectionInputs = data.contactSectionInputs;
-  const brandGrowing = data.brandGrowing;
-  const scoringCards = data.scoringCards;
-
+  // Rendering Seo Analysis Page
   res.render("pages/seo-analysis", {
-    seoAnalysisInputs,
-    contactSectionInputs,
-    brandGrowing,
-    scoringCards,
+    ...data,
   });
 });
 

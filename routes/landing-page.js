@@ -1,24 +1,35 @@
-const { express, loadJSON, formatDate } = require(`../dependencies`);
+const {
+  express,
+  loadJSON,
+  formatDate,
+
+  Blog,
+  CaseStudy,
+} = require(`../dependencies`); // Import necessary modules, helpers, and Mongoose models
+
+// Initialize Express router
 const router = express.Router();
 
+// Importing Landing Page data and Trustpilot
 const data = loadJSON("landing-page/data.json");
 const trustpilot = loadJSON("misc/trustpilot.json");
 
-const CaseStudy = require("../models/CaseStudy");
-const Blog = require("../models/Blog");
-
+// Route to display the landing page
 router.get("/", async (_, res) => {
   try {
-    const [caseStudies, blogs] = await Promise.all([
-      CaseStudy.find({}).lean(),
-      Blog.find({}).sort({ date: -1 }).lean(),
+    // Fetch Case Studies and latest Blogs simultaneously from the DB
+    const [caseStudies, latestBlogs] = await Promise.all([
+      CaseStudy.find({}).limit(7).lean(),
+      Blog.find({}).sort({ date: -1 }).limit(8).lean(),
     ]);
 
-    const formattedBlogs = blogs.map((b) => ({
+    // Map over fetched blogs and apply date formatting helper
+    const formattedBlogs = latestBlogs.map((b) => ({
       ...b,
       date: formatDate(b.date),
     }));
 
+    // Rendering Landing Page
     res.render("pages/landing-page", {
       ...data,
       blogs: formattedBlogs,

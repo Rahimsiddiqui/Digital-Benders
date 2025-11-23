@@ -97,7 +97,7 @@
       "id": "card-1",
       "button": "Custom <br /> Development",
       "title": "Custom Development",
-      "image": "https://www.creativesquad.ca/images/creatives/BG_web.webp",
+      "image": "/assets/images/BG-web.webp",
       "alt": "Custom Development Image",
       "link": "/web-design-and-development-service-in-canada",
       "features": [
@@ -119,7 +119,7 @@
       "id": "card-2",
       "button": "Digital <br /> Marketing",
       "title": "Digital Marketing",
-      "image": "https://www.creativesquad.ca/images/creatives/BG_digital.webp",
+      "image": "/assets/images/BG-digital.webp",
       "alt": "Digital Marketing Image",
       "link": "/social-media-marketing-service-in-canada",
       "features": [
@@ -141,7 +141,7 @@
       "id": "card-3",
       "button": "App <br /> Development",
       "title": "App Development",
-      "image": "https://www.creativesquad.ca/images/creatives/BG_app.webp",
+      "image": "/assets/images/BG-app.webp",
       "alt": "App Development Image",
       "link": "/app-development-service-in-canada",
       "features": [
@@ -163,7 +163,7 @@
       "id": "card-4",
       "button": "Creative <br /> Services",
       "title": "Creative Services",
-      "image": "https://www.creativesquad.ca/images/creatives/BG_creative.webp",
+      "image": "/assets/images/BG-creative.webp",
       "alt": "Creative Services Image",
       "link": "/user-interface-experience-service-in-canada",
       "features": [
@@ -185,7 +185,7 @@
       "id": "card-5",
       "button": "Marketing <br /> Strategy",
       "title": "Marketing Strategy",
-      "image": "https://www.creativesquad.ca/images/creatives/BG_marketing.webp",
+      "image": "/assets/images/BG-marketing.webp",
       "alt": "Marketing Strategy Image",
       "link": "/marketing-strategy-service-in-canada",
       "features": [
@@ -211,7 +211,7 @@
       "button": "Strategic Planning",
       "title": "Strategic Planning",
       "description": "Our design & development team collaborates to understand your demands and users by lining them up with your company dynamics for an exceptional digital experience.",
-      "image": "https://www.creativesquad.ca/images/discover.webp",
+      "image": "/assets/images/discover.webp",
       "alt": "Strategic Planning Image",
       "link": "/web-design-and-development-service-in-canada"
     },
@@ -220,7 +220,7 @@
       "button": "Content Creation",
       "title": "Content Creation",
       "description": "Our experienced content creators will develop a content strategy (website copy, blog articles, social media posts, or video scrip) tailored to your target audience and business objectives.",
-      "image": "https://www.creativesquad.ca/images/development.webp",
+      "image": "/assets/images/development.webp",
       "alt": "Content Creation Image",
       "link": "/content-marketing-service-in-canada"
     },
@@ -229,7 +229,7 @@
       "button": "Performance Marketing",
       "title": "Performance Marketing",
       "description": "To accelerate your online growth, we leverage paid advertising channels. Our digital advertising experts create highly targeted campaigns that maximize your return on investment (ROI).",
-      "image": "https://www.creativesquad.ca/images/testing.webp",
+      "image": "/assets/images/testing.webp",
       "alt": "Performance Marketing Image",
       "link": "/google-ads-service-in-canada"
     },
@@ -238,7 +238,7 @@
       "button": "Analytics",
       "title": "Analytics",
       "description": "We analyze the data to gain insights into user behavior and areas for improvement. We continuously optimize your campaigns to achieve your marketing objectives.",
-      "image": "https://www.creativesquad.ca/images/deployment.webp",
+      "image": "/assets/images/deployment.webp",
       "alt": "Analytics Image",
       "link": "/analytics-report-service-in-canada"
     },
@@ -247,7 +247,7 @@
       "button": "Optimization",
       "title": "Optimization",
       "description": "We believe in data-driven decision-making. Our team utilizes advanced analytics tools to track and measure the performance of your marketing campaigns.",
-      "image": "https://www.creativesquad.ca/images/maintainance.webp",
+      "image": "/assets/images/maintainance.webp",
       "alt": "Optimization Image",
       "link": "/search-engine-optimization-service-in-canada"
     }
@@ -276,65 +276,22 @@
     }
   ],
 
-  "recentArticles": [
-    {
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1733517641561-Web%20Development%20and%20Design%20Services%20in%20Toronto.jpg",
-      "alt": "Professional Web Development and Design Services Image",
-      "date": "6/12/2024",
-      "heading": "Building a Strong Digital Presence: The Importance of Professional Web Development and Design Services",
-      "description": "A business’s website is often the first point of contact between the company and potential customers. This makes web development and web design services not just important but absolutely essential for creating a strong online presence. A professio...",
-      "link": "building-a-strong-digital-presence-the-importance-of-professional-web-development-and-design-services"
-    },
-    {
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1736255854403-Search%20Engine%20Optimization.jpg",
-      "alt": "Comprehensive Optimization Services Image",
-      "date": "7/1/2025",
-      "heading": "Optimize Your Website for Success with Comprehensive Optimization Services",
-      "description": "Your website is often the first impression customers have of your business. A well-designed website is crucial, but without optimization, even the most stunning site may fall short in driving traffic and achieving conversions. This is where websit...",
-      "link": "optimize-your-website-for-success-with-comprehensive-optimization-services"
-    },
-    {
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1736257265315-Google+Advertising.jpg",
-      "alt": "Guide to Local Success Image",
-      "date": "7/1/2025",
-      "heading": "Harness the Power of Google Advertising: Your Guide to Local Success",
-      "description": "Advertising on Google is more than just a marketing strategy—it's a necessity for businesses aiming to stay competitive. Whether you’re targeting a global audience or focusing on local customers, Google advertising offers tools and features to mat...",
-      "link": "harness-the-power-of-google-advertising-your-guide-to-local-success"
-    },
-    {
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1739220540870-SEO%20Services%20in%20Canada.png",
-      "alt": "Expert Website Optimization Services Image",
-      "date": "10/2/2025",
-      "heading": "Transform Your Online Presence with Expert Website Optimization Services",
-      "description": "Your website is the face of your business. If it’s slow, outdated, or difficult to navigate, potential customers may leave before they even get to know your brand. That’s where website optimization services come into play. By improving the structu...",
-      "link": "transform-your-online-presence-with-expert-website-optimization-services"
-    },
-    {
-      "image": "https://crativesquad-blog-thumbnail.s3.ca-central-1.amazonaws.com/1739305508909-Ecommerce%20Development%20in%20Canada.png",
-      "alt": "Leading Ecommerce Website Development Company Image",
-      "date": "11/2/2025",
-      "heading": "Elevate Your Online Store with a Leading Ecommerce Website Development Company",
-      "description": "The ecommerce landscape is booming, making it essential for businesses to have a polished and functional online store. Whether you’re launching a new business or upgrading your existing website, collaborating with an ecommerce website developm...",
-      "link": "elevate-your-online-store-with-a-leading-ecommerce-website-development-company"
-    }
-  ],
-
   "results": [
     {
       "id": "result-1",
-      "image": "https://www.creativesquad.ca/images/icons/roi_icon1.svg",
+      "image": "/assets/images/roi-icon-1.svg",
       "title": "Innovative Ideas",
       "description": "Explore a wide range of groundbreaking and creative ideas to enhance your digital media endeavors."
     },
     {
       "id": "result-2",
-      "image": "https://www.creativesquad.ca/images/icons/roi_icon2.svg",
+      "image": "/assets/images/roi-icon-2.svg",
       "title": "Personalized Solutions",
       "description": "Receive customized and bespoke digital marketing and web solutions designed specifically for your individual business requirements."
     },
     {
       "id": "result-3",
-      "image": "https://www.creativesquad.ca/images/icons/roi_icon3.svg",
+      "image": "/assets/images/roi-icon-3.svg",
       "title": "ROI Focused",
       "description": "Achieve a laser-focused approach on return on investment (ROI), utilizing strategies that deliver tangible and quantifiable outcomes."
     }
@@ -345,11 +302,11 @@
       "id": "service-1",
       "title": "Design & Build",
       "shown": {
-        "icon": "https://www.creativesquad.ca/images/icons/img1.svg",
+        "icon": "/assets/images/img-1.svg",
         "description": "From intuitive navigation to seamless responsiveness across devices, we prioritize every aspect to deliver an exceptional user experience through exceptional web design & development services."
       },
       "hidden": {
-        "icon": "https://www.creativesquad.ca/images/icons/img4.svg",
+        "icon": "/assets/images/img-4.svg",
         "links": [
           {
             "text": "Custom Web Dev",
@@ -380,11 +337,11 @@
       "id": "service-2",
       "title": "Create & Market",
       "shown": {
-        "icon": "https://www.creativesquad.ca/images/icons/img2.svg",
+        "icon": "/assets/images/img-2.svg",
         "description": "Make the world talk about you with Creative Squad, the leading digital marketing powerhouse in Canada. Our marketing solutions cover everything from strategic ad campaigns to management."
       },
       "hidden": {
-        "icon": "https://www.creativesquad.ca/images/icons/img6.svg",
+        "icon": "/assets/images/img-6.svg",
         "links": [
           {
             "text": "Marketing Strategy",
@@ -418,11 +375,11 @@
       "id": "service-3",
       "title": "Automate & Scale",
       "shown": {
-        "icon": "https://www.creativesquad.ca/images/icons/img3.svg",
+        "icon": "/assets/images/img-3.svg",
         "description": "Leverage the potential of automation and scalability with Creative Squad, the premier digital marketing agency in Canada. Enhance your brand's online impact through our wide-ranging services."
       },
       "hidden": {
-        "icon": "https://www.creativesquad.ca/images/icons/img7.svg",
+        "icon": "/assets/images/img-7.svg",
         "links": [
           {
             "text": "Call Action Tracking",

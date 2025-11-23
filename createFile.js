@@ -22,7 +22,6 @@ if (!/^[a-z0-9-_]+$/i.test(fileName)) {
 const ROOT = process.cwd();
 
 const createdFiles = [];
-const tableData = {};
 
 const appJsPath = path.join(ROOT, "app.js");
 const projectFolderName = path.basename(ROOT);
@@ -36,6 +35,20 @@ function toCamelCase(str) {
 
 const camelName = toCamelCase(fileName);
 const routeVarName = `${camelName}Route`;
+
+// -----------------------------
+// Convert filename → File Name
+// -----------------------------
+function formatForComment(str) {
+  return str
+    .replace(/[^a-zA-Z0-9]+/g, " ")
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+}
+
+const commentWorthyFileName = formatForComment(fileName);
 
 // -----------------------------
 // Templates
@@ -78,13 +91,20 @@ const cssTemplate = `
 `.trim();
 
 const routeTemplate = `
-const { express, loadJSON } = require("../dependencies");
+const { 
+  express,
+  loadJSON } = require("../dependencies"); // Import necessary module and helper
+
+// Initialize Express router
 const router = express.Router();
 
-router.get("/${fileName}", (_, res) => {
-  const data = loadJSON("${fileName}/data.json");
+// Import ${commentWorthyFileName} data 
+const data = loadJSON("${fileName}/data.json");
 
-  res.render("pages/${fileName}", {data});
+// Route to display ${commentWorthyFileName} Page
+router.get("/${fileName}", (_, res) => {
+  // Rendering ${commentWorthyFileName} Page
+  res.render("pages/${fileName}", { ...data });
 });
 
 module.exports = router;

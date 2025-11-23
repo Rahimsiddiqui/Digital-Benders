@@ -479,9 +479,14 @@ header .contact-section__subtitle {
   .brand-growing__btns {
     border-radius: 50px;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     box-shadow: var(--card-shadow);
     gap: 0;
+  }
+
+  .brand-growing__btn {
+    width: 100%;
+    margin: 0;
   }
 
   .brand-growing__card.active {
@@ -505,6 +510,10 @@ header .contact-section__subtitle {
 
   .brand-growing__card .card__content h3 {
     font-size: var(--size-2xl);
+  }
+
+  .brand-growing__card .card__main-image {
+    text-align: left;
   }
 
   .column .scoring-card {
@@ -586,7 +595,9 @@ header .contact-section__subtitle {
     max-width: 1180px;
   }
 
-  .contact-section-container {
+  .contact-section-container,
+  .brand-growing__btns,
+  .brand-growing__card.active {
     max-width: 1100px;
   }
 }

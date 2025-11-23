@@ -1335,6 +1335,7 @@ header .contact-section__subtitle {
   }
 
   .brand-growing__btn {
+    width: 100%;
     margin: 0;
   }
 
@@ -1471,6 +1472,10 @@ header .contact-section__subtitle {
   .providing-results-container header,
   .results-cards .card {
     max-width: var(--size-23xl);
+  }
+
+  .brand-growing__btns {
+    width: 1040px;
   }
 
   .testimonials-cards-container {

@@ -1,21 +1,16 @@
-const { express, loadJSON } = require(`../dependencies`);
+const { express, loadJSON } = require(`../dependencies`); // Import necessary module and helper
+
+// Initialize Express router
 const router = express.Router();
 
+// Import Production Service data
+const data = loadJSON("production-service/data.json");
+
+// Route to display Production Service Page
 router.get("/production-service-in-canada", (_, res) => {
-  const data = loadJSON("production-service/data.json");
-
-  const brandLogos = data.brandLogos;
-  const designImages = data.designImages;
-  const photographyServices = data.photographyServices;
-  const productInsights = data.productInsights;
-  const faqs = data.faqs;
-
+  // Rendering Production Service Page
   res.render("pages/production-service", {
-    brandLogos,
-    designImages,
-    photographyServices,
-    productInsights,
-    faqs,
+    ...data,
   });
 });
 

@@ -1,12 +1,17 @@
+// CORE & THIRD-PARTY DEPENDENCIES
 const express = require(`express`);
 const app = express();
 const path = require(`path`);
 const helmet = require(`helmet`);
 const ejsMate = require(`ejs-mate`);
+const mongoose = require(`mongoose`);
 const fs = require(`fs`);
 
+// MODELS
 const Blog = require(`./models/Blog`);
+const CaseStudy = require(`./models/CaseStudy`);
 
+// FUNCTIONS
 function loadJSON(file) {
   return JSON.parse(
     fs.readFileSync(path.join(__dirname, "data", file), "utf-8")
@@ -38,15 +43,19 @@ function formatDate(dateObj) {
 }
 
 module.exports = {
-  express,
+  fs,
   app,
   path,
+  helmet,
   ejsMate,
-  fs,
+  express,
+  mongoose,
+
+  slugify,
   saveJSON,
   loadJSON,
-  slugify,
-  helmet,
-  Blog,
   formatDate,
+
+  Blog,
+  CaseStudy,
 };
