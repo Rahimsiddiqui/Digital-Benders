@@ -1,13 +1,13 @@
 @import url("/stylesheet/utils/utils.css");
 
 .contact-section-main-container {
-  background: url(https://www.creativesquad.ca/images/contactformbackground.jpg);
+  background: url(/assets/images/contact-form-background.jpg);
   width: 100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   object-fit: contain;
   background-blend-mode: overlay;
-  padding: var(--size-7xl) 0;
+  padding: var(--size-7xl) 0 0 0;
 }
 
 .contact-section-container {
@@ -100,6 +100,10 @@ header .contact-section__subtitle {
 
 /* >= 768px */
 @media (min-width: 768px) {
+  .contact-section-main-container {
+    padding-bottom: var(--size-md);
+  }
+
   .contact-section__form .contact-section__inputs {
     grid-template-columns: repeat(2, 1fr);
   }

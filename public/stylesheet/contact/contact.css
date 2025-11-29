@@ -1,8 +1,7 @@
 @import url("/stylesheet/utils/utils.css");
 
 .contact-container {
-  background: url(https://www.creativesquad.ca/images/creatives/contact-bg.png)
-    no-repeat center center/cover;
+  background: url(/assets/images/contact-bg.png) no-repeat center center/cover;
   margin-top: -3.37rem;
   padding-bottom: var(--size-5xl);
   margin-bottom: var(--size-4_5xl);

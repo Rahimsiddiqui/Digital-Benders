@@ -3,11 +3,7 @@
 
 <footer class="full-width">
   <div class="footer__brand-image">
-    <img
-      loading="lazy"
-      src="https://www.creativesquad.ca/images/logo.svg"
-      alt="Brand Image"
-    />
+    <img src="/assets/images/logo.svg" alt="Brand Image" loading="lazy" />
   </div>
   <div class="footer__links-container">
     <% footerData.footerLinks.forEach(footerLink => { %>
@@ -37,8 +33,8 @@
       <% footerData.mediaLinks.forEach(mediaLink => { %>
       <a href="<%= mediaLink.link %>" target="_blank">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
           role="img"
+          xmlns="http://www.w3.org/2000/svg"
           aria-label="<%= mediaLink.name %>"
           viewBox="<%= mediaLink.viewBox %>"
         >
@@ -74,8 +70,8 @@
         <span class="input-group-text" id="addon-wrapping"
           ><button class="form__tele-icon">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               role="img"
+              xmlns="http://www.w3.org/2000/svg"
               aria-label="Telegram Icon"
               width="23.568"
               height="23.568"

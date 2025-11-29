@@ -1,12 +1,12 @@
 @import url("/stylesheet/utils/utils.css");
 
 #main-header {
-  background: url(https://www.creativesquad.ca/images/creatives/seo-analysis-hero.png)
-    no-repeat center center/cover;
+  background: url(/assets/images/seo-analysis-hero.png) no-repeat center
+    center/cover;
   text-align: center;
   margin-top: -3.37rem;
   min-height: 100vh;
-  padding: var(--size-7_5xl) 0;
+  padding: var(--size-8xl) 0 var(--size-5xl) 0;
 }
 
 #spinner-overlay {
@@ -224,15 +224,6 @@ header h4 {
 
 .scoring-card .scoring-card__description {
   font-size: var(--size-sm);
-}
-
-.section-4 {
-  background: url(https://www.creativesquad.ca/images/contactformbackground.jpg);
-  width: 100%;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  background-blend-mode: overlay;
 }
 
 .contact-section-container {
@@ -473,7 +464,7 @@ header .contact-section__subtitle {
 
   .brand-growing-container {
     max-width: 1300px;
-    padding: var(--size-5xl) 0;
+    padding: var(--size-5_5xl) 0 var(--size-7xl) 0;
   }
 
   .brand-growing__btns {
@@ -514,6 +505,7 @@ header .contact-section__subtitle {
 
   .brand-growing__card .card__main-image {
     text-align: left;
+    margin-bottom: 0;
   }
 
   .column .scoring-card {

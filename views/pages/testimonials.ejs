@@ -1,0 +1,188 @@
+<%- layout(`boilerplate/boilerplate`) %>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/stylesheet/testimonials/testimonials.css" />
+
+<div class="testimonials-container">
+  <header class="testimonials-header">
+    <div class="col-container">
+      <div class="col">
+        <h1 class="title-main">Client <span>testimonials</span></h1>
+        <p class="para-main">
+          We make decisions based on real data, ensuring your campaigns are
+          optimized for maximum impact. And that's not all. We're constantly
+          innovating and expanding our client portfolio. We start by getting to
+          know your business inside and out. Through in-depth discussions and
+          market research, we uncover your unique goals, target audience, and
+          competition.
+        </p>
+        <a href="tel: X-XXX-XXX-XXXX" class="btn-tel">Chat With Us</a>
+      </div>
+      <div class="col testimonials__summary">
+        <video
+          src="/assets/videos/thumbnail-1-video.mp4"
+          preload="auto"
+          controls
+          muted
+          loop
+          playsinline
+          autoplay
+        ></video>
+      </div>
+    </div>
+  </header>
+
+  <main class="testimonials-main">
+    <section class="roi-focused">
+      <div class="col-container">
+        <div class="col">
+          <h2 class="title-main">
+            <span>Building Brands</span> <br />
+            Worldwide
+          </h2>
+          <p class="para-main">
+            We don't just talk strategy – we deliver real results, proven by the
+            success stories of our amazing clients. We take pride in building
+            long-term partnerships and tailoring our strategies to each client's
+            unique goals. We understand the unique needs and landscape of the
+            Canadian market, giving you a strategic edge.
+          </p>
+          <a href="tel: X-XXX-XXX-XXXX" class="btn-tel">Get A Free Quote</a>
+        </div>
+        <div class="col">
+          <% roiCards.forEach(card => { %>
+          <div class="roi__card">
+            <div>
+              <img
+                src="<%= card.src %>"
+                alt="<%= card.alt %> Image"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="title-sub"><%= card.title %></h3>
+            <p class="para-sub"><%= card.description %></p>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-cards-container">
+      <% testimonials1.forEach(testimonial => { %>
+      <div class="card">
+        <div class="card__video">
+          <iframe
+            width="100%"
+            height="700"
+            src="<%= testimonial.video %>"
+            title="<%= testimonial.title %> Testimonial"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="card__content">
+          <div class="card__stars">
+            <img
+              src="/assets/images/5-star.png"
+              alt="5 Star Image"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="title-sub"><%= testimonial.title %></h3>
+          <p class="para-sub"><%= testimonial.description %></p>
+          <a href="#">
+            View Case Study
+            <svg
+              height="22"
+              width="22"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <% }) %>
+    </section>
+
+    <section class="marketing-strategy">
+      <div class="col-container">
+        <div class="col">
+          <h2 class="title-main">
+            <span>We Deliver Real,</span> Measurable Results
+          </h2>
+          <p class="para-main">
+            We make decisions based on real data, ensuring your campaigns are
+            optimized for maximum impact. And that's not all. We're constantly
+            innovating and expanding our client portfolio. We start by getting
+            to know your business inside and out. Through in-depth discussions
+            and market research, we uncover your unique goals, target audience,
+            and competition.
+          </p>
+          <a href="tel: X-XXX-XXX-XXXX" class="btn-tel">Get Started</a>
+        </div>
+        <div class="col">
+          <% measurableResults.forEach((result,i) => { %>
+          <div class="result result-<%= i + 1 %>">
+            <img src="<%= result.src %>" alt="<%= result.alt %> Image" />
+            <h3 class="title-sub"><%= result.title %></h3>
+            <p class="para-sub"><%= result.description %></p>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-cards-container">
+      <% testimonials2.forEach(testimonial => { %>
+      <div class="card">
+        <div class="card__video">
+          <iframe
+            width="100%"
+            height="700"
+            src="<%= testimonial.video %>"
+            title="<%= testimonial.title %> Testimonial"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="card__content">
+          <div class="card__stars">
+            <img
+              src="/assets/images/5-star.png"
+              alt="5 Star Image"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="title-sub"><%= testimonial.title %></h3>
+          <p class="para-sub"><%= testimonial.description %></p>
+          <a href="#">
+            View Case Study
+            <svg
+              height="22"
+              width="22"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <% }) %>
+    </section>
+
+    <%- include("../misc/trustpilot") %> <%- include("../misc/contactForm") %>
+  </main>
+</div>

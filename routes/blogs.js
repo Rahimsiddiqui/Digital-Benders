@@ -24,7 +24,11 @@ router.get("/blogs", async (_, res) => {
     res.render("pages/blogs/blogs", { posts: formattedBlogs });
   } catch (err) {
     console.error("Database Error: ", err);
-    res.status(500).render("pages/500-error");
+    res.status(500).render("pages/error", {
+      title: "Internal Server Error",
+      code: 500,
+      message: "Internal Server Error, Try Later.",
+    });
   }
 });
 
@@ -39,7 +43,13 @@ router.get("/blogs/:slug", async (req, res) => {
       Blog.find({}).sort({ views: -1 }).limit(6).lean(),
     ]);
 
-    if (!blog) return res.status(404).render("pages/404-error");
+    if (!blog) {
+      return res.status(404).render("pages/error", {
+        title: "Page Not Found",
+        code: 404,
+        message: "This page could not be found.",
+      });
+    }
 
     // Logic to prevent counting multiple views from the same user within 12 hours
     const cookieName = `viewed_${slug}`;
@@ -78,7 +88,11 @@ router.get("/blogs/:slug", async (req, res) => {
     });
   } catch (err) {
     console.error("Error Occurred: ", err);
-    res.status(500).render("pages/500-error");
+    res.status(500).render("pages/error", {
+      title: "Internal Server Error",
+      code: 500,
+      message: "Internal Server Error, Try Later.",
+    });
   }
 });
 

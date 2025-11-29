@@ -37,24 +37,26 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "public")));
+
 app.use(
   helmet({
     crossOriginEmbedderPolicy: false,
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
+
         scriptSrc: [
           "'self'",
           "'unsafe-inline'",
-          "'unsafe-eval'",
           "https://cdn.jsdelivr.net",
           "https://unpkg.com",
           "https://cdnjs.cloudflare.com",
           "https://embed.tawk.to",
+          "https://va.tawk.to",
+          "https://static-v.tawk.to",
           "https://www.youtube.com",
-          "https://www.google.com",
-          "https://www.gstatic.com",
         ],
+
         styleSrc: [
           "'self'",
           "'unsafe-inline'",
@@ -64,15 +66,12 @@ app.use(
           "https://cdnjs.cloudflare.com",
           "https://embed.tawk.to",
         ],
+
         fontSrc: [
           "'self'",
           "data:",
           "https://fonts.gstatic.com",
-          "https://cdn.jsdelivr.net",
-          "https://unpkg.com",
-          "https://cdnjs.cloudflare.com",
           "https://embed.tawk.to",
-          "https://*.tawk.to",
         ],
 
         imgSrc: [
@@ -81,19 +80,24 @@ app.use(
           "blob:",
           "https://*",
           "https://embed.tawk.to",
+          "https://va.tawk.to",
         ],
-        mediaSrc: ["'self'", "https://*", "blob:"],
+
+        mediaSrc: ["'self'", "blob:", "https://*"],
+
         connectSrc: [
           "'self'",
-          "https://*",
-          "wss://*",
           "https://embed.tawk.to",
-          "https://*.tawk.to",
+          "https://va.tawk.to",
+          "https://vch.tawk.to",
+          "https://static-v.tawk.to",
           "wss://*.tawk.to",
-          "https://youtube.com",
+          "https://cdn.jsdelivr.net",
+          "https://unpkg.com",
+          "https://cdnjs.cloudflare.com",
           "https://*.youtube.com",
-          "https://*.google.com",
         ],
+
         frameSrc: [
           "'self'",
           "https://www.youtube.com",
@@ -104,6 +108,7 @@ app.use(
     },
   })
 );
+
 app.use((req, res, next) => {
   res.locals.currentRoute = req.path;
   next();
@@ -126,6 +131,7 @@ const seoAnalysisRoute = require("./routes/seo-analysis");
 const blogsRoute = require("./routes/blogs");
 const productionService = require("./routes/production-service");
 const portfolioRoute = require("./routes/portfolio");
+const testimonialsRoute = require("./routes/testimonials");
 
 app.use("/", [
   landingPageRoute,
@@ -135,16 +141,25 @@ app.use("/", [
   blogsRoute,
   productionService,
   portfolioRoute,
+  testimonialsRoute,
 ]);
 
 // ===== ERROR HANDLING =====
 app.use((_, res) => {
-  res.status(404).render("pages/404-error");
+  res.status(404).render("pages/error", {
+    title: "Page Not Found",
+    code: 404,
+    message: "This page could not be found.",
+  });
 });
 
 app.use((err, req, res, next) => {
   console.error("Uncaught Error: ", err);
-  res.status(500).render("pages/500-error");
+  res.status(500).render("pages/error", {
+    title: "Internal Server Error",
+    code: 500,
+    message: "Internal Server Error, Try Later.",
+  });
 });
 
 // ===== SERVER START =====

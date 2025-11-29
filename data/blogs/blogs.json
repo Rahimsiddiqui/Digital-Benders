@@ -1,6 +1,6 @@
 [
   {
-    "src": "/assets/images/frustrated-with-google-image.jpg",
+    "src": "/assets/images/frustrated-with-google.png",
     "alt": "Frustrated With Google",
     "title": "Frustrated with Google? How Poor SEO Is Silently Killing Conversions",
     "description": "Imagine investing in a professional website only to watch visitors arrive and leave without taking action. Your Google rankings drop, competitors thrive, and your traffic dries up. This isn’t uncommon. Many businesses fail not because their sites...",
@@ -505,119 +505,6 @@
           "type": "text",
           "title": "Final Thoughts",
           "content": "Custom website development is more than an expense — it's a long-term investment in your brand, performance, and business growth. While templates are quick and cheap, they limit your potential. A custom site gives you complete control, better SEO, stronger performance, and a platform that grows with your business."
-        }
-      ]
-    }
-  },
-
-  {
-    "src": "/assets/images/constant-site-crashes-image.jpg",
-    "alt": "Constant Site Crashes",
-    "title": "Tired of Constant Site Crashes? Custom Web Development Keeps Your Business Online",
-    "description": "Running a business online isn’t just about great products or services. If your website keeps crashing, you’re losing more than visitors—you’re losing revenue, credibility, and customer trust. Frequent downtime frustrates users and can seriously ha...",
-    "date": "19/9/2025",
-    "post": {
-      "intro": "Few things hurt a business more than a website that keeps crashing. Whether it’s during peak traffic, product launches, or random hours of the day, site downtime instantly kills trust, revenue, and user experience. If this sounds familiar, you’re not alone — and it’s a major sign that you need <b>custom web development</b>.",
-      "sections": [
-        {
-          "type": "list",
-          "title": "Why Do Websites Crash?",
-          "intro": "Most site crashes happen because the site isn’t built to handle real-world traffic and performance demands. Common causes include:",
-          "items": [
-            {
-              "emphasis": "Shared hosting overload:",
-              "text": "Cheap shared hosting cannot handle traffic spikes."
-            },
-            {
-              "emphasis": "Poorly optimized code:",
-              "text": "Heavy scripts, bloated plugins, and inefficient backend logic slow everything down."
-            },
-            {
-              "emphasis": "Traffic spikes:",
-              "text": "Sudden visitor surges cause server overload."
-            },
-            {
-              "emphasis": "Insecure systems:",
-              "text": "Outdated code makes you vulnerable to attacks that crash your site."
-            },
-            {
-              "emphasis": "Too many plugins:",
-              "text": "Especially with WordPress, plugin conflict is a leading cause of crashes."
-            }
-          ]
-        },
-        {
-          "type": "list",
-          "title": "The Hidden Cost of Frequent Crashes",
-          "intro": "Every minute your site is down, your business loses potential customers. Here’s how crashes silently ruin conversions:",
-          "items": [
-            {
-              "text": "Users leave instantly when a site doesn’t load."
-            },
-            {
-              "text": "Google lowers your ranking due to poor reliability."
-            },
-            {
-              "text": "Returning customers stop trusting your brand."
-            },
-            {
-              "text": "Ad campaigns become wasted money if landing pages break."
-            }
-          ]
-        },
-        {
-          "type": "list",
-          "title": "Why Custom Web Development Fixes the Problem",
-          "intro": "Unlike template-based or plugin-heavy websites, custom-built sites are optimized for performance, scalability, and stability. Here’s what custom development brings:",
-          "items": [
-            {
-              "emphasis": "Optimized backend architecture:",
-              "text": "Clean, efficient code designed for speed."
-            },
-            {
-              "emphasis": "Improved server performance:",
-              "text": "Built around technologies that match your business scale."
-            },
-            {
-              "emphasis": "Crash-proof handling:",
-              "text": "Proper caching, load balancing, and optimized queries."
-            },
-            {
-              "emphasis": "Security-first approach:",
-              "text": "Reduces vulnerability to attacks and downtime."
-            },
-            {
-              "emphasis": "Zero plugin dependency:",
-              "text": "Custom features mean fewer conflicts and failures."
-            }
-          ]
-        },
-        {
-          "type": "list",
-          "title": "How Custom Web Development Keeps You Online",
-          "intro": "A well-developed custom website ensures:",
-          "items": [
-            {
-              "text": "Consistent uptime — even during traffic surges."
-            },
-            {
-              "text": "Fast load times across all devices."
-            },
-            {
-              "text": "Scalability as your business grows."
-            },
-            {
-              "text": "Stable integrations with APIs, payment systems, and databases."
-            },
-            {
-              "text": "Better search ranking due to performance and reliability."
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "title": "Final Thoughts",
-          "content": "If your website crashes often, it’s not just an inconvenience — it’s a sign your business is outgrowing your system. Custom web development provides the stability, performance, and scalability your business needs to stay online 24/7 and convert visitors into loyal customers. Your website shouldn’t be your weakest link; it should be your strongest asset."
         }
       ]
     }

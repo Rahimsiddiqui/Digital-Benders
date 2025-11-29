@@ -6,8 +6,8 @@ faqs.forEach((faq) => {
   const question = faq.querySelector(".faq__question");
   const answer = faq.querySelector(".faq__answer");
 
-  const openIcon = "/assets/images/faqs-minus-icon.svg";
-  const closeIcon = "/assets/images/faqs-plus-icon.svg";
+  const openIcon = "/assets/images/minus-icon.svg";
+  const closeIcon = "/assets/images/plus-icon.svg";
 
   const toggleFaq = () => {
     const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";

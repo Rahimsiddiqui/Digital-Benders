@@ -1,6 +1,7 @@
 // createFile.js
 const fs = require("fs");
 const path = require("path");
+const { exec } = require("child_process");
 
 const fileName = process.argv[2];
 
@@ -49,6 +50,32 @@ function formatForComment(str) {
 }
 
 const commentWorthyFileName = formatForComment(fileName);
+
+//
+// File Creation Helper
+//
+
+function safeWrite(filePath, content = "") {
+  try {
+    fs.mkdirSync(path.dirname(filePath), { recursive: true });
+    fs.writeFileSync(filePath, content);
+    createdFiles.push(path.relative(ROOT, filePath));
+    return filePath; // <-- return the actual path
+  } catch (err) {
+    console.error(`❌ Failed to create ${filePath}:`, err.message);
+    process.exit(1);
+  }
+}
+
+// -----------------------------
+// Opening Created Files in VSCode
+// -----------------------------
+
+function openInVSCode(filePath) {
+  exec(`code -r "${filePath}"`, (err) => {
+    if (err) console.error(`❌ Failed to open ${filePath}: `, err.message);
+  });
+}
 
 // -----------------------------
 // Templates
@@ -111,33 +138,32 @@ module.exports = router;
 `.trim();
 
 // -----------------------------
-// File Creation Helper
-// -----------------------------
-function safeWrite(filePath, content) {
-  try {
-    fs.mkdirSync(path.dirname(filePath), { recursive: true });
-    fs.writeFileSync(filePath, content);
-    createdFiles.push(path.relative(ROOT, filePath));
-  } catch (err) {
-    console.error(`❌ Failed to create ${filePath}:`, err.message);
-    process.exit(1);
-  }
-}
-
-// -----------------------------
 // Create Files
 // -----------------------------
-safeWrite(path.join(ROOT, "views", "pages", `${fileName}.ejs`), ejsTemplate);
-safeWrite(path.join(ROOT, "public", "javascript", fileName, `ex.js`));
-safeWrite(
+const ejsPath = safeWrite(
+  path.join(ROOT, "views", "pages", `${fileName}.ejs`),
+  ejsTemplate
+);
+const jsPath = safeWrite(
+  path.join(ROOT, "public", "javascript", fileName, `ex.js`),
+  ""
+);
+const cssPath = safeWrite(
   path.join(ROOT, "public", "stylesheet", fileName, `${fileName}.css`),
   cssTemplate
 );
-safeWrite(
+const jsonPath = safeWrite(
   path.join(ROOT, "data", fileName, "data.json"),
   JSON.stringify({}, null, 2)
 );
 safeWrite(path.join(ROOT, "routes", `${fileName}.js`), routeTemplate);
+const utilPath = path.join(ROOT, "public", "stylesheet", "utils", "utils.css");
+
+openInVSCode(ejsPath);
+openInVSCode(cssPath);
+openInVSCode(utilPath);
+openInVSCode(jsonPath);
+openInVSCode(jsPath);
 
 // -----------------------------
 // Update app.js

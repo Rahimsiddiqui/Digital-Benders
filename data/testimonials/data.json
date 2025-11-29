@@ -1,0 +1,104 @@
+{
+  "roiCards": [
+    {
+      "src": "/assets/images/roi-image-1.svg",
+      "alt": "Chess",
+      "title": "Strategic Influencer Marketing",
+      "description": "Harness the power of influencers to connect with your target audience and expand your brand reach."
+    },
+    {
+      "src": "/assets/images/roi-image-2.svg",
+      "alt": "Star",
+      "title": "Organic Social Media Strategy",
+      "description": "Develop an organic SMM strategy that fosters genuine connections and drives engagement on social media platforms."
+    },
+    {
+      "src": "/assets/images/roi-image-3.svg",
+      "alt": "Video",
+      "title": "Impactful Content Promotion Strategies",
+      "description": "Craft a targeted content promotion strategy to amplify your content and ensure it reaches the right audience."
+    },
+    {
+      "src": "/assets/images/roi-image-4.svg",
+      "alt": "Dollar",
+      "title": "Data-Driven Paid Ads",
+      "description": "Leverage data insights to develop paid advertising campaigns that deliver measurable results and reach your ideal customers."
+    }
+  ],
+
+  "testimonials1": [
+    {
+      "video": "https://www.youtube.com/embed/U1USZs8AoQ0",
+      "title": "Tru Off Grid",
+      "description": "Their satisfaction motivates us."
+    },
+    {
+      "video": "https://www.youtube.com/embed/L_thYvisr8s",
+      "title": "Empowerment Project",
+      "description": "Proud to highlight our client's journey."
+    },
+    {
+      "video": "https://www.youtube.com/embed/emRxmtX9FNE",
+      "title": "Meadows Equine",
+      "description": "Proud to highlight our client's journey."
+    }
+  ],
+
+  "testimonials2": [
+    {
+      "video": "https://www.youtube.com/embed/nXydN98v94E",
+      "title": "Blue Fysh",
+      "description": "Proud to highlight our client's journey."
+    },
+    {
+      "video": "https://www.youtube.com/embed/Di-qJSuMjlA",
+      "title": "Venus Health",
+      "description": "Results that speak louder than words!"
+    },
+    {
+      "video": "https://www.youtube.com/embed/YIbaAZpbDGg",
+      "title": "Sarina Gandhi",
+      "description": "Proud to highlight our client's journey."
+    }
+  ],
+
+  "measurableResults": [
+    {
+      "src": "/assets/images/measurable-results-1.svg",
+      "alt": "Book",
+      "title": "Strategic Planning & Roadmapping",
+      "description": "Equipped with a clear understanding of your needs, we develop a customized digital marketing roadmap. This roadmap outlines specific strategies, channels, and tactics to achieve your objectives."
+    },
+    {
+      "src": "/assets/images/measurable-results-2.svg",
+      "alt": "Road",
+      "title": "Meticulous Campaign Execution",
+      "description": "Our team of experts meticulously executes your digital marketing campaigns across various channels, including SEO, content marketing, social media, paid advertising, and more."
+    },
+    {
+      "src": "/assets/images/measurable-results-3.svg",
+      "alt": "Todo-list",
+      "title": "Data-Driven Optimization & Reporting",
+      "description": "Throughout the process, we maintain transparent communication, keeping you informed of progress and actively seeking your feedback. The digital landscape is ever-evolving. We stay ahead of the curve, constantly learning and implementing new strategies to ensure your digital presence continues to thrive. This collaborative process allows us to tailor our approach to your specific needs and deliver measurable results that contribute to your overall business success."
+    }
+  ],
+
+  "contactSectionInputs": [
+    { "type": "text", "placeholder": "Your Full Name", "specialClass": false },
+    {
+      "type": "text",
+      "placeholder": "Your Phone Number",
+      "specialClass": true
+    },
+    {
+      "type": "email",
+      "placeholder": "Your Email Address",
+      "specialClass": false
+    },
+    {
+      "type": "text",
+      "placeholder": "Enter Project Type",
+      "specialClass": false
+    }
+  ]
+}

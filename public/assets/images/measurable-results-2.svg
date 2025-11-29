@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50.938" height="49.394" viewBox="0 0 50.938 49.394">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_469" data-name="Rectangle 469" width="50.938" height="49.394" transform="translate(551.922 15)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Group_237" data-name="Group 237" transform="translate(-551.922 -15)" clip-path="url(#clip-path)">
+    <path id="Path_441" data-name="Path 441" d="M602.04,51.268V28.517a4.8,4.8,0,0,0-4.79-4.79H586.473" transform="translate(-7.885 -1.992)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="29.09 2.91"/>
+    <path id="Path_442" data-name="Path 442" d="M592.107,15.97l-7.185,5.987,7.185,5.987" transform="translate(-7.531 -0.221)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_443" data-name="Path 443" d="M563.2,28.382V52.33" transform="translate(-2.574 -3.054)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="29.09 2.91"/>
+    <path id="Path_444" data-name="Path 444" d="M566.6,28.556l-9.484-9.484" transform="translate(-1.185 -0.929)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="29.09 2.91"/>
+    <path id="Path_445" data-name="Path 445" d="M566.479,19.2l-9.484,9.484" transform="translate(-1.158 -0.958)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="29.09 2.91"/>
+    <path id="Path_446" data-name="Path 446" d="M561.076,73.781a7.185,7.185,0,1,0-7.185-7.185A7.185,7.185,0,0,0,561.076,73.781Z" transform="translate(-0.45 -10.136)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="29.09 2.91" fill-rule="evenodd"/>
+    <path id="Path_447" data-name="Path 447" d="M604.518,73.781a7.185,7.185,0,1,0-7.185-7.185A7.185,7.185,0,0,0,604.518,73.781Z" transform="translate(-10.364 -10.136)" fill="#d11413" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="29.09 2.91"/>
+  </g>
+</svg>

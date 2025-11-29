@@ -4,7 +4,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("https://www.creativesquad.ca/images/footer_background_mob.png");
+  background: url("/assets/images/footer-bg-image.png") no-repeat center center /
+    cover scroll;
   padding-top: var(--size-4xl);
   padding-bottom: var(--size-2xl);
   font-family: var(--mulish-font);
@@ -84,7 +85,6 @@ footer {
     }
 
     & svg {
-      fill: black;
       width: var(--size-lg);
       height: var(--size-lg);
     }

@@ -38,7 +38,11 @@ router.get("/", async (_, res) => {
     });
   } catch (err) {
     console.error("Landing Page Error: ", err);
-    res.status(500).render("pages/500-error");
+    res.status(500).render("pages/error", {
+      title: "Internal Server Error",
+      code: 500,
+      message: "Internal Server Error, Try Later.",
+    });
   }
 });
 
